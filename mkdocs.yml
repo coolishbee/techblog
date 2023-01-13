@@ -1,0 +1,16 @@
+site_name: Tech Blog
+nav:
+    - Home: index.md
+    - About: about.md
+    - Unity SDK:
+        - Android:
+            - maven: docker-build-deploy.md
+    - User Guide:
+        - Test1:
+            - Test2: docker-build-deploy.md
+            - Test3: go-google-api-usage.md
+theme: readthedocs
+markdown_extensions:
+    - admonition
+    - toc:
+        permalink: "#"
