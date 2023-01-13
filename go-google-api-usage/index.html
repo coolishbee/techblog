@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Test3 - Tech Blog</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Test3";
+        var mkdocs_page_input_path = "go-google-api-usage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Test1</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../docker-build-deploy/">Test2</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Test3</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#api">API 콘솔 프로젝트 생성 및 설정</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#refreshtoken">RefreshToken 생성</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#redirect">Redirect 서버 구축</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_1">브라우저에서 로그인하기</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#api_1">API 사용하기</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#accesstoken-post">AccessToken 얻기위한 POST 요청</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#google-developer-api">Google Developer API 호출</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>User Guide &raquo;</li>
+          <li>Test1 &raquo;</li>
+      <li>Test3</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="google-api">Google API 사용법<a class="headerlink" href="#google-api" title="Permanent link">#</a></h1>
+<p>go 언어용 라이브러리가 있지만 직접 액서스 토큰으로 Google API 를 사용하는 방식입니다.</p>
+<h2 id="api">API 콘솔 프로젝트 생성 및 설정<a class="headerlink" href="#api" title="Permanent link">#</a></h2>
+<p><a href="https://developers.google.com/android-publisher/authorization?hl=ko">Google Play Developer API</a> 을 사용하기 위해선 OAuth2 인증이 필수입니다.
+Google Cloud 프로젝트내 사용자 인증 정보에서 웹 애플리케이션 유형으로 OAuth 2.0 클라이언트 ID 를 만들어줘야 합니다.
+(참고로 토큰을 얻기 위해 OAuth 동의화면에서 아무런 API 범위 추가가 필요하지 않습니다.)</p>
+<p>토큰을 얻기 위해 필요한 필수 항목</p>
+<ul>
+<li>ClientID</li>
+<li>ClientSecret</li>
+<li>승인된 리디렉션 URI</li>
+</ul>
+<h2 id="refreshtoken">RefreshToken 생성<a class="headerlink" href="#refreshtoken" title="Permanent link">#</a></h2>
+<h3 id="redirect">Redirect 서버 구축<a class="headerlink" href="#redirect" title="Permanent link">#</a></h3>
+<p>토큰을 얻기위해 미리 Redirect 서버를 구축해야 합니다.</p>
+<p><a href="https://github.com/coolishbee/go-redirect-server">example</a> :</p>
+<pre><code class="language-go">package main
+
+import (
+    &quot;context&quot;
+    &quot;log&quot;
+    &quot;net/http&quot;
+
+    &quot;github.com/gin-gonic/gin&quot;
+    &quot;golang.org/x/oauth2&quot;
+    &quot;golang.org/x/oauth2/google&quot;
+)
+
+func main() {
+    router := gin.Default()
+    ctx := context.Background()
+
+    oauth2Conf := &amp;oauth2.Config{
+        ClientID:     &quot;871xxxxxxxx-xxxxx.apps.googleusercontent.com&quot;,
+        ClientSecret: &quot;GOXXXX-31xxxxxxxx&quot;,
+        Endpoint:     google.Endpoint,
+        RedirectURL:  &quot;http://localhost:8077/redirect&quot;,
+        Scopes: []string{
+            &quot;https://www.googleapis.com/auth/admob.readonly&quot;,
+        },
+    }
+
+    router.GET(&quot;/redirect&quot;, func(c *gin.Context) {
+        code := c.Query(&quot;code&quot;)
+        log.Println(code)
+        tok, err := oauth2Conf.Exchange(ctx, code)
+        if err != nil {
+            c.JSON(500, err)
+            return
+        }
+        log.Println(tok.RefreshToken)
+    })
+}  
+</code></pre>
+<h3 id="_1">브라우저에서 로그인하기<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<p>미리 구글계정을 로그아웃해놓고 아래 URI 로 요청 후 로그인 합니다.
+로그인이 성공한다면 리디렉션 서버로 요청이 갑니다. 그리고 code를 받아서 exchange 하면 RefreshToken 이 발급됩니다.</p>
+<ul>
+<li>scope : 사용할 API 범위</li>
+<li>client_id : API 콘솔에서 설정한 ClientID</li>
+</ul>
+<pre><code>https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/admob.readonly&amp;response_type=code&amp;access_type=offline&amp;redirect_uri=http://localhost:8077/redirect&amp;client_id=...
+</code></pre>
+<h2 id="api_1">API 사용하기<a class="headerlink" href="#api_1" title="Permanent link">#</a></h2>
+<p>백엔드단에서 매번 브라우저로 인증처리를 할 수 없기때문에 RefreshToken 을 이용해서 AccessToken 을 얻습니다.</p>
+<h3 id="accesstoken-post">AccessToken 얻기위한 POST 요청<a class="headerlink" href="#accesstoken-post" title="Permanent link">#</a></h3>
+<pre><code>POST
+https://accounts.google.com/o/oauth2/token
+HEADER
+&quot;Content-Type&quot; : &quot;application/x-www-form-urlencoded&quot;
+</code></pre>
+<p>[Request Body (FormData)]
+| Key  | Description     | Type   |
+| ---- | --------------- | ------ |
+| refresh_token   | 위에서 발급받은 토큰   | string |
+| client_id | API 콘솔에서 얻은 id     | string |
+| client_secret  | API 콘솔 key | string |
+| grant_type  | 어떤 유형으로 토큰을 얻을지에 대한 타입 | string |</p>
+<p>example :</p>
+<pre><code class="language-go">import &quot;github.com/go-resty/resty/v2&quot;
+
+func example() {
+    client := resty.New()
+    resp, err := client.R().
+        SetHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;).
+        SetFormData(map[string]string{
+            &quot;refresh_token&quot;: &quot;1//0e6caG1CsCnrVCgYIARAAGA4SNwF-...&quot;,
+            &quot;client_id&quot;:     &quot;871390000-xxx.apps.googleusercontent.com&quot;,
+            &quot;client_secret&quot;: &quot;GOXXXX-31xxxx&quot;,
+            &quot;grant_type&quot;:    &quot;refresh_token&quot;,
+        }).
+        Post(&quot;https://accounts.google.com/o/oauth2/token&quot;)
+
+    if err != nil {
+        log.Println(err.Error())
+    }   
+    fmt.Println(&quot;  Body       :\n&quot;, resp)
+  ...
+</code></pre>
+<h3 id="google-developer-api">Google Developer API 호출<a class="headerlink" href="#google-developer-api" title="Permanent link">#</a></h3>
+<p>admob 예제:</p>
+<pre><code class="language-go">type AdmobReq struct {
+    ReportSpec struct {
+        DateRange struct {
+            StartDate struct {
+                Year  int `json:&quot;year&quot;`
+                Month int `json:&quot;month&quot;`
+                Day   int `json:&quot;day&quot;`
+            } `json:&quot;startDate&quot;`
+            EndDate struct {
+                Year  int `json:&quot;year&quot;`
+                Month int `json:&quot;month&quot;`
+                Day   int `json:&quot;day&quot;`
+            } `json:&quot;endDate&quot;`
+        } `json:&quot;dateRange&quot;`
+        Metrics              []string `json:&quot;metrics&quot;`
+        LocalizationSettings struct {
+            CurrencyCode string `json:&quot;currencyCode&quot;`
+            LanguageCode string `json:&quot;languageCode&quot;`
+        } `json:&quot;localizationSettings&quot;`
+        Dimensions []string `json:&quot;dimensions&quot;`
+    } `json:&quot;reportSpec&quot;`
+}
+
+var admobReq AdmobReq
+admobReq.ReportSpec.DateRange.StartDate.Year = startYear
+admobReq.ReportSpec.DateRange.StartDate.Month = startMonth
+admobReq.ReportSpec.DateRange.StartDate.Day = startDay
+admobReq.ReportSpec.DateRange.EndDate.Year = endYear
+admobReq.ReportSpec.DateRange.EndDate.Month = endMonth
+admobReq.ReportSpec.DateRange.EndDate.Day = endDay
+admobReq.ReportSpec.Metrics = []string{&quot;ESTIMATED_EARNINGS&quot;, &quot;IMPRESSIONS&quot;, &quot;IMPRESSION_RPM&quot;}
+admobReq.ReportSpec.LocalizationSettings.CurrencyCode = &quot;USD&quot;
+admobReq.ReportSpec.LocalizationSettings.LanguageCode = &quot;en-US&quot;
+admobReq.ReportSpec.Dimensions = []string{&quot;DATE&quot;, &quot;APP&quot;}
+
+reportResp, err := client.R().
+  SetAuthToken(authResp.AccessToken). //마샬링한 액서스 코드
+  SetHeader(&quot;ContentType&quot;, &quot;application/json&quot;).
+  SetBody(admobReq).
+  Post(&quot;https://admob.googleapis.com/v1/accounts/pub-0000000/networkReport:generate&quot;)
+
+fmt.Println(&quot;  Error      :&quot;, err)
+fmt.Println(&quot;  Body       :\n&quot;, reportResp)
+</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.</p>
+</div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../docker-build-deploy/" class="btn btn-neutral float-left" title="Test2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../docker-build-deploy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
