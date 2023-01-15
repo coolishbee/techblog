@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Fastlane usage - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Fastlane usage";
+        var mkdocs_page_input_path = "ci/fastlane-usage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapod-usage/">Cocoapod Usage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">JAVA/Kotlin</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/gson/">Gson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/retrofit2/">Retrofit2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/create-library/">Create Module</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Editor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-build-machine-shell/">Build Machine</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../android/gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Fastlane usage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>일단 fastlane 을 설치하는 방법은 여러가지가 있다.</p>
+<ul>
+<li>bundler</li>
+<li>brew</li>
+<li>macOS 의 system ruby</li>
+</ul>
+<h2 id="xcode-command-line-tools-macos">Xcode command line tools (macOS)<a class="headerlink" href="#xcode-command-line-tools-macos" title="Permanent link">#</a></h2>
+<p>clt 는 git, svn, perl, python 등 여러 컴파일러를 제공해줍니다. (보통 homebrew 설치시 자동설치됩니다)</p>
+<p>뭘로 하든 기본설치라는 말씀.</p>
+<pre><code class="language-no-highlight">xcode-select --install
+</code></pre>
+<h2 id="installing-fastlane">Installing <em>fastlane</em><a class="headerlink" href="#installing-fastlane" title="Permanent link">#</a></h2>
+<p><em>fastlane</em>은 여러 가지 방법으로 설치할 수 있습니다. 선호하는 방법은 <a href="https://bundler.io/"><em>Bundler</em></a>입니다. <em>fastlane</em>은 Homebrew를 통해 직접 설치할 수도 있습니다(macOS의 경우). macOS의 시스템 Ruby를 사용하는 것은 가능하지만 종속성을 관리하기 어렵고 충돌을 일으킬 수 있으므로 권장하지 않습니다.</p>
+<h3 id="managed-ruby-environment-bundler-macoslinuxwindows">Managed Ruby environment + Bundler (macOS/Linux/Windows)<a class="headerlink" href="#managed-ruby-environment-bundler-macoslinuxwindows" title="Permanent link">#</a></h3>
+<p>ruby는 시스템루비가 아닌 버전(2.5 이상)을 새로 설치하고 bundler 를 이용해서 fastlane 을 설치하는 가이드입니다.(bundler를 설치하려면 gem 이라는 ruby 라이브러리 패키지가 필요하다. 선행조건)</p>
+<h4 id="ruby">Ruby<a class="headerlink" href="#ruby" title="Permanent link">#</a></h4>
+<p>macOS를 사용하는 경우 시스템 Ruby는 권장하지 않습니다. <a href="https://www.ruby-lang.org/en/documentation/installation/#managers">시스템 환경을 변경하지 않고 Ruby를 설치하는 방법은 다양합니다</a>. macOS 및 Linux의 경우 <em>rbenv</em>는 Ruby 환경을 관리하는 가장 인기 있는 방법 중 하나입니다.</p>
+<p><em>fastlane</em>은 Ruby 버전 2.5 이상을 지원합니다. 사용 중인 Ruby 버전을 확인합니다:</p>
+<pre><code class="language-sh">$ ruby --version
+ruby 2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-darwin19]
+</code></pre>
+<h4 id="bundler">Bundler<a class="headerlink" href="#bundler" title="Permanent link">#</a></h4>
+<p><em>fastlane</em>에 대한 종속성을 정의하려면 <em>Bundler</em> 및 <code>Gemfile</code>을 사용하는 것이 좋습니다. 이렇게 하면 사용할 <em>fastlane</em> 버전과 해당 종속성이 명확하게 정의되고 <em>fastlane</em> 실행 속도도 빨라집니다.</p>
+<ul>
+<li><code>gem install bundler</code>를 실행하여 <em>Bundler</em>를 설치합니다.</li>
+<li>해당 프로젝트의 루트 디렉터리에 <code>./Gemfile</code>을 만듭니다.</li>
+</ul>
+<pre><code class="language-ruby">source &quot;https://rubygems.org&quot;
+
+gem &quot;fastlane&quot;
+</code></pre>
+<ul>
+<li><code>bundle update</code>를 실행하고 <code>./Gemfile</code>과 <code>./Gemfile.lock</code>을 버전 제어에 추가합니다.</li>
+<li><em>fastlane</em>을 실행할 때마다 <code>bundle exec fastlane [lane]</code>을 사용하십시오.</li>
+<li>CI에서 <code>bundle install</code>를 첫 번째 빌드 단계로 추가합니다.</li>
+<li><em>fastlane</em>을 업데이트하려면 <code>bundle update fastlane</code>을 실행하세요.</li>
+</ul>
+<h3 id="homebrew-macos">Homebrew (macOS)<a class="headerlink" href="#homebrew-macos" title="Permanent link">#</a></h3>
+<p>이렇게 하면 Ruby를 별도로 설치할 필요가 없으며 대신 <em>homebrew</em>가 <em>fastlane</em>에 가장 적합한 Ruby 버전을 설치합니다. 자세한 내용은 <a href="https://formulae.brew.sh/formula/fastlane">이 페이지</a>를 참조하세요.</p>
+<pre><code class="language-sh">brew install fastlane
+</code></pre>
+<h3 id="system-ruby-rubygems-macoslinuxwindows">System Ruby + RubyGems (macOS/Linux/Windows)<a class="headerlink" href="#system-ruby-rubygems-macoslinuxwindows" title="Permanent link">#</a></h3>
+<p>이것은 로컬 환경에 권장되지 않지만 시스템 Ruby 환경에 <em>fastlane</em>을 설치할 수 있습니다. <code>sudo</code>를 사용하면 나중에 파일 권한으로 인해 원치 않는 결과가 자주 발생하고 환경 관리가 더 어려워집니다.</p>
+<pre><code class="language-sh">sudo gem install fastlane
+</code></pre>
+<h3 id="fastlane">fastlane 초기화<a class="headerlink" href="#fastlane" title="Permanent link">#</a></h3>
+<pre><code>fastlane init
+</code></pre>
+<p>프로젝트 디렉토리에서 이 명령어를 실행해주면 fastlane 스크립트가 생성됩니다.</p>
+<h3 id="fastlane_1">fastlane 으로 터미널 명령어 실행하기<a class="headerlink" href="#fastlane_1" title="Permanent link">#</a></h3>
+<pre><code class="language-ruby">lane :lint_pod do
+    Action.sh(&quot;pod spec lint --verbose ../UniversalSDK.podspec&quot;)
+end
+</code></pre>
+<h3 id="framework">framework 빌드 및 배포하기<a class="headerlink" href="#framework" title="Permanent link">#</a></h3>
+<h3 id="git">git 명령어 사용하기<a class="headerlink" href="#git" title="Permanent link">#</a></h3>
+<p><a href="https://docs.fastlane.tools/getting-started/ios/setup/">fastlane docs for iOS Setup</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

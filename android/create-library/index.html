@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Create Module - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Create Module";
+        var mkdocs_page_input_path = "android/create-library.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapod-usage/">Cocoapod Usage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">JAVA/Kotlin</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gson/">Gson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../retrofit2/">Retrofit2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">SDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Create Module</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_2">앱을 포함한 라이브러리 프로젝트 생성</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">앱 모듈을 라이브러리 모듈로 변환</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Editor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-build-machine-shell/">Build Machine</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Android &raquo;</li>
+          <li>SDK &raquo;</li>
+      <li>Create Module</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">라이브러리 생성<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="_2">앱을 포함한 라이브러리 프로젝트 생성<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>프로젝트내에서 새 라이브러리 모듈 생성방식.</p>
+<ol>
+<li><strong>File &gt; New &gt; New Project</strong>을 클릭합니다.</li>
+<li><strong>Empty Activity Next &gt; 대충 설정하고 Finish</strong></li>
+<li><strong>File &gt; New &gt; New Module</strong>을 클릭합니다.</li>
+<li><strong>Create New Module</strong> 창이 표시되면 <strong>Android Library</strong>, <strong>Next</strong>를 차례로 클릭합니다.(AAR 라이브러리 기준)</li>
+<li>라이브러리에 이름을 지정하고 라이브러리의 코드를 위한 최소 SDK 버전을 선택한 후 <strong>Finish</strong>를 클릭합니다.</li>
+</ol>
+<h2 id="_3">앱 모듈을 라이브러리 모듈로 변환<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>앱없이 라이브러리 모듈만 포함한 프로젝트 생성방식.</p>
+<ol>
+<li>
+<p><strong>File &gt; New &gt; New Project</strong>을 클릭합니다.</p>
+</li>
+<li>
+<p><strong>No Activity Next &gt; 대충 설정하고 Finish</strong></p>
+</li>
+<li>
+<p>(Module: app) 의 <code>build.gradle</code> 파일을 엽니다.</p>
+</li>
+<li>
+<p><code>applicationId</code>를 지정하는 줄을 삭제합니다. Android 앱 모듈에서만 지정할 수 있습니다.</p>
+</li>
+<li>
+<p><code>apply plugin: 'com.android.application'</code></p>
+</li>
+</ol>
+<p>다음과 같이 변경합니다.</p>
+<p><code>groovy
+   apply plugin: 'com.android.library'</code></p>
+<ol>
+<li>
+<p>파일을 저장하고 <strong>File &gt; Sync Project with Gradle Files</strong>를 클릭합니다.</p>
+</li>
+<li>
+<p>app폴더안에 libs, src, build.gradle 파일들을 상위폴더로 이동합니다. 그리고 app폴더는 삭제합니다.</p>
+</li>
+</ol>
+<p><img alt="app folder" src="https://user-images.githubusercontent.com/20632507/103523136-c7563300-4ebe-11eb-9ec6-283d02558427.png" /></p>
+<p><img alt="folder delete" src="https://user-images.githubusercontent.com/20632507/103523294-fcfb1c00-4ebe-11eb-9ede-894bfd55cb9f.png" /></p>
+<ol>
+<li>settings.gradle 안에 내용을 지워줍니다. 파일을 삭제해도 상관없음</li>
+</ol>
+<p><img alt="settings" src="https://user-images.githubusercontent.com/20632507/103523316-04bac080-4ebf-11eb-9e48-eabedb1aa62d.png" /></p>
+<p><img alt="empty" src="https://user-images.githubusercontent.com/20632507/103523341-0c7a6500-4ebf-11eb-9868-4402e79bada2.png" /></p>
+<ol>
+<li>build.gradle 스크립트 수정</li>
+</ol>
+<p>```groovy
+   apply plugin: 'com.android.library'
+   apply plugin: 'kotlin-android'
+   apply plugin: 'kotlin-android-extensions'</p>
+<p>//added 꼭 추가되야함!!
+   buildscript {
+       ext.kotlin_version = '1.3.11'
+       repositories {
+           google()
+           jcenter()
+       }
+       dependencies {
+           classpath 'com.android.tools.build:gradle:3.1.2'
+           classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+       }
+   }</p>
+<p>allprojects {
+       repositories {
+           google()
+           jcenter()
+       }
+   }
+   //end</p>
+<p>android {
+       compileSdkVersion 30
+       buildToolsVersion "30.0.1"</p>
+<pre><code>   defaultConfig {
+       minSdkVersion 17
+       targetSdkVersion 30
+       versionCode 1
+       versionName "1.0"
+
+       testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+   }
+
+   buildTypes {
+       release {
+           minifyEnabled false
+           proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+       }
+   }
+</code></pre>
+<p>}</p>
+<p>dependencies {
+       implementation  "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"</p>
+<p>}
+   ```</p>
+<ol>
+<li>
+<p>여기까지 저장하고 <strong>Sync Project with Gradle Files</strong> 했을때 에러가 난다면 gradle-wrapper.properties 에 gradle 버전과 build gradle 버전이 맞는지 여부를 확인해봐야 합니다. 이것은 코틀린 버전과도 연관이 있을 수 있습니다.</p>
+</li>
+<li>
+<p>최종 프로젝트 뷰</p>
+<p><img alt="project view" src="https://user-images.githubusercontent.com/20632507/103524364-cc1be680-4ec0-11eb-8b6d-96fa6485dcb9.png" /></p>
+</li>
+<li>
+<p>최종 프로젝트 파일뷰</p>
+<p><img alt="file view" src="https://user-images.githubusercontent.com/20632507/103524374-d1793100-4ec0-11eb-9d13-239d19357679.png" /></p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../android-onestore-billing-usage/" class="btn btn-neutral float-left" title="OneStoreBilling"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../maven-deploy/" class="btn btn-neutral float-right" title="Maven">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../android-onestore-billing-usage/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../maven-deploy/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

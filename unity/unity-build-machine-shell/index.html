@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Build Machine - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Build Machine";
+        var mkdocs_page_input_path = "unity/unity-build-machine-shell.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapod-usage/">Cocoapod Usage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">JAVA/Kotlin</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/gson/">Gson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/retrofit2/">Retrofit2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/create-library/">Create Module</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Editor</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Build Machine</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#_2">빌드 파라미터를 받을 수 있게 구성에서 매개변수 설정</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#shell-script">shell script 로 유니티 함수 호출</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_3">유니티 함수내에서 파라미터 파싱</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../android/gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Unity &raquo;</li>
+          <li>Editor &raquo;</li>
+      <li>Build Machine</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="_1">유니티 빌드머신<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<p>젠킨스에서 유니티빌드함수 호출시 파라미터 넘기기</p>
+<h2 id="_2">빌드 파라미터를 받을 수 있게 구성에서 매개변수 설정<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p><img alt="jenkins" src="https://user-images.githubusercontent.com/20632507/148345487-79015afc-4bfc-4348-9230-73fb43a16711.png" /></p>
+<h2 id="shell-script">shell script 로 유니티 함수 호출<a class="headerlink" href="#shell-script" title="Permanent link">#</a></h2>
+<pre><code class="language-shell">-quit -batchmode -buildTarget Android -executeMethod BuildMenu.Buildmachine_TEST -server ${server} -store ${store}
+</code></pre>
+<h2 id="_3">유니티 함수내에서 파라미터 파싱<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<pre><code>using UnityEngine;
+using UnityEditor;
+using System;
+using System.Collections.Generic;
+
+public class BuildMenu : ScriptableObject
+{
+    static string[] SCENES = FindEnabledEditorScenes();
+
+    private static string[] FindEnabledEditorScenes()
+    {
+        List&lt;string&gt; EditorScenes = new List&lt;string&gt;();
+
+        foreach (EditorBuildSettingsScene scene in EditorBuildSettings.scenes)
+        {
+            if (!scene.enabled) continue;
+            EditorScenes.Add(scene.path);
+        }
+
+        return EditorScenes.ToArray();
+    }
+
+    static string GetBuildServer()
+    {
+        string[] args = System.Environment.GetCommandLineArgs();
+        string buildid = &quot;server&quot;;
+        for (int i = 0; i &lt; args.Length - 1; i++)
+        {
+            if (&quot;-server&quot; == args[i])
+            {
+                buildid = args[i + 1];
+                break;
+            }
+        }
+
+        return buildid;
+    }
+
+    static string GetBuildStore()
+    {
+        string[] args = System.Environment.GetCommandLineArgs();
+        string buildid = &quot;store&quot;;
+        for (int i = 0; i &lt; args.Length - 1; i++)
+        {
+            if (&quot;-store&quot; == args[i])
+            {
+                buildid = args[i + 1];
+                break;
+            }
+        }
+
+        return buildid;
+    }
+
+    static string GetAndroidOutputFile()
+    {
+        string output = string.Format(&quot;{0}/{1}_{2}.apk&quot;, &quot;AndroidBuild&quot;,
+                                                     GetBuildStore(),
+                                                     GetBuildServer());
+        return output;
+    }
+
+    [UnityEditor.MenuItem(&quot;BuildMenu/TEST&quot;, false, 3001)]
+    static void Buildmachine_TEST()
+    {        
+        PrepareAndroidBuild(&quot;com.test.app&quot;);
+        PerformAndroidBuild(GetAndroidOutputFile(), &quot;&quot;, false);
+    }
+
+    static void PrepareAndroidBuild(string bundleID)
+    {
+        PlayerSettings.Android.keystoreName = &quot;user.keystore&quot;;
+        PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, bundleID);
+        PlayerSettings.Android.keyaliasName = &quot;&quot;;
+        PlayerSettings.keystorePass = &quot;&quot;;
+        PlayerSettings.keyaliasPass = &quot;&quot;;
+        PlayerSettings.bundleVersion = &quot;&quot;;
+        PlayerSettings.Android.bundleVersionCode = 20;
+    }
+
+    static string PerformAndroidBuild(string output, string define, bool isDev)
+    {
+        PlayerSettings.SetScriptingDefineSymbolsForGroup(BuildTargetGroup.Android, define);
+
+        BuildPipeline.BuildPlayer(SCENES, output, BuildTarget.Android, isDev ? BuildOptions.AutoRunPlayer : BuildOptions.None);
+        return output;
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../android/jcenter/" class="btn btn-neutral float-left" title="Jcenter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gradle-version-manage/" class="btn btn-neutral float-right" title="Gradle">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../android/jcenter/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../gradle-version-manage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Retrofit2 - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Retrofit2";
+        var mkdocs_page_input_path = "android/retrofit2.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapod-usage/">Cocoapod Usage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">JAVA/Kotlin</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gson/">Gson</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Retrofit2</a>
+    <ul class="current">
+    </ul>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../create-library/">Create Module</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Editor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-build-machine-shell/">Build Machine</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Android &raquo;</li>
+          <li>JAVA/Kotlin &raquo;</li>
+      <li>Retrofit2</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <blockquote>
+<p>기본적인 정보들은 구글링했을때 워낙 정보가 많기때문에 생략하겠습니다.</p>
+<p>레트로핏의 기본적인 예제를 해봤다는 가정하에 만든 문서입니다.</p>
+</blockquote>
+<h3 id="get-api">Get API 정의하기<a class="headerlink" href="#get-api" title="Permanent link">#</a></h3>
+<pre><code class="language-java">public class RespServerTime {
+
+    public final String utc;
+    public final long unix;
+
+    public RespServerTime(String utc, long unix) {
+        this.utc = utc;
+        this.unix = unix;
+    }
+}
+</code></pre>
+<pre><code>@GET(&quot;/api/serverTime&quot;)
+Call&lt;RespServerTime&gt; getServerTime();
+</code></pre>
+<pre><code>https://baseURL.co.kr/api/serverTime
+</code></pre>
+<p>기본적인 get 방식이며 interface 를 위와 같이 구성했을시 호출되는 URL 입니다.</p>
+<p>리턴값에 해당클래스로 정의하면 성공 리턴시 별도 파싱없이 캐스팅해서 사용할 수 있습니다.</p>
+<hr />
+<h3 id="baseurl-full-url-get-api">BaseURL 없이 FULL URL 로 Get API 호출하기<a class="headerlink" href="#baseurl-full-url-get-api" title="Permanent link">#</a></h3>
+<pre><code class="language-java">public class RespAppGeo {
+
+    public final String status;
+    public final String country;
+    public final String countryCode;
+    public final String region;
+    public final String regionName;
+    public final String city;
+    public final String timezone;
+    public final String query;
+
+    public RespAppGeo(String status, String country, String countryCode, String region,
+                      String regionName, String city, String timezone, String query) {
+
+        this.status = status;
+        this.country = country;
+        this.countryCode = countryCode;
+        this.region = region;
+        this.regionName = regionName;
+        this.city = city;
+        this.timezone = timezone;
+        this.query = query;
+    }
+
+    public String toString() {
+        return &quot;RespAppGeo{&quot; +
+                &quot;status='&quot; + status + '\'' +
+                &quot;, country='&quot; + country + '\'' +
+                &quot;, countryCode='&quot; + countryCode + '\'' +
+                &quot;, region='&quot; + region + '\'' +
+                &quot;, regionName='&quot; + regionName +
+                &quot;, city='&quot; + city + '\'' +
+                &quot;, timezone='&quot; + timezone + '\'' +
+                &quot;, query='&quot; + query + '\'' +
+                '}';
+    }
+}
+</code></pre>
+<pre><code>@GET
+Call&lt;RespAppGeo&gt; getGeoAPI(@Url String url);
+</code></pre>
+<pre><code>http://ip-api.com/json
+</code></pre>
+<p>API 호출시 위와 같이 Full URL 을 넣어주면 됩니다. 따로 BaseURL 영향을 받지 않고 호출하고 싶을때 사용하면 좋습니다.</p>
+<hr />
+<h3 id="post-api">POST API 정의하기<a class="headerlink" href="#post-api" title="Permanent link">#</a></h3>
+<pre><code class="language-java">public class ReqAppInfo {
+
+    @SerializedName(&quot;table&quot;)
+    @Expose
+    public String table;
+
+    @SerializedName(&quot;data&quot;)
+    @Expose
+    public AppData data = new AppData();
+
+    public class AppData {
+
+        @SerializedName(&quot;projectId&quot;)
+        @Expose
+        public int projectId;
+
+        @SerializedName(&quot;appPackage&quot;)
+        @Expose
+        public String appPackage;
+    }
+}
+</code></pre>
+<pre><code class="language-java">public class RespAppInfo {    
+
+    @SerializedName(&quot;AppLanguage&quot;)
+    @Expose
+    public String AppLanguage;    
+
+    @SerializedName(&quot;AppAuthKey_Google&quot;)
+    @Expose
+    public String AppAuthKey_Google;
+
+    @SerializedName(&quot;AppAuthKey_Facebook&quot;)
+    @Expose
+    public String AppAuthKey_Facebook;
+
+    @SerializedName(&quot;AppAuthKey_Apple&quot;)
+    @Expose
+    public String AppAuthKey_Apple;
+
+}
+</code></pre>
+<pre><code>@POST(&quot;/api/Info&quot;)
+Call&lt;RespAppInfo&gt; postAppInfo(@Query(&quot;t&quot;) long time, @Query(&quot;sign&quot;) String sign,
+                             @Body ReqAppInfo data);
+</code></pre>
+<pre><code>https://baseURL.co.kr/api/Info?t={0}&amp;sign={1}
+</code></pre>
+<p>기본적인 post 방식이며 interface 를 위와 같이 구성했을시 호출되는 URL 입니다.</p>
+<p>마찬가지로 리턴값에 Resp클래스나 JsonObject로 정의하면 성공 리턴시 파싱없이 캐스팅해서 사용할 수 도 있고</p>
+<p>JsonObject 같은 경우에는 Gson 으로 파싱할 수 있습니다.</p>
+<hr />
+<h3 id="retrofitclient">RetrofitClient 구현부<a class="headerlink" href="#retrofitclient" title="Permanent link">#</a></h3>
+<pre><code class="language-java">public class RetrofitClient {
+
+    public RetrofitApiService apiService;
+    private static Retrofit retrofit;
+
+
+    private static class SingletonHolder {
+        private static RetrofitClient INSTANCE = new RetrofitClient(RetrofitUtils.API_SERVER_Base_URL);
+    }
+
+    public static RetrofitClient get() {
+        return SingletonHolder.INSTANCE;
+    }
+
+    public RetrofitClient(@NonNull final String apiBaseUrl) {
+        retrofit = new Retrofit.Builder()
+                .baseUrl(apiBaseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(RetrofitUtils.getUnsafeOkHttpClient().build())
+                .build();
+
+        apiService = create(RetrofitApiService.class);
+    }
+
+    /**
+     * create you ApiService
+     * Create an implementation of the API endpoints defined by the {@code service} interface.
+     */
+    private  &lt;T&gt; T create(final Class&lt;T&gt; service) {
+        if(service == null) {
+            throw new RuntimeException(&quot;Api service is null&quot;);
+        }
+        return retrofit.create(service);
+    }    
+}
+</code></pre>
+<h3 id="retrofitclient_1">RetrofitClient 사용하기<a class="headerlink" href="#retrofitclient_1" title="Permanent link">#</a></h3>
+<pre><code class="language-java">Call&lt;RespServerTime&gt; getServerTime = RetrofitClient.get().apiService.getServerTime();
+getServerTime.enqueue(new Callback&lt;RespServerTime&gt;() {
+    @Override
+    public void onResponse(@NotNull Call&lt;RespServerTime&gt; call,
+                            @NotNull Response&lt;RespServerTime&gt; response) {
+        RespServerTime respData = response.body();        
+    }
+
+    @Override
+    public void onFailure(@NotNull Call&lt;RespServerTime&gt; call, @NotNull Throwable t) {
+
+    }
+});
+</code></pre>
+<blockquote>
+<p><a href="https://github.com/james-chun-dev/retrofitExample">retrofitExample 보러가기</a></p>
+</blockquote>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../gson/" class="btn btn-neutral float-left" title="Gson"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../acra-usage/" class="btn btn-neutral float-right" title="ACRA">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../gson/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../acra-usage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

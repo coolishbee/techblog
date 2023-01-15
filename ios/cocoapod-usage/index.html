@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Cocoapod Usage - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Cocoapod Usage";
+        var mkdocs_page_input_path = "ios/cocoapod-usage.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">SDK</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Cocoapod Usage</a>
+    <ul class="current">
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">JAVA/Kotlin</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/gson/">Gson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/retrofit2/">Retrofit2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/create-library/">Create Module</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Editor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-build-machine-shell/">Build Machine</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../android/gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>iOS &raquo;</li>
+          <li>SDK &raquo;</li>
+      <li>Cocoapod Usage</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="cocoapod">Cocoapod 설치<a class="headerlink" href="#cocoapod" title="Permanent link">#</a></h2>
+<p>macOS 에는 Ruby 가 기본 내장되어 있다. 다음 명령어면 설치가 완료된다.</p>
+<pre><code>$ sudo gem install cocoapods
+</code></pre>
+<h2 id="cocoapod_1">Cocoapod 명령어<a class="headerlink" href="#cocoapod_1" title="Permanent link">#</a></h2>
+<h3 id="pod-init">pod init<a class="headerlink" href="#pod-init" title="Permanent link">#</a></h3>
+<p>새로운 pod 파일을 생성해준다.</p>
+<pre><code>$ pod init
+</code></pre>
+<h3 id="pod-install">pod install<a class="headerlink" href="#pod-install" title="Permanent link">#</a></h3>
+<p>pod을 프로젝트에 세팅하기 위하여 맨 처음에 사용됩니다. 하지만 Podfile의 pod을 <strong>추가, 수정, 삭제</strong>할 때에도 사용됩니다.</p>
+<p><code>pod install</code> 명령어를 실행하면 <strong>새로운 pod을 다운받고 설치</strong>합니다. 그리고 각 pod 마다 설치된 버전을 <strong>Podfile.lock</strong> 에 기록해 놓습니다. Podfile.lock은 설치된 pod들의 버전을 계속 추적하여 기록해놓고 유지시키는 역할을 합니다.</p>
+<p><code>pod install</code> 을 실행하면,</p>
+<p>Podfile.lock에 리스트된 팟들에 대해선 지정된 버전만 다운받습니다. 새로운 버전이 존재하는지 체크하지 않는 것이죠!</p>
+<p>Podfile.lock에 리스트되지 않은 팟들은 Podfile에 명시된 버전 조건으로 검색하여 다운로드 받습니다. (ex. pod 'MyPod', '~&gt;1.2')</p>
+<pre><code>$ pod install
+</code></pre>
+<h3 id="pod-update">pod update<a class="headerlink" href="#pod-update" title="Permanent link">#</a></h3>
+<p><code>pod update {팟이름}</code> 을 실행시키면, 코코아팟은 해당 팟의 업데이트된 버전이 있는지 검색합니다. </p>
+<p>Podfile.lock을 참조하지 않죠. 이 명령어는 팟을 <strong>최신 버전으로 업데이트</strong> 시켜주는 것입니다. (단, Podfile의 버전 조건과 일치해야 합니다.) </p>
+<p>단순하게 <code>pod update</code> 만 실행시키면 코코아팟은 모든 팟에 대해 가능한 최신 버전으로 업데이트를 실행합니다.</p>
+<pre><code>$ pod update
+</code></pre>
+<h3 id="pod-outdated">pod outdated<a class="headerlink" href="#pod-outdated" title="Permanent link">#</a></h3>
+<p>pod outdated 를 실행하면, 코코아팟은 Podfile.lock에 리스트된 것보다 새로운 버전을 가진 모든 팟을 나열합니다. </p>
+<p>이 팟들에 대해 pod update {팟이름} 을 실행한다면 업데이트가 될 것이라는 것을 의미합니다. (역시나 Podfile의 버전 조건과 부합하는 한!)</p>
+<h3 id="pod-repo-update">pod repo update<a class="headerlink" href="#pod-repo-update" title="Permanent link">#</a></h3>
+<p><code>/Users/{사용자이름}/.cocoapods/repos</code> 에 있는 모든 podspec 파일을 업데이트 합니다. podspec 파일에는 해당 pod 의 주소 등 중요한 정보들이 담겨있습니다.</p>
+<pre><code>spec.source = { :git =&gt; 'https://github.com/Alamofire/Alamofire.git', :tag =&gt; 'v3.1.1' }
+</code></pre>
+<p><code>~/.cocoapods/repos</code> 에는 모든 pod에 대해 가능한 버전들의 <code>podspec</code> 파일들이 모여있습니다. <code>pod repo update</code> 를 실행하게 되면 최신 <code>podspec</code> 파일들로 업데이트되게 되는 것입니다. 추가한 라이브러리에 대한 <code>podspec</code> 이 업데이트되지 않아 오류가 날 경우 이 명령어를 통하여 해결할 수 있습니다.</p>
+<h3 id="pod-repo-list">pod repo list<a class="headerlink" href="#pod-repo-list" title="Permanent link">#</a></h3>
+<p>pod repo 리스트를 출력해줍니다.</p>
+<pre><code>$ pod repo list
+</code></pre>
+<h3 id="pod-repo-remove">pod repo remove<a class="headerlink" href="#pod-repo-remove" title="Permanent link">#</a></h3>
+<p>특정 repo(private) 를 삭제합니다.</p>
+<pre><code>$ pod repo remove sdk_name
+</code></pre>
+<h3 id="pod-spec-lint">pod spec lint<a class="headerlink" href="#pod-spec-lint" title="Permanent link">#</a></h3>
+<p>podspec 정보에 대한 유효성을 검사합니다. (xcode 빌드가 이루어짐)</p>
+<pre><code>$ pod spec lint --verbose UniversalSDK.podspec
+</code></pre>
+<h3 id="pod-repo-push">pod repo push<a class="headerlink" href="#pod-repo-push" title="Permanent link">#</a></h3>
+<p><strong>pod spec lint</strong> 에 성공했을 경우에만 사용가능하다.</p>
+<p>로컬에 pod repo 를 push 해주고 동시에 private spec git 저장소에도 push 한다.</p>
+<pre><code>$ pod repo push [폴더명] UniversalSDK.podspec
+</code></pre>
+<h3 id="pod-repo-add">pod repo add<a class="headerlink" href="#pod-repo-add" title="Permanent link">#</a></h3>
+<p>private repo 를 팀 동료에게 제공시 즉, 다른 mac 에서 private repo 를 접근시 사용해야 한다.</p>
+<p>private spec repo 를 git 을 통해 내려받는다.</p>
+<pre><code>$ pod repo add [폴더명] https://github.com/jameschun7/specs.git
+</code></pre>
+<h3 id="cocoapods">cocoapods 모든 파일 삭제<a class="headerlink" href="#cocoapods" title="Permanent link">#</a></h3>
+<pre><code>$ rm -rf ~/.cocoapods
+</code></pre>
+<h3 id="_1">삭제후 초기화<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<pre><code>$ pod setup
+</code></pre>
+<h2 id="podfiles">Podfiles 파일 설정<a class="headerlink" href="#podfiles" title="Permanent link">#</a></h2>
+<p>Podfiles는 CocoaPods의 설정 파일이다. <code>pod init</code>을 통해서 파일을 생성할 수 있다.</p>
+<pre><code>source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '9.0'
+
+target 'SampleSDK' do
+    project 'SampleSDK/SampleSDK.xcodeproj'
+    pod 'AFNetworking', '~&gt; 3.0'
+end
+</code></pre>
+<ul>
+<li>pod: 사용하는 오픈소스 라이브러리 이름. 특정 버전, 브랜치, 경로, 저장소, 특정 커밋, 특정spec URL 등으로 원하는 시점의 소스 코드를 정의할 수 있다.</li>
+<li>target: 프로젝트의 특정 타겟에서만 반영되는 추가 설정. 주로 테스트 타겟의 경우에 테스트용 라이브러리 설정에 사용된다.</li>
+<li>xcodeproj: 프로젝트 이름과 워크스페이스 이름이 다른 경우 설정 옵션.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../app-with-framework/" class="btn btn-neutral float-left" title="Create Framework"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cocoapods-private/" class="btn btn-neutral float-right" title="Cocoapod Private">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../app-with-framework/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cocoapods-private/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

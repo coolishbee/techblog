@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Gson - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Gson";
+        var mkdocs_page_input_path = "android/gson.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapod-usage/">Cocoapod Usage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">JAVA/Kotlin</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Gson</a>
+    <ul class="current">
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../retrofit2/">Retrofit2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../create-library/">Create Module</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Editor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-build-machine-shell/">Build Machine</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Android &raquo;</li>
+          <li>JAVA/Kotlin &raquo;</li>
+      <li>Gson</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p>안드로이드에서 서버와 통신함에 있어서 Json 포맷이 필수적으로 활용되기때문에 Gson 사용법을 정리하게 되었다.
+사실 서버에서 json 규격에 맞게 데이터를 정상적으로 준다면 더 아름답게 캐스팅이 가능하지 이렇게 파싱할 일이 거이 없을 것이다.
+혹시라도 만약 이렇게 list(배열)을 배열로 안주고 "" string 으로 준다면 이 방법을 권합니다.</p>
+<hr />
+<h3 id="json-data">json data<a class="headerlink" href="#json-data" title="Permanent link">#</a></h3>
+<pre><code class="language-json">{
+   &quot;statusCode&quot;:200,
+   &quot;list&quot;:&quot;[
+      {
+         &quot;IBNSeq&quot;:4,
+         &quot;AppId&quot;:200301,
+         &quot;StoreList&quot;:&quot;Google/Galaxy&quot;,
+         &quot;Sort&quot;:0,
+         &quot;IsDel&quot;:false,
+         &quot;LangList&quot;:[
+            {
+               &quot;Language&quot;:23,
+               &quot;Title&quot;:&quot;afewewf&quot;,
+               &quot;Contents&quot;:&quot;ewafaewf&quot;,
+               &quot;Images&quot;:&quot;https://cdn.amazon.com/200301/202008/P20080703481350230.jpg&quot;,
+               &quot;Link&quot;:&quot;awfefewewa&quot;
+            },
+            {
+               &quot;Language&quot;:10,
+               &quot;Title&quot;:&quot;ewafwef&quot;,
+               &quot;Contents&quot;:&quot;aewfaewf&quot;,
+               &quot;Images&quot;:&quot;https://cdn.amazon.com/200301/202008/P20080703482725303.jpg&quot;,
+               &quot;Link&quot;:&quot;wafewefa&quot;
+            }
+         ],
+         &quot;StartDate&quot;:&quot;2020-07-16T06:00:00&quot;,
+         &quot;EndDate&quot;:&quot;2020-11-05T06:55:00&quot;,
+         &quot;RegDate&quot;:&quot;2020-10-13T16:44:43.463&quot;
+      },
+      {
+         &quot;IBNSeq&quot;:3,
+         &quot;AppId&quot;:200301,
+         &quot;StoreList&quot;:&quot;Google/IOS&quot;,
+         &quot;Sort&quot;:1,
+         &quot;IsDel&quot;:false,
+         &quot;LangList&quot;:[
+            {
+               &quot;Language&quot;:23,
+               &quot;Title&quot;:&quot;test&quot;,
+               &quot;Contents&quot;:&quot;tesestagaew&quot;,
+               &quot;Images&quot;:&quot;https://cdn.amazon.com/200301/202008/P20080703484426532.jpg&quot;,
+               &quot;Link&quot;:&quot;urlurlurl&quot;
+            },
+            {
+               &quot;Language&quot;:10,
+               &quot;Title&quot;:&quot;fewa&quot;,
+               &quot;Contents&quot;:&quot;eafw&quot;,
+               &quot;Images&quot;:&quot;https://cdn.amazon.com/200301/202008/P20080703484933609.jpg&quot;,
+               &quot;Link&quot;:&quot;urlurlurlurl&quot;
+            }
+         ],
+         &quot;StartDate&quot;:&quot;2020-07-23T06:00:00&quot;,
+         &quot;EndDate&quot;:&quot;2020-11-29T06:15:00&quot;,
+         &quot;RegDate&quot;:&quot;2020-10-13T16:45:00.463&quot;
+      }
+   ]&quot;
+}
+</code></pre>
+<hr />
+<h3 id="_1">클래스 구조<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<pre><code class="language-java">public class RespAppImageBanner {
+
+    @SerializedName(&quot;IBNSeq&quot;)
+    @Expose
+    public int IBNSeq;
+
+    @SerializedName(&quot;AppId&quot;)
+    @Expose
+    public int AppId;
+
+    @SerializedName(&quot;StoreList&quot;)
+    @Expose
+    public String StoreList;
+
+    @SerializedName(&quot;Sort&quot;)
+    @Expose
+    public int Sort;
+
+    @SerializedName(&quot;IsDel&quot;)
+    @Expose
+    public boolean IsDel;
+
+    @SerializedName(&quot;StartDate&quot;)
+    @Expose
+    public String StartDate;
+
+    @SerializedName(&quot;EndDate&quot;)
+    @Expose
+    public String EndDate;
+
+    @SerializedName(&quot;RegDate&quot;)
+    @Expose
+    public String RegDate;
+
+    @SerializedName(&quot;LangList&quot;)
+    @Expose
+    public LangList list = new LangList();
+
+    public class LangList {
+        @SerializedName(&quot;Language&quot;)
+        @Expose
+        public String Language;
+
+        @SerializedName(&quot;Title&quot;)
+        @Expose
+        public String Title;
+
+        @SerializedName(&quot;Contents&quot;)
+        @Expose
+        public String Contents;
+
+        @SerializedName(&quot;Images&quot;)
+        @Expose
+        public String Images;
+
+        @SerializedName(&quot;Link&quot;)
+        @Expose
+        public String Link;
+    }
+}
+</code></pre>
+<h3 id="_2">파싱하기<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<pre><code class="language-java">// response.body().toString() 이 jsonData
+Gson gson = new Gson();
+JsonObject info = gson.fromJson(response.body().toString(), JsonObject.class);
+JsonArray listArray = gson.fromJson(info.get(&quot;list&quot;).getAsString(), JsonArray.class);
+
+ArrayList&lt;String&gt; arrayList = new ArrayList&lt;String&gt;();
+for(int i=0; i&lt;listArray.size(); i++)
+{
+    JsonObject jsonObject = gson.fromJson(listArray.get(i).toString(), JsonObject.class);
+    JsonArray langArray = gson.fromJson(
+            jsonObject.get(&quot;LangList&quot;).getAsJsonArray(),
+            JsonArray.class);
+
+    Type listType = new TypeToken&lt;List&lt;RespAppImageBanner.LangList&gt;&gt;(){}.getType();
+    List&lt;RespAppImageBanner.LangList&gt; langList = gson.fromJson(langArray.toString(), listType);
+    for (int j=0; j&lt;langList.size(); j++)
+    {
+        Log.d(&quot;http&quot;, langList.get(i).Contents);
+        Log.d(&quot;http&quot;, langList.get(i).Images);
+        Log.d(&quot;http&quot;, langList.get(i).Link);
+        Log.d(&quot;http&quot;, langList.get(i).Title);
+        Log.d(&quot;http&quot;, langList.get(i).Language);
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../android-package-refactor/" class="btn btn-neutral float-left" title="PackagenameRefactor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../retrofit2/" class="btn btn-neutral float-right" title="Retrofit2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../android-package-refactor/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../retrofit2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

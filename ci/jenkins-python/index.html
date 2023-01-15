@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Jenkins python - Tech Blog</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Jenkins python";
+        var mkdocs_page_input_path = "ci/jenkins-python.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Tech Blog
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">News</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Go</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/go-google-api-usage/">Google API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../go/golang-develop-env/">Develop Env</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">iOS</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Objective-C/Swift</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/afnetworking-usage/">AfNetworking</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-inapp-purchase-usage/">InAppPurchase</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/app-with-framework/">Create Framework</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapod-usage/">Cocoapod Usage</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-private/">Cocoapod Private</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/cocoapods-public/">Cocoapod Public</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios_exclude_simulator_architecture/">Exclude Architecture</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/ios-serviceID-setting/">ServiceID Setting</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../ios/use_frameworks_definition/">Framework Definition</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Android</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">JAVA/Kotlin</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-appleLogin/">AppleLogin</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-package-refactor/">PackagenameRefactor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/gson/">Gson</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/retrofit2/">Retrofit2</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">SDK</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/acra-usage/">ACRA</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-google-billing-usage/">GoogleBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/android-onestore-billing-usage/">OneStoreBilling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/create-library/">Create Module</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Gradle</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/maven-deploy/">Maven</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../android/jcenter/">Jcenter</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Unity</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Editor</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-build-machine-shell/">Build Machine</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Android</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/gradle-version-manage/">Gradle</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity2017-androidx-use/">AndroidX Use</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">iOS</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity_xcode_AddInAppPurchase/">Capability</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../unity/unity-ios-application-override/">Application Override</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Docker</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../docker/docker-build-deploy/">Build Deploy</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Shell</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../android/gpg-usage/">GPG Key</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Tech Blog</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Jenkins python</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="python-usage-in-jenkins">Python usage in Jenkins<a class="headerlink" href="#python-usage-in-jenkins" title="Permanent link">#</a></h2>
+<p>개발사와 퍼블리싱 사업부간에 협업 리소스 비용을 줄이기 위한 기능들 개발.</p>
+<h3 id="_1">이미지 배너 교체<a class="headerlink" href="#_1" title="Permanent link">#</a></h3>
+<ul>
+<li>이미지 파일명 입력받기</li>
+<li>cdn과 연결된 ftp에 입력된 이미지 파일 탐색</li>
+<li>제공된 개발사 API에 cdn url 파라미터로 요청</li>
+<li>API 응답에 따라 슬랙 API 호출</li>
+</ul>
+<h4 id="_2">젠킨스 파라미터 설정<a class="headerlink" href="#_2" title="Permanent link">#</a></h4>
+<p><img alt="img-banner" src="https://user-images.githubusercontent.com/20632507/189065003-7a076188-9748-4a1a-aeb9-f15905a4c007.png" /></p>
+<h4 id="_3">젠킨스 쉘스크립트<a class="headerlink" href="#_3" title="Permanent link">#</a></h4>
+<pre><code>#!/usr/bin/env python3
+import sys
+from ftplib import FTP
+import os
+import warnings
+import urllib3
+import json
+
+filename = os.environ['FILENAME']
+warnings.filterwarnings(action='ignore')
+
+ftp_host = 'ftp-host'
+ftp_user = 'user'
+ftp_passwd = 'pwd'
+ftp_dir = 'dir'
+
+api_host = 'http://apiurl'
+api_key = 'api-key'
+api_type = 'ChangePopUpImg'
+color = {'SUCCESS': '#1AF952', 'FAILED': '#F91A1A'}
+
+slack_url = 'https://hooks.slack.com/services/key'
+
+ftp = FTP(host=ftp_host)
+ftp.login(user=ftp_user, passwd=ftp_passwd)
+
+# 파일리스트 구하기
+def get_ftp_file_list(dir):
+   ftp.cwd(dir)
+   ftp_file_list = []
+   file_list = []
+
+   try:
+      ftp.dir(ftp_file_list.append)
+      for ftp_file in ftp_file_list[2:]:
+         file = ftp_file.split()
+         file_list.append(file[8])
+   except:
+      print('FTP 디렉터리가 존재하지 않습니다.')
+      sys.exit(1)
+
+   return file_list
+
+# API로 배너 파일명 업데이트 하기
+def update_banner_name(filename, file_list):
+
+    if filename in file_list:
+        http = urllib3.PoolManager()
+        cdn_url = f'https://cdn.co.kr/{ftp_dir}/{filename}'
+        api_url = f'{api_host}?Key={api_key}&amp;Type={api_type}&amp;ImgUrl={cdn_url}'
+        print(api_url)
+        response = http.request('GET', api_url)
+        retMsg = response.data.decode(&quot;utf-8&quot;)
+        if response.status == 200:
+            send_slack_webhook_msg(gen_slack_message(color['SUCCESS'], '[API Schedule] 이미지 배너교체', retMsg))
+        else:
+            send_slack_webhook_msg(gen_slack_message(color['FAILED'], '[API Schedule] 이미지 배너교체', retMsg))
+            print(retMsg)
+            sys.exit(1)
+    else:
+        send_slack_webhook_msg(gen_slack_message(color['FAILED'], '[API Schedule] 이미지 배너교체', 'FTP 서버에 파일이 없습니다'))
+        print('FTP 서버에 파일이 없습니다.')
+        sys.exit(1)
+
+# 슬랙 API 설정
+def gen_slack_message(type, title, text):
+        body, body_channel, body_attachments = {}, {}, {}
+        body['attachments'] = []
+        body_attachments[&quot;color&quot;] = type
+        body_attachments[&quot;pretext&quot;] = title
+        body_attachments[&quot;text&quot;] = text
+        body['attachments'].append(body_channel)
+        body['attachments'].append(body_attachments)
+        return json.dumps(body).encode('utf-8')
+
+# 슬랙 API Request
+def send_slack_webhook_msg(req_body):    
+    req_headers = {'Content-Type': 'application/json; charset=UTF-8'}
+    http = urllib3.PoolManager()
+    req = http.request('POST', slack_url, headers=req_headers, body=req_body)
+    result = req.data.decode('utf-8')
+    return result
+
+
+file_list = get_ftp_file_list(ftp_dir)
+update_banner_name(filename, file_list)
+</code></pre>
+<h4 id="_4">슬랙메시지 알람 연동<a class="headerlink" href="#_4" title="Permanent link">#</a></h4>
+<p><img alt="slack-msg" src="https://user-images.githubusercontent.com/20632507/190053902-dca73d9c-97c4-4edf-8224-e5057a6ad7e5.png" /></p>
+<h3 id="_5">게임서버 점검<a class="headerlink" href="#_5" title="Permanent link">#</a></h3>
+<ul>
+<li>점검메시지 입력받기</li>
+<li>제공된 개발사 API에 점검메시지 및 약속된 파라미터 값으로 요청</li>
+<li>API 응답에 따라 슬랙 API 호출</li>
+</ul>
+<h4 id="_6">젠킨스 파라미터 설정<a class="headerlink" href="#_6" title="Permanent link">#</a></h4>
+<p><img alt="maintenance" src="https://user-images.githubusercontent.com/20632507/189065057-e89d4293-07ce-468d-accf-43e94771e2fe.png" /></p>
+<h4 id="_7">젠킨스 쉘스크립트<a class="headerlink" href="#_7" title="Permanent link">#</a></h4>
+<pre><code>#!/usr/bin/env python3
+import os
+import warnings
+import urllib3
+import json
+
+warnings.filterwarnings(action='ignore')
+
+notice = os.environ['notice']
+
+api_host = 'http://apiurl'
+api_key = 'api-key'
+api_type = 'Maintenance'
+status = {'OPEN': 0, 'CLOSE': 1}
+
+color = {'SUCCESS': '#1AF952', 'FAILED': '#F91A1A'}
+slack_url = 'https://hooks.slack.com/services/key'
+
+# 서버점검 API 호출
+def update_Maintenance(notice_text):
+    http = urllib3.PoolManager()
+    api_url = f'{api_host}?Key={api_key}&amp;Type={api_type}&amp;Status={status[&quot;CLOSE&quot;]}&amp;Message={notice_text}'
+    print(api_url)
+    response = http.request('GET', api_url)
+    retMsg = response.data.decode(&quot;utf-8&quot;)
+    if response.status == 200:
+        send_slack_webhook_msg(gen_slack_message(color['SUCCESS'], '[API Schedule] 서버 점검', retMsg))
+    else:
+        send_slack_webhook_msg(gen_slack_message(color['FAILED'], '[API Schedule] 서버 점검', retMsg))
+
+# 슬랙 API 설정
+def gen_slack_message(type, title, text):
+        body, body_channel, body_attachments = {}, {}, {}
+        body['attachments'] = []
+        body_attachments[&quot;color&quot;] = type
+        body_attachments[&quot;pretext&quot;] = title
+        body_attachments[&quot;text&quot;] = text
+        body['attachments'].append(body_channel)
+        body['attachments'].append(body_attachments)
+        return json.dumps(body).encode('utf-8')
+
+# 슬랙 API Request
+def send_slack_webhook_msg(req_body):    
+    req_headers = {'Content-Type': 'application/json; charset=UTF-8'}
+    http = urllib3.PoolManager()
+    req = http.request('POST', slack_url, headers=req_headers, body=req_body)
+    result = req.data.decode('utf-8')
+    return result
+
+update_Maintenance(notice)
+</code></pre>
+<h4 id="_8">슬랙메시지 알람 연동<a class="headerlink" href="#_8" title="Permanent link">#</a></h4>
+<p><img alt="slack-msg" src="https://user-images.githubusercontent.com/20632507/190053924-8d3d5dea-17fa-4204-b399-1417c40f73c8.png" /></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
