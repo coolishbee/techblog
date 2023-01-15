@@ -1,14 +1,49 @@
 site_name: Tech Blog
 nav:
-    - Home: index.md
+    - News: index.md
     - About: about.md
-    - Unity SDK:
+    - Go:
+        - Google API: go/go-google-api-usage.md
+        - Develop Env: go/golang-develop-env.md
+    - iOS:
+        - Objective-C/Swift:
+            - AfNetworking: ios/afnetworking-usage.md
+            - InAppPurchase: ios/ios-inapp-purchase-usage.md
+        - SDK:
+            - Create Framework: ios/app-with-framework.md
+            - Cocoapod Usage: ios/cocoapod-usage.md
+            - Cocoapod Private: ios/cocoapods-private.md
+            - Cocoapod Public: ios/cocoapods-public.md
+            - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
+            - ServiceID Setting: ios/ios-serviceID-setting.md
+            - Framework Definition: ios/use_frameworks_definition.md
+    - Android:
+        - JAVA/Kotlin:
+            - AppleLogin: android/android-appleLogin.md
+            - PackagenameRefactor: android/android-package-refactor.md
+            - Gson: android/gson.md
+            - Retrofit2: android/retrofit2.md
+        - SDK:
+            - ACRA: android/acra-usage.md
+            - GoogleBilling: android/android-google-billing-usage.md
+            - OneStoreBilling: android/android-onestore-billing-usage.md
+            - Create Module: android/create-library.md
+        - Gradle:
+            - Maven: android/maven-deploy.md
+            - Jcenter: android/jcenter.md
+    - Unity:
+        - Editor:
+            - Build Machine: unity/unity-build-machine-shell.md
         - Android:
-            - maven: docker-build-deploy.md
-    - User Guide:
-        - Test1:
-            - Test2: docker-build-deploy.md
-            - Test3: go-google-api-usage.md
+            - Gradle: unity/gradle-version-manage.md
+            - AndroidX Use: unity/unity2017-androidx-use.md
+        - iOS:
+            - Capability: unity/unity_xcode_AddInAppPurchase.md
+            - Application Override: unity/unity-ios-application-override.md
+    - Docker:
+        - Build Deploy: docker/docker-build-deploy.md
+    - Shell:
+        - GPG Key: android/gpg-usage.md
 theme: readthedocs
 markdown_extensions:
     - admonition

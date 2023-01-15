@@ -21,7 +21,7 @@ Google Cloud 프로젝트내 사용자 인증 정보에서 웹 애플리케이�
 토큰을 얻기위해 미리 Redirect 서버를 구축해야 합니다.
  
 [example](https://github.com/coolishbee/go-redirect-server) :
-```go
+```
 package main
 
 import (
@@ -94,7 +94,7 @@ HEADER
 | grant_type  | 어떤 유형으로 토큰을 얻을지에 대한 타입 | string |
 
 example :
-```go
+```
 import "github.com/go-resty/resty/v2"
 
 func example() {
@@ -119,7 +119,7 @@ func example() {
 ### Google Developer API 호출
 
 admob 예제:
-```go
+```
 type AdmobReq struct {
 	ReportSpec struct {
 		DateRange struct {
@@ -165,6 +165,4 @@ fmt.Println("  Error      :", err)
 fmt.Println("  Body       :\n", reportResp)
 ```
 
-!!! tip
-
-    동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.
+> 동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.
