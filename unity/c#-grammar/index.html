@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Android Gradle - Tech Blog</title>
+    <title>C# - Tech Blog</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Android Gradle";
-        var mkdocs_page_input_path = "unity/gradle-version-manage.md";
+        var mkdocs_page_name = "C#";
+        var mkdocs_page_input_path = "unity/c#-grammar.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -153,21 +153,23 @@
               </ul>
               <p class="caption"><span class="caption-text">Unity</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="#">Grammar</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../c%23-grammar/">C#</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Grammar</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">C#</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#commands">Commands</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-layout">Project layout</a>
+    </li>
+    </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../unity-api/">API</a>
                 </li>
     </ul>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Features</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Android Gradle</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#gradle-version_1">Gradle Version 호환성</a>
-    </li>
-    </ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Features</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../gradle-version-manage/">Android Gradle</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../unity2017-androidx-use/">AndroidX Use</a>
                 </li>
@@ -215,8 +217,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
           <li>Unity &raquo;</li>
-          <li>Features &raquo;</li>
-      <li>Android Gradle</li>
+          <li>Grammar &raquo;</li>
+      <li>C#</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -225,164 +227,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="gradle-version">유니티 안드로이드 Gradle Version 관리<a class="headerlink" href="#gradle-version" title="Permanent link">#</a></h1>
-<p>Gradle 도구를 사용할 때 꼭 알아야 할 버전관리 이슈을 정리해보았다. 특히 유니티 엔진같은 경우 특수한 경우이기 때문에 더욱더 중요하다. (내용은 안드로이드 스튜디오에서도 동일하게 적용된다.)</p>
-<p>우선 Gradle 버전과 Gradle Plugin 버전이 별도로 관리된다는 것을 알아야 한다. 하지만 해당 Gradle 플러그인 버전마다 요구되는 Gradle 버전이 있다. 즉 서로 맞는 버전이 따로 정해져 있다는 것이다.</p>
-<p>물론 유니티에 내장되있는 Gradle 버전도 유니티 버전마다 정해져 있다. </p>
-<p>만약 안드로이드 네이티브로 라이브러리를 개발하여 유니티에서 빌드할 경우 이 버전이 맞아야 빌드에 성공할 수 있다.</p>
-<h2 id="gradle-version_1">Gradle Version 호환성<a class="headerlink" href="#gradle-version_1" title="Permanent link">#</a></h2>
+                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">#</a></h1>
+<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h2>
 <ul>
-<li>안드로이드 스튜디오 기준</li>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>Gradle 플러그인 버전</th>
-<th>필요한 Gradle 버전</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.0.0~1.1.3</td>
-<td>2.2.1~2.3</td>
-</tr>
-<tr>
-<td>1.2.0~1.3.1</td>
-<td>2.2.1~2.9</td>
-</tr>
-<tr>
-<td>1.5.0</td>
-<td>2.2.1~2.13</td>
-</tr>
-<tr>
-<td>2.0.0~2.1.2</td>
-<td>2.10~2.13</td>
-</tr>
-<tr>
-<td>2.1.3~2.2.3</td>
-<td>2.14.1+</td>
-</tr>
-<tr>
-<td>2.3.0+</td>
-<td>3.3+</td>
-</tr>
-<tr>
-<td>3.0.0+</td>
-<td>4.1+</td>
-</tr>
-<tr>
-<td>3.1.0+</td>
-<td>4.4+</td>
-</tr>
-<tr>
-<td>3.2.0~3.2.1</td>
-<td>4.6+</td>
-</tr>
-<tr>
-<td>3.3.0~3.3.3</td>
-<td>4.10.1+</td>
-</tr>
-<tr>
-<td>3.4.0~3.4.3</td>
-<td>5.1.1+</td>
-</tr>
-<tr>
-<td>3.5.0~3.5.4</td>
-<td>5.4.1+</td>
-</tr>
-<tr>
-<td>3.6.0~3.6.4</td>
-<td>5.6.4+</td>
-</tr>
-<tr>
-<td>4.0.0+</td>
-<td>6.1.1+</td>
-</tr>
-<tr>
-<td>4.1.0+</td>
-<td>6.5+</td>
-</tr>
-<tr>
-<td>4.2.0+</td>
-<td>6.7.1+</td>
-</tr>
-<tr>
-<td>7.0</td>
-<td>7.0+</td>
-</tr>
-<tr>
-<td>7.1</td>
-<td>7.2+</td>
-</tr>
-<tr>
-<td>7.2</td>
-<td>7.3+</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>유니티 에디터 기준</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>유니티 버전(LTS)</th>
-<th>Gradle 플러그인 버전</th>
-<th>필요한 Gradle 버전</th>
-<th>사용가능한 코틀린 버전</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>2020.3 starting from 2020.3.15f1<br/>2021.1 starting from 2021.1.16f1</td>
-<td>4.0.x</td>
-<td>6.1.1</td>
-<td>.</td>
-</tr>
-<tr>
-<td>2020.1, 2020.2, 2020.3 up to and including 2020.3.14f1<br/>2021.1 up to and including 2021.1.15f1</td>
-<td>3.6.x</td>
-<td>5.6.4</td>
-<td>.</td>
-</tr>
-<tr>
-<td>2019.4</td>
-<td>3.4.x</td>
-<td>5.1.1</td>
-<td>1.3.72</td>
-</tr>
-<tr>
-<td>2018.4</td>
-<td>3.4.x</td>
-<td>5.1.1</td>
-<td>1.3.72</td>
-</tr>
-<tr>
-<td>2017.4</td>
-<td>3.4.x</td>
-<td>5.1.1</td>
-<td>1.3.72</td>
-</tr>
-</tbody>
-</table>
-<p>유니티에 내장된 Gradle 버전은 '/Applications/Unity/Hub/Editor/{unity_version}/PlaybackEngines/AndroidPlayer/Tools/gradle/lib' 에서 확인 할 수 있으며 현재 확인한 바로는 전부 5.1.1 로 되어있다. 이전 버전같은경우에는 아마 더 하위버전이었다.</p>
-<p>LTS 버전이 펌웨어됨에 따라 아마도 버전이 올라간 것으로 보인다.</p>
-<p>여기서 말하는 Gradle 플러그인 버전이란 mainTemplate.gradle 또는 baseProjectTemplate.gradle 에 있는</p>
-<pre><code>dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
-}
+<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">#</a></h2>
+<pre><code>mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
 </code></pre>
-<p>이것이다. 아마 유니티에서 자동생성 했을 시에는 셋팅이 되어있을 것이다.</p>
-<p><strong>만약 유니티용 SDK 를 네이티브로 개발한다면 사용하는 API 들은 유니티 Gradle 버전에 맞춰서 개발해야 한다. 안드로이드에서 사용하는 플러그인들도 Gradle 버전에 영향을 받기 때문이다.</strong></p>
-<p>코틀린 경우엔 2019 최신 LTS 버전에서는 1.3.11 까지 확인해보았지만 그 이상버전은 테스트 해보질 않아서 확실하게 모르겠다. 추후 확인해보기로!</p>
-<p><a href="https://developer.android.com/studio/releases/gradle-plugin">Android Gradle 플러그인 출시노트 보러가기</a></p>
-<p><a href="https://docs.unity3d.com/kr/2021.1/Manual/android-gradle-overview.html">Unity 버전별 Android Gradle Overview</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../unity-api/" class="btn btn-neutral float-left" title="API"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../unity2017-androidx-use/" class="btn btn-neutral float-right" title="AndroidX Use">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../android/jcenter/" class="btn btn-neutral float-left" title="Jcenter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../unity-api/" class="btn btn-neutral float-right" title="API">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -405,10 +270,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../unity-api/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../android/jcenter/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../unity2017-androidx-use/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../unity-api/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
