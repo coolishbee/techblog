@@ -2,44 +2,59 @@ site_name: Tech Blog
 nav:
     - News: index.md
     - About: about.md
-    - Go:
-        - Google API: go/go-google-api-usage.md
-        - Develop Env: go/golang-develop-env.md
+    - Go:        
+        - Develop Env: go/go-develop-env.md
+        - Grammar:
+            - API: go/go-grammar.md
+        - Features:
+            - Go GC: go/go-grammar.md        
+        - Library:
+            - Google API: go/go-google-api-usage.md
     - iOS:
-        - Objective-C/Swift:
+        - Grammar:
+            - Swift: ios/ios-grammar.md
+        - Features:
+            - Swift ARC: ios/ios-grammar.md        
+        - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
-        - SDK:
             - Create Framework: ios/app-with-framework.md
             - Cocoapod Usage: ios/cocoapod-usage.md
             - Cocoapod Private: ios/cocoapods-private.md
             - Cocoapod Public: ios/cocoapods-public.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
             - ServiceID Setting: ios/ios-serviceID-setting.md
-            - Framework Definition: ios/use_frameworks_definition.md
+            - Framework Definition: ios/use_frameworks_definition.md        
     - Android:
-        - JAVA/Kotlin:
-            - AppleLogin: android/android-appleLogin.md
+        - Grammar:
+            - Kotlin: android/android-grammar.md
+        - Features:
+            - Swift ARC: android/android-grammar.md
             - PackagenameRefactor: android/android-package-refactor.md
-            - Gson: android/gson.md
-            - Retrofit2: android/retrofit2.md
-        - SDK:
+        - Library:
             - ACRA: android/acra-usage.md
             - GoogleBilling: android/android-google-billing-usage.md
             - OneStoreBilling: android/android-onestore-billing-usage.md
             - Create Module: android/create-library.md
+            - Gson: android/gson.md
+            - Retrofit2: android/retrofit2.md
+            - AppleLogin: android/android-appleLogin.md            
         - Gradle:
             - Maven: android/maven-deploy.md
             - Jcenter: android/jcenter.md
     - Unity:
+        - Grammar:
+            - C#: unity/c#-grammar.md
+            - API: unity/unity-api.md
+        - Features:
+            - Android Gradle: unity/gradle-version-manage.md
+            - AndroidX Use: unity/unity2017-androidx-use.md
+            - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
+            - iOS Application Override: unity/unity-ios-application-override.md
+        - Library:
+            - Asset: unity/unity-api.md
         - Editor:
             - Build Machine: unity/unity-build-machine-shell.md
-        - Android:
-            - Gradle: unity/gradle-version-manage.md
-            - AndroidX Use: unity/unity2017-androidx-use.md
-        - iOS:
-            - Capability: unity/unity_xcode_AddInAppPurchase.md
-            - Application Override: unity/unity-ios-application-override.md
     - Docker:
         - Build Deploy: docker/docker-build-deploy.md
     - Shell:
