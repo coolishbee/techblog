@@ -59,7 +59,7 @@ nav:
         - Build Deploy: docker/docker-build-deploy.md
     - Shell:
         - GPG Key: android/gpg-usage.md
-theme: readthedocs
+theme: material
 markdown_extensions:
     - admonition
     - toc:

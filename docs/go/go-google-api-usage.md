@@ -165,4 +165,6 @@ fmt.Println("  Error      :", err)
 fmt.Println("  Body       :\n", reportResp)
 ```
 
-> 동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.
+!!! tip
+
+    동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.

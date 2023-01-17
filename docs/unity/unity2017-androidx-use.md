@@ -83,9 +83,6 @@ public class AndroidPostBuildProcessor : IPostGenerateGradleAndroidProject
 }
 ```
 
+!!! 참고자료
 
-
-> 참고자료
->
-> https://stackoverflow.com/questions/54186051/is-there-a-way-to-change-the-gradle-properties-file-in-unity
-
+    https://stackoverflow.com/questions/54186051/is-there-a-way-to-change-the-gradle-properties-file-in-unity
