@@ -4,17 +4,17 @@ nav:
     - About: about.md
     - Go:        
         - Develop Env: go/go-develop-env.md
-        - Grammar:
-            - API: go/go-grammar.md
+        - Grammar: go/go-grammar.md            
         - Features:
-            - Go GC: go/go-grammar.md        
+            - Go GC: go/go-gc.md
         - Library:
             - Google API: go/go-google-api-usage.md
+            - Gin Swagger: go/go-gin-swagger.md
     - iOS:
         - Grammar:
             - Swift: ios/ios-grammar.md
         - Features:
-            - Swift ARC: ios/ios-grammar.md        
+            - Swift ARC: ios/ios-grammar.md            
         - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
@@ -24,13 +24,15 @@ nav:
             - Cocoapod Public: ios/cocoapods-public.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
             - ServiceID Setting: ios/ios-serviceID-setting.md
-            - Framework Definition: ios/use_frameworks_definition.md        
+            - Framework Definition: ios/use_frameworks_definition.md
+            - Apple Login: ios/apple-login.md
     - Android:
         - Grammar:
             - Kotlin: android/android-grammar.md
         - Features:
             - Swift ARC: android/android-grammar.md
             - PackagenameRefactor: android/android-package-refactor.md
+            - Proguard: android/android-proguard.md
         - Library:
             - ACRA: android/acra-usage.md
             - GoogleBilling: android/android-google-billing-usage.md
@@ -38,7 +40,7 @@ nav:
             - Create Module: android/create-library.md
             - Gson: android/gson.md
             - Retrofit2: android/retrofit2.md
-            - AppleLogin: android/android-appleLogin.md            
+            - AppleLogin: android/android-appleLogin.md
         - Gradle:
             - Maven: android/maven-deploy.md
             - Jcenter: android/jcenter.md

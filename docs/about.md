@@ -4,6 +4,8 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## My Story
 
+![Screenshot](img/screenshot.png)
+
 ## Project layout
 
     mkdocs.yml    # The configuration file.

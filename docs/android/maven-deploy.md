@@ -182,3 +182,11 @@ dependencies {
     implementation 'io.github.jameschun7:universalsdk:0.2.4'    
 }
 ```
+
+## NEW
+
+[Maven Publish 플러그인 사용](https://developer.android.com/studio/build/maven-publish-plugin?hl=ko)
+
+[[nexus] Gradle을 이용한 jar 파일 업로드(publish)](https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle)
+
+[Maven Publish Plugin 7.6](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation)

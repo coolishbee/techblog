@@ -20,7 +20,7 @@
 * 컴파일 방식: annotation 을 이용하여 미리 설정정보를 셋팅하는 방식이다.(AndroidManifest.xml 필수)
 * 런타임 방식: 모든 설정정보는 API 소스코드로 작성하는 방식이다.
 
-## 예제
+## Example
 
 ```java
 public class MainActivity extends AppCompatActivity {
@@ -68,8 +68,7 @@ go install -v github.com/gen2brain/acra-go/acra-go
 터미널에서 명령어를 진행하면 `$GOPATH/bin/acra-go` 에 설치가 됩니다.
 (acra-go 가 사용하고 있는 써드파티 의존성 해결 필요.)
 
-* [go 개발환경 설정](https://github.com/jameschun7/docs/blob/main/golang/golang-develop-env.md)
-* [go mod 사용법](https://github.com/jameschun7/docs/blob/main/golang/golang-develop-env.md)
+* [go 개발환경 설정 및 mod 사용법](../go/go-develop-env.md)
 
 go mod 사용법을 참고하여 프로젝트내에서 `go mod init` 명령어를 실행하면 vendor 파일 읽고 의존성 걸려 있는 모듈들을 모두 받는듯 하다. (패키지매니저 역할)
 
@@ -83,7 +82,7 @@ acra-go -bind-addr 192.168.12.10:55000 --htpasswd-frontend .htpasswd
 
 ### Client
 
-* [예제 참고](#예제)
+* [예제 참고](#example)
 
 ### htpasswd 파일 생성
 
