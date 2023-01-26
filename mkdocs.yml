@@ -10,21 +10,23 @@ nav:
         - Library:
             - Google API: go/go-google-api-usage.md
             - Gin Swagger: go/go-gin-swagger.md
+            - Google Play Developer API: go/google-play-developer-api.md
+            - Gin MongoDB: go/go-gin-mongodb.md
+            - Gorilla WebSocket: go/go-gorilla-websocket.md
     - iOS:
         - Grammar:
             - Swift: ios/ios-grammar.md
         - Features:
-            - Swift ARC: ios/ios-grammar.md            
+            - Swift ARC: ios/ios-grammar.md
+            - Framework Definition: ios/use_frameworks_definition.md
+            - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
         - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
             - Create Framework: ios/app-with-framework.md
             - Cocoapod Usage: ios/cocoapod-usage.md
             - Cocoapod Private: ios/cocoapods-private.md
-            - Cocoapod Public: ios/cocoapods-public.md
-            - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
-            - ServiceID Setting: ios/ios-serviceID-setting.md
-            - Framework Definition: ios/use_frameworks_definition.md
+            - Cocoapod Public: ios/cocoapods-public.md            
             - Apple Login: ios/apple-login.md
     - Android:
         - Grammar:
@@ -38,9 +40,11 @@ nav:
             - GoogleBilling: android/android-google-billing-usage.md
             - OneStoreBilling: android/android-onestore-billing-usage.md
             - Create Module: android/create-library.md
+            - Create Only Module: android/only-library.md
             - Gson: android/gson.md
             - Retrofit2: android/retrofit2.md
             - AppleLogin: android/android-appleLogin.md
+            - ServiceID Setting: ios/ios-serviceID-setting.md
         - Gradle:
             - Maven: android/maven-deploy.md
             - Jcenter: android/jcenter.md
@@ -59,8 +63,19 @@ nav:
             - Build Machine: unity/unity-build-machine-shell.md
     - Docker:
         - Build Deploy: docker/docker-build-deploy.md
+        - Compose: docker/docker-compose.md
     - Shell:
-        - GPG Key: android/gpg-usage.md
+        - GPG Key: shell/gpg-usage.md
+        - MAC Terminal: shell/mac-terminal.md
+        - Linux Terminal: shell/linux-terminal.md
+    - CI/CD:
+        - Jenkins:
+            - Jenkins Setup: ci/jenkins-setup.md
+            - Jenkins Usage: ci/jenkins-usage.md
+            - Jenkins Python: ci/jenkins-python.md
+        - Fastlane:
+            - Fastlane Usage: ci/fastlane-usage.md
+        - Travis: ci/travis-ci.md
 theme: material
 markdown_extensions:
     - admonition

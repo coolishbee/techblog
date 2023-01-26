@@ -295,3 +295,51 @@ func main() {
 
 
 > 출처: https://gosamples.dev/date-format-yyyy-mm-dd/
+
+## [ioutil.TempFile] 임시파일 생성하는 방법
+
+[IO / ioutil](https://golang.org/pkg/io/ioutil/) 패키지는 두 가지 기능을 포함하고 임시 디렉토리 [TempDir](https://golang.org/pkg/io/ioutil/#TempDir) 및 임시 파일 [TempFile](https://golang.org/pkg/io/ioutil/#TempFile) 을 만들 수 있습니다.
+
+유닉스 머신에서 기본적으로 TempDir 함수는/tmp/임시 디렉토리로반환됩니다.접두사가있는 디렉토리를 작성하기 위해 추가 매개 변수를 전달할 수 있습니다.
+
+TempFile 함수는 고유하고 임의의 숫자를 만듭니다.pattern매개 변수를 사용하여 파일의 접두사와 접미사를 제어 할 수 있습니다. 예로 \*.tmp 를 전달하면 임시 파일이 생성됩니다.프로그램에서 임시 파일을 삭제하지 않고 나중에 임시 파일을 정리하는 일괄 삭제 작업을 원하는 경우에 유용합니다.
+
+파일을 만든 후에는 파일 형식 그대로 파일에 무엇이든 쓸 수 있습니다
+
+os.File.os.File은 io.ReadWriter 인터페이스를 구현하므로 Write메소드를 사용하여 파일에 쓸 수 있습니다.
+
+```
+package main
+
+import (
+    "fmt"
+    "io/ioutil"
+    "os"
+)
+
+func main() {
+
+    // Create a Temp File:  This will create a filename like /tmp/pre-23423234
+    // If we use a pattern like "pre-*.ext", you can get a file like: /tmp/pre-23423234.ext
+    tmpFile, err := ioutil.TempFile(os.TempDir(), "pre-")
+    if err != nil {
+        fmt.Println("Cannot create temporary file", err)
+    }
+
+    // cleaning up by removing the file
+    defer os.Remove(tmpFile.Name())
+
+    fmt.Println("Created a Temp File: " + tmpFile.Name())
+
+    // Write to the file
+    text := []byte("Writing some text into the temp file.")
+    if _, err = tmpFile.Write(text); err != nil {
+        fmt.Println("Failed to write to temporary file", err)
+    }
+
+    // Close the file
+    if err := tmpFile.Close(); err != nil {
+        fmt.Println(err)
+    }
+}
+```

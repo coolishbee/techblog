@@ -35,15 +35,15 @@ $ docker build -t ads-report-go .
 
 ## Docker tag 설정
 ```
-$ docker tag ads-report-go ad-report.igamepub.co.kr:443/ads-report-go:1.1
+$ docker tag ads-report-go ad-report.com:443/ads-report-go:1.1
 ```
 ## Docker push
 ```
-$ docker push ad-report.igamepub.co.kr:443/ads-report-go:1.1
+$ docker push ad-report.com:443/ads-report-go:1.1
 ```
 ## Docker Image Pull
 ```
-$ docker pull ad-report.igamepub.co.kr:443/ads-report-go:1.1
+$ docker pull ad-report.com:443/ads-report-go:1.1
 ```
 ## Docker Run
 ```
