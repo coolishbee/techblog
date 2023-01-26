@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="./">
+        <link rel="prev" href="../go-develop-env/">
       
       
-        <link rel="next" href="../go-google-api-usage/">
+        <link rel="next" href="../go-gc/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
     
     
       
-        <title>Go GC - Tech Blog</title>
+        <title>Grammar - Tech Blog</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#strconv-convert-uint64-to-string" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Go GC
+              Grammar
             
           </span>
         </div>
@@ -246,8 +246,148 @@
   
     <li class="md-nav__item">
       <a href="../go-develop-env/" class="md-nav__link">
-        Go develop env
+        Develop Env
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Grammar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Grammar
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#strconv-convert-uint64-to-string" class="md-nav__link">
+    [strconv] Convert uint64 to string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strconv-convert-uint8-to-string" class="md-nav__link">
+    [strconv] convert uint8 to string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osexec-in-go" class="md-nav__link">
+    [os/exec] 커맨드 명령어 실행하기 in go
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iconv-go-byte-to-string" class="md-nav__link">
+    [iconv-go] byte to string 변환시 한글깨짐 해결
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes256-cbc" class="md-nav__link">
+    aes256 cbc 암호화 복호화
+  </a>
+  
+    <nav class="md-nav" aria-label="aes256 cbc 암호화 복호화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkcs5padding" class="md-nav__link">
+    PKCS5Padding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-yyyy-mm-dd-date-format" class="md-nav__link">
+    [time] YYYY-MM-DD date format 사용하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datetime-format-layout" class="md-nav__link">
+    Datetime Format Layout
+  </a>
+  
+    <nav class="md-nav" aria-label="Datetime Format Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yyyy-mm-dd" class="md-nav__link">
+    YYYY-MM-DD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddmmyyyy" class="md-nav__link">
+    DD/MM/YYYY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yyyy-mm-dd-hhmmss" class="md-nav__link">
+    YYYY-MM-DD hh:mm:ss
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioutiltempfile" class="md-nav__link">
+    [ioutil.TempFile] 임시파일 생성하는 방법
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -264,61 +404,11 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_2" tabindex="0" aria-expanded="false">
-          Grammar
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Grammar
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="./" class="md-nav__link">
-        API
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="false">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -334,59 +424,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Go GC
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../go-gc/" class="md-nav__link">
         Go GC
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -434,6 +476,62 @@
     <li class="md-nav__item">
       <a href="../go-google-api-usage/" class="md-nav__link">
         Google API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-gin-swagger/" class="md-nav__link">
+        Gin Swagger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../google-play-developer-api/" class="md-nav__link">
+        Google Play Developer API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-gin-mongodb/" class="md-nav__link">
+        Gin MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-gorilla-websocket/" class="md-nav__link">
+        Gorilla WebSocket
       </a>
     </li>
   
@@ -571,6 +669,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/use_frameworks_definition/" class="md-nav__link">
+        Framework Definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios_exclude_simulator_architecture/" class="md-nav__link">
+        Exclude Architecture
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -695,36 +821,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/ios_exclude_simulator_architecture/" class="md-nav__link">
-        Exclude Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ios/ios-serviceID-setting/" class="md-nav__link">
-        ServiceID Setting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ios/use_frameworks_definition/" class="md-nav__link">
-        Framework Definition
+      <a href="../../ios/apple-login/" class="md-nav__link">
+        Apple Login
       </a>
     </li>
   
@@ -876,6 +974,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-proguard/" class="md-nav__link">
+        Proguard
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -972,6 +1084,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../android/only-library/" class="md-nav__link">
+        Create Only Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../android/gson/" class="md-nav__link">
         Gson
       </a>
@@ -1002,6 +1128,20 @@
     <li class="md-nav__item">
       <a href="../../android/android-appleLogin/" class="md-nav__link">
         AppleLogin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios-serviceID-setting/" class="md-nav__link">
+        ServiceID Setting
       </a>
     </li>
   
@@ -1409,6 +1549,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker-compose/" class="md-nav__link">
+        Compose
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1450,8 +1604,209 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/gpg-usage/" class="md-nav__link">
+      <a href="../../shell/gpg-usage/" class="md-nav__link">
         GPG Key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell/mac-terminal/" class="md-nav__link">
+        MAC Terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell/linux-terminal/" class="md-nav__link">
+        Linux Terminal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_1" type="checkbox" id="__nav_9_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_1" tabindex="0" aria-expanded="false">
+          Jenkins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jenkins" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_1">
+          <span class="md-nav__icon md-icon"></span>
+          Jenkins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/jenkins-setup/" class="md-nav__link">
+        Jenkins Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/jenkins-usage/" class="md-nav__link">
+        Jenkins Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/jenkins-python/" class="md-nav__link">
+        Jenkins Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9_2" tabindex="0" aria-expanded="false">
+          Fastlane
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fastlane" data-md-level="2">
+        <label class="md-nav__title" for="__nav_9_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fastlane
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/fastlane-usage/" class="md-nav__link">
+        Fastlane Usage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/travis-ci/" class="md-nav__link">
+        Travis
       </a>
     </li>
   
@@ -1481,8 +1836,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1491,15 +1844,97 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#strconv-convert-uint64-to-string" class="md-nav__link">
+    [strconv] Convert uint64 to string
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#strconv-convert-uint8-to-string" class="md-nav__link">
+    [strconv] convert uint8 to string
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#osexec-in-go" class="md-nav__link">
+    [os/exec] 커맨드 명령어 실행하기 in go
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iconv-go-byte-to-string" class="md-nav__link">
+    [iconv-go] byte to string 변환시 한글깨짐 해결
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes256-cbc" class="md-nav__link">
+    aes256 cbc 암호화 복호화
+  </a>
+  
+    <nav class="md-nav" aria-label="aes256 cbc 암호화 복호화">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pkcs5padding" class="md-nav__link">
+    PKCS5Padding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-yyyy-mm-dd-date-format" class="md-nav__link">
+    [time] YYYY-MM-DD date format 사용하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datetime-format-layout" class="md-nav__link">
+    Datetime Format Layout
+  </a>
+  
+    <nav class="md-nav" aria-label="Datetime Format Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yyyy-mm-dd" class="md-nav__link">
+    YYYY-MM-DD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddmmyyyy" class="md-nav__link">
+    DD/MM/YYYY
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#yyyy-mm-dd-hhmmss" class="md-nav__link">
+    YYYY-MM-DD hh:mm:ss
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioutiltempfile" class="md-nav__link">
+    [ioutil.TempFile] 임시파일 생성하는 방법
   </a>
   
 </li>
@@ -1520,20 +1955,320 @@
 
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">#</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">#</a></h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+  <h1>Grammar</h1>
+
+<h2 id="strconv-convert-uint64-to-string">[strconv] Convert uint64 to string<a class="headerlink" href="#strconv-convert-uint64-to-string" title="Permanent link">#</a></h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;strconv&quot;
+)
+
+func main() {
+
+    // Create our number
+    var myNumber uint64
+    myNumber = 18446744073709551615
+
+    // Format to a string by passing the number and it's base.
+    str := strconv.FormatUint(myNumber, 10)
+
+    // Print as string
+    // Will output: 'The number is: 18446744073709551615'
+    fmt.Println(&quot;The number is: &quot; + str)
+}
+</code></pre>
+<blockquote>
+<p>https://golangcode.com/uint64-to-string/</p>
+</blockquote>
+<h2 id="strconv-convert-uint8-to-string">[strconv] convert uint8 to string<a class="headerlink" href="#strconv-convert-uint8-to-string" title="Permanent link">#</a></h2>
+<pre><code>strconv.Itoa(int(123))
+</code></pre>
+<blockquote>
+<p>https://stackoverflow.com/questions/19223277/how-to-convert-uint8-to-string</p>
+</blockquote>
+<h2 id="osexec-in-go">[os/exec] 커맨드 명령어 실행하기 in go<a class="headerlink" href="#osexec-in-go" title="Permanent link">#</a></h2>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;os&quot;
+    &quot;os/exec&quot;
+    &quot;strings&quot;
+)
+
+func main() {
+
+    // 1. Create an *exec.Cmd
+    // cmd := exec.Command(&quot;go&quot;, &quot;version&quot;)
+
+    // // Stdout buffer
+    // cmdOutput := &amp;bytes.Buffer{}
+    // // Attach buffer to command
+    // cmd.Stdout = cmdOutput
+
+    // // Execute command
+    // printCommand(cmd)
+    // err := cmd.Run() // will wait for command to return
+    // printError(err)
+    // // Only output the commands stdout
+    // printOutput(cmdOutput.Bytes())
+
+    // 2. Create an *exec.Cmd
+    cmd := exec.Command(&quot;go&quot;, &quot;version&quot;)
+
+    // Combine stdout and stderr
+    printCommand(cmd)
+    output, err := cmd.CombinedOutput()
+    printError(err)
+    printOutput(output)
+}
+
+func printCommand(cmd *exec.Cmd) {
+    fmt.Printf(&quot;==&gt; Executing: %s\n&quot;, strings.Join(cmd.Args, &quot; &quot;))
+}
+
+func printError(err error) {
+    if err != nil {
+        os.Stderr.WriteString(fmt.Sprintf(&quot;==&gt; Error: %s\n&quot;, err.Error()))
+    }
+}
+
+func printOutput(outs []byte) {
+    if len(outs) &gt; 0 {
+        fmt.Printf(&quot;==&gt; Output: %s\n&quot;, string(outs))
+    }
+}
+</code></pre>
+<blockquote>
+<p>출처: https://www.darrencoxall.com/golang/executing-commands-in-go</p>
+</blockquote>
+<h2 id="iconv-go-byte-to-string">[iconv-go] byte to string 변환시 한글깨짐 해결<a class="headerlink" href="#iconv-go-byte-to-string" title="Permanent link">#</a></h2>
+<p>간혹 byte를 string 으로 출력시 한글깨짐 현상을 겪을 수 있다.
+이때 가장 합리적인 해결 방안
+example:</p>
+<pre><code>result, _ := iconv.ConvertString(string(output), &quot;euc-kr&quot;, &quot;utf-8&quot;)
+</code></pre>
+<blockquote>
+<p>https://github.com/djimenez/iconv-go</p>
+</blockquote>
+<p>윈도우 사용자:
+윈도우는 gcc 활성화를 위해서 <a href="https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/">MinGW</a>를 설치해야 한다.(키보드 관련 go 라이브러리도 마찬가지)
+<img alt="res" src="https://velog.velcdn.com/images/james-chun-dev/post/8a4d7e17-d24a-462b-8a8e-12ca2c704f55/image.png" />
+인스톨 파일이 작동되지 않는다면 압축파일 받아서 ProgramFiles 에 압축해제해서 떨궈놓고 환경변수(mingw64/bin)만 셋팅하면 된다.</p>
+<h2 id="aes256-cbc">aes256 cbc 암호화 복호화<a class="headerlink" href="#aes256-cbc" title="Permanent link">#</a></h2>
+<h3 id="pkcs5padding">PKCS5Padding<a class="headerlink" href="#pkcs5padding" title="Permanent link">#</a></h3>
+<p>base64:</p>
+<pre><code class="language-go">import (
+    &quot;bytes&quot;
+    &quot;crypto/aes&quot;
+    &quot;crypto/cipher&quot;
+    &quot;encoding/base64&quot;
+    &quot;fmt&quot;
+)
+
+func AESEncrypt(src string, key []byte, iv string) string {
+    block, err := aes.NewCipher(key)
+    if err != nil {
+        fmt.Println(&quot;key error1&quot;, err)
+    }
+    if src == &quot;&quot; {
+        fmt.Println(&quot;plain content empty&quot;)
+    }
+    ecb := cipher.NewCBCEncrypter(block, []byte(iv))
+    content := []byte(src)
+    content = PKCS5Padding(content, block.BlockSize())
+    crypted := make([]byte, len(content))
+    ecb.CryptBlocks(crypted, content)
+
+    return base64.StdEncoding.EncodeToString(crypted)
+}
+
+func AESDecrypt(cryptedStr string, key []byte, iv string) []byte {
+    encryptedData, _ := base64.StdEncoding.DecodeString(cryptedStr)
+    block, err := aes.NewCipher(key)
+    if err != nil {
+        fmt.Println(&quot;key error1&quot;, err)
+    }
+    if len(encryptedData) == 0 {
+        fmt.Println(&quot;plain content empty&quot;)
+    }
+    ecb := cipher.NewCBCDecrypter(block, []byte(iv))
+    decrypted := make([]byte, len(encryptedData))
+    ecb.CryptBlocks(decrypted, encryptedData)
+
+    return PKCS5Trimming(decrypted)
+}
+
+func PKCS5Padding(ciphertext []byte, blockSize int) []byte {
+    padding := blockSize - len(ciphertext)%blockSize
+    padtext := bytes.Repeat([]byte{byte(padding)}, padding)
+    return append(ciphertext, padtext...)
+}
+
+func PKCS5Trimming(encrypt []byte) []byte {
+    padding := encrypt[len(encrypt)-1]
+    return encrypt[:len(encrypt)-int(padding)]
+}
+</code></pre>
+<p>hex:</p>
+<pre><code class="language-go">func Ase256Encode(plaintext string, key string, iv string, blockSize int) string {
+    bKey := []byte(key)
+    bIV := []byte(iv)
+    bPlaintext := PKCS5Padding([]byte(plaintext), blockSize, len(plaintext))
+    block, err := aes.NewCipher(bKey)
+    if err != nil {
+        panic(err)
+    }
+    ciphertext := make([]byte, len(bPlaintext))
+    mode := cipher.NewCBCEncrypter(block, bIV)
+    mode.CryptBlocks(ciphertext, bPlaintext)
+    return hex.EncodeToString(ciphertext)
+}
+
+func Ase256Decode(cipherText string, encKey string, iv string) (decryptedString string) {
+    bKey := []byte(encKey)
+    bIV := []byte(iv)
+    cipherTextDecoded, err := hex.DecodeString(cipherText)
+    if err != nil {
+        panic(err)
+    }
+
+    block, err := aes.NewCipher(bKey)
+    if err != nil {
+        panic(err)
+    }
+
+    mode := cipher.NewCBCDecrypter(block, bIV)
+    mode.CryptBlocks([]byte(cipherTextDecoded), []byte(cipherTextDecoded))
+    return string(cipherTextDecoded)
+}
+
+func PKCS5Padding(ciphertext []byte, blockSize int, after int) []byte {
+    padding := (blockSize - len(ciphertext)%blockSize)
+    padtext := bytes.Repeat([]byte{byte(padding)}, padding)
+    return append(ciphertext, padtext...)
+}
+</code></pre>
+<h2 id="time-yyyy-mm-dd-date-format">[time] YYYY-MM-DD date format 사용하기<a class="headerlink" href="#time-yyyy-mm-dd-date-format" title="Permanent link">#</a></h2>
+<h2 id="datetime-format-layout">Datetime Format Layout<a class="headerlink" href="#datetime-format-layout" title="Permanent link">#</a></h2>
+<pre><code>const (
+    Layout      = &quot;01/02 03:04:05PM '06 -0700&quot; // The reference time, in numerical order.
+    ANSIC       = &quot;Mon Jan _2 15:04:05 2006&quot;
+    UnixDate    = &quot;Mon Jan _2 15:04:05 MST 2006&quot;
+    RubyDate    = &quot;Mon Jan 02 15:04:05 -0700 2006&quot;
+    RFC822      = &quot;02 Jan 06 15:04 MST&quot;
+    RFC822Z     = &quot;02 Jan 06 15:04 -0700&quot; // RFC822 with numeric zone
+    RFC850      = &quot;Monday, 02-Jan-06 15:04:05 MST&quot;
+    RFC1123     = &quot;Mon, 02 Jan 2006 15:04:05 MST&quot;
+    RFC1123Z    = &quot;Mon, 02 Jan 2006 15:04:05 -0700&quot; // RFC1123 with numeric zone
+    RFC3339     = &quot;2006-01-02T15:04:05Z07:00&quot;
+    RFC3339Nano = &quot;2006-01-02T15:04:05.999999999Z07:00&quot;
+    Kitchen     = &quot;3:04PM&quot;
+    // Handy time stamps.
+    Stamp      = &quot;Jan _2 15:04:05&quot;
+    StampMilli = &quot;Jan _2 15:04:05.000&quot;
+    StampMicro = &quot;Jan _2 15:04:05.000000&quot;
+    StampNano  = &quot;Jan _2 15:04:05.000000000&quot;
+)
+</code></pre>
+<h4 id="yyyy-mm-dd">YYYY-MM-DD<a class="headerlink" href="#yyyy-mm-dd" title="Permanent link">#</a></h4>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+const (
+    YYYYMMDD = &quot;2006-01-02&quot;
+)
+
+func main() {
+    now := time.Now().UTC()
+    fmt.Println(now.Format(YYYYMMDD))
+}
+//output: 2022-03-14
+</code></pre>
+<h4 id="ddmmyyyy">DD/MM/YYYY<a class="headerlink" href="#ddmmyyyy" title="Permanent link">#</a></h4>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+const (
+    DDMMYYYY = &quot;02/01/2006&quot;
+)
+
+func main() {
+    now := time.Now().UTC()
+    fmt.Println(now.Format(DDMMYYYY))
+}
+//output: 14/03/2022
+</code></pre>
+<h4 id="yyyy-mm-dd-hhmmss">YYYY-MM-DD hh:mm:ss<a class="headerlink" href="#yyyy-mm-dd-hhmmss" title="Permanent link">#</a></h4>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;time&quot;
+)
+
+const (
+    DDMMYYYYhhmmss = &quot;2006-01-02 15:04:05&quot;
+)
+
+func main() {
+    now := time.Now().UTC()
+    fmt.Println(now.Format(DDMMYYYYhhmmss))
+}
+//output: 2022-03-14 05:41:33
+</code></pre>
+<blockquote>
+<p>출처: https://gosamples.dev/date-format-yyyy-mm-dd/</p>
+</blockquote>
+<h2 id="ioutiltempfile">[ioutil.TempFile] 임시파일 생성하는 방법<a class="headerlink" href="#ioutiltempfile" title="Permanent link">#</a></h2>
+<p><a href="https://golang.org/pkg/io/ioutil/">IO / ioutil</a> 패키지는 두 가지 기능을 포함하고 임시 디렉토리 <a href="https://golang.org/pkg/io/ioutil/#TempDir">TempDir</a> 및 임시 파일 <a href="https://golang.org/pkg/io/ioutil/#TempFile">TempFile</a> 을 만들 수 있습니다.</p>
+<p>유닉스 머신에서 기본적으로 TempDir 함수는/tmp/임시 디렉토리로반환됩니다.접두사가있는 디렉토리를 작성하기 위해 추가 매개 변수를 전달할 수 있습니다.</p>
+<p>TempFile 함수는 고유하고 임의의 숫자를 만듭니다.pattern매개 변수를 사용하여 파일의 접두사와 접미사를 제어 할 수 있습니다. 예로 *.tmp 를 전달하면 임시 파일이 생성됩니다.프로그램에서 임시 파일을 삭제하지 않고 나중에 임시 파일을 정리하는 일괄 삭제 작업을 원하는 경우에 유용합니다.</p>
+<p>파일을 만든 후에는 파일 형식 그대로 파일에 무엇이든 쓸 수 있습니다</p>
+<p>os.File.os.File은 io.ReadWriter 인터페이스를 구현하므로 Write메소드를 사용하여 파일에 쓸 수 있습니다.</p>
+<pre><code>package main
+
+import (
+    &quot;fmt&quot;
+    &quot;io/ioutil&quot;
+    &quot;os&quot;
+)
+
+func main() {
+
+    // Create a Temp File:  This will create a filename like /tmp/pre-23423234
+    // If we use a pattern like &quot;pre-*.ext&quot;, you can get a file like: /tmp/pre-23423234.ext
+    tmpFile, err := ioutil.TempFile(os.TempDir(), &quot;pre-&quot;)
+    if err != nil {
+        fmt.Println(&quot;Cannot create temporary file&quot;, err)
+    }
+
+    // cleaning up by removing the file
+    defer os.Remove(tmpFile.Name())
+
+    fmt.Println(&quot;Created a Temp File: &quot; + tmpFile.Name())
+
+    // Write to the file
+    text := []byte(&quot;Writing some text into the temp file.&quot;)
+    if _, err = tmpFile.Write(text); err != nil {
+        fmt.Println(&quot;Failed to write to temporary file&quot;, err)
+    }
+
+    // Close the file
+    if err := tmpFile.Close(); err != nil {
+        fmt.Println(err)
+    }
+}
 </code></pre>
 
 
