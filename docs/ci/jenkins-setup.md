@@ -28,3 +28,27 @@ Jenkins 관리 > 플러그인 관리 > 설치가능 > 필터 검색란에 blue �
 ### 접속방법
 
 Dashboard 에서 블루 오션 열기 를 클릭해도 되고 https://jenkins-server-url/blue 로 접속해도 된다.
+
+## IP 접속 설정
+
+Jenkins 관리 - 시스템 설정 - Jenkins Location - Jenkins URL 에서 IP Port 설정
+
+### 파일 설정
+
+해당 파일에서 IP Port 설정 편집
+
+intel:
+```
+$ /usr/local/opt/jenkins-lts/2.xxx.x/homebrew.mxcl.jenkins-lts.plist
+```
+
+m1:
+```
+$ /opt/homebrew/Cellar/jenkins-lts/2.xxx.x/homebrew.mxcl.jenkins-lts.plist
+```
+
+`vi homebrew.mxcl.jenkins-lts.plist`:
+```
+<string>--httpListenAddress=127.0.0.1</string>
+<string>--httpPort=8080</string>
+```

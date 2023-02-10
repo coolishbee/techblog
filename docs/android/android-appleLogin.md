@@ -18,9 +18,9 @@ val url = (APPLE_AUTH_URL
            + APPLE_REDIRECT_URI)
 ```
 
+## 로그인 Chrome Custom Tabs 로 구성
 
-
-## 로그인 웹뷰 구성
+## 로그인 웹뷰로 구성
 
 Java :
 
@@ -282,11 +282,13 @@ redirect uri 설정시 애플서버에서 post 로 로그인정보를 request �
 
 그래야 클라이언트 웹뷰에서 shouldOverrideUrlLoading 로 redirect 된 정보를 받을 수 있기 때문이다.
 
-## 2차검증
+[apple-login-redirect.md]
 
-Server to Server 로 진행하는 토큰검증하는 내용은 포함하고 있지 않습니다.
+## Validate Identity token
 
-[별도로 참고할 사이트 안내해드립니다.](https://whitepaek.tistory.com/61)
+!!! Reference
+
+    [Validating "Sign in with Apple" Authorization Code](https://p.agnihotry.com/post/validating_sign_in_with_apple_authorization_code/)
 
 
 

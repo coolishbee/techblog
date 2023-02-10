@@ -67,7 +67,7 @@ brew install fastlane
 sudo gem install fastlane
 ```
 
-### fastlane 초기화
+## fastlane 초기화
 
 ```
 fastlane init
@@ -75,7 +75,7 @@ fastlane init
 
 프로젝트 디렉토리에서 이 명령어를 실행해주면 fastlane 스크립트가 생성됩니다.
 
-### fastlane 으로 터미널 명령어 실행하기
+## fastlane 으로 터미널 명령어 실행하기
 
 ```ruby
 lane :lint_pod do
@@ -83,8 +83,30 @@ lane :lint_pod do
 end
 ```
 
-### framework 빌드 및 배포하기
+## framework 빌드 및 배포하기
 
 ### git 명령어 사용하기
 
 [fastlane docs for iOS Setup](https://docs.fastlane.tools/getting-started/ios/setup/)
+
+## Jenkins 사용시 설정
+
+iOS 빌드시 환경변수 설정
+
+Jenkins 관리 - 시스템 설정 - Global properties
+
+```
+key : LANG
+val : en_US.UTF-8
+
+key : LC_ALL
+val : en_US.UTF-8
+
+key : Path
+val : /bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+```
+m1 일경우
+```
+key : Path
+val : /bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin
+```

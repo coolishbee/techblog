@@ -7,12 +7,15 @@ nav:
         - Grammar: go/go-grammar.md            
         - Features:
             - Go GC: go/go-gc.md
+            - Go Build: go/go-build-linux-onWindows.md
         - Library:
             - Google API: go/go-google-api-usage.md
+            - Apple Login Redirect Sever: go/apple-login-redirect.md
             - Gin Swagger: go/go-gin-swagger.md
             - Google Play Developer API: go/google-play-developer-api.md
             - Gin MongoDB: go/go-gin-mongodb.md
             - Gorilla WebSocket: go/go-gorilla-websocket.md
+            - Gin CORS: go/gin-cors.md
     - iOS:
         - Grammar:
             - Swift: ios/ios-grammar.md
@@ -73,8 +76,9 @@ nav:
             - Jenkins Setup: ci/jenkins-setup.md
             - Jenkins Usage: ci/jenkins-usage.md
             - Jenkins Python: ci/jenkins-python.md
+            - Jenkins Docker: ci/jenkins-docker.md
         - Fastlane:
-            - Fastlane Usage: ci/fastlane-usage.md
+            - Fastlane Setup: ci/fastlane-setup.md
         - Travis: ci/travis-ci.md
 theme: material
 markdown_extensions:
