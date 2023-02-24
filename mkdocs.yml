@@ -20,7 +20,7 @@ nav:
         - Grammar:
             - Swift: ios/ios-grammar.md
         - Features:
-            - Swift ARC: ios/ios-grammar.md
+            - Swift ARC: ios/apple-arc.md
             - Framework Definition: ios/use_frameworks_definition.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
         - Library:
@@ -35,7 +35,7 @@ nav:
         - Grammar:
             - Kotlin: android/android-grammar.md
         - Features:
-            - Swift ARC: android/android-grammar.md
+            - GC: android/android-gc.md
             - PackagenameRefactor: android/android-package-refactor.md
             - Proguard: android/android-proguard.md
         - Library:
@@ -64,9 +64,14 @@ nav:
             - Asset: unity/unity-api.md
         - Editor:
             - Build Machine: unity/unity-build-machine-shell.md
+    - DB:
+        - Mysql/MariaDB: db/mysql.md
+        - MongoDB: db/mongodb.md
+        - Redis: db/redis.md
+        - LevelDB: db/leveldb.md
     - Docker:
         - Build Deploy: docker/docker-build-deploy.md
-        - Compose: docker/docker-compose.md
+        - Compose: docker/docker-compose.md    
     - Shell:
         - GPG Key: shell/gpg-usage.md
         - MAC Terminal: shell/mac-terminal.md
@@ -80,6 +85,14 @@ nav:
         - Fastlane:
             - Fastlane Setup: ci/fastlane-setup.md
         - Travis: ci/travis-ci.md
+    - Package Manager:
+        - Homebrew: pm/homebrew.md
+        - Cocoapod: pm/cocoapod.md
+        - PIP: pm/pip.md
+        - apt: pm/apt.md
+        - yum: pm/yum.md
+        - pnpm: pm/pnpm.md
+        - PUB: pm/pub.md
 theme: material
 markdown_extensions:
     - admonition

@@ -23,7 +23,8 @@ func main() {
 }
 ```
 
->https://golangcode.com/uint64-to-string/
+!!! Reference
+	https://golangcode.com/uint64-to-string/
 
 ## [strconv] convert uint8 to string
 
@@ -31,7 +32,8 @@ func main() {
 strconv.Itoa(int(123))
 ```
 
->https://stackoverflow.com/questions/19223277/how-to-convert-uint8-to-string
+!!! Reference
+	https://stackoverflow.com/questions/19223277/how-to-convert-uint8-to-string
 
 ## [os/exec] 커맨드 명령어 실행하기 in go
 
@@ -89,7 +91,8 @@ func printOutput(outs []byte) {
 }
 ```
 
->출처: https://www.darrencoxall.com/golang/executing-commands-in-go
+!!! Reference
+	출처: https://www.darrencoxall.com/golang/executing-commands-in-go
 
 ## [iconv-go] byte to string 변환시 한글깨짐 해결
 
@@ -100,7 +103,8 @@ example:
 result, _ := iconv.ConvertString(string(output), "euc-kr", "utf-8")
 ```
 
->https://github.com/djimenez/iconv-go
+!!! Reference
+	https://github.com/djimenez/iconv-go
 
 윈도우 사용자:
 윈도우는 gcc 활성화를 위해서 [MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/)를 설치해야 한다.(키보드 관련 go 라이브러리도 마찬가지)
@@ -293,8 +297,8 @@ func main() {
 //output: 2022-03-14 05:41:33
 ```
 
-
-> 출처: https://gosamples.dev/date-format-yyyy-mm-dd/
+!!! Reference
+	출처: https://gosamples.dev/date-format-yyyy-mm-dd/
 
 ## [ioutil.TempFile] 임시파일 생성하는 방법
 
@@ -343,3 +347,15 @@ func main() {
     }
 }
 ```
+
+## io/ioutil -> io 옮겨간 메서드
+
+- ioutil.ReadAll => io.ReadAll
+- ioutil.ReadDir => os.ReadDir
+- ioutil.ReadFile => os.ReadFile
+- ioutil.TempDir => os.MkdirTemp
+- ioutil.TempFile => os.CreateTemp
+- ioutil.WriteFile => os.WriteFile
+
+!!! Reference
+	https://runebook.dev/ko/docs/go/io/ioutil/index

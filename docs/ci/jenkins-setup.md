@@ -47,7 +47,7 @@ m1:
 $ /opt/homebrew/Cellar/jenkins-lts/2.xxx.x/homebrew.mxcl.jenkins-lts.plist
 ```
 
-`vi homebrew.mxcl.jenkins-lts.plist`:
+> vi homebrew.mxcl.jenkins-lts.plist
 ```
 <string>--httpListenAddress=127.0.0.1</string>
 <string>--httpPort=8080</string>

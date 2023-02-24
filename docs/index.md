@@ -18,8 +18,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## TODO
 
-* ios sdk facebook login exception IO (ref: unity editor script)
-* android sdk logout open_customtabs async IO delete
 * unity sdk interface need to fix
 * check warning msg when android wrapper project rebuild
 * go api server integrating jenkins and docker docs
+* go-redirect-server
