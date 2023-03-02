@@ -79,9 +79,9 @@ nav:
     - CI/CD:
         - Jenkins:
             - Jenkins Setup: ci/jenkins-setup.md
-            - Jenkins Usage: ci/jenkins-usage.md
-            - Jenkins Python: ci/jenkins-python.md
-            - Jenkins Docker: ci/jenkins-docker.md
+            - Jenkins SDK Build and Deploy: ci/jenkins-sdk-build-deploy.md
+            - Python in Jenkins: ci/jenkins-python.md
+            - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
         - Fastlane:
             - Fastlane Setup: ci/fastlane-setup.md
         - Travis: ci/travis-ci.md

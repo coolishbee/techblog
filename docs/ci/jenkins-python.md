@@ -1,4 +1,4 @@
-## Python usage in Jenkins
+## Jenkins 에서 Python 연동
 
 개발사와 퍼블리싱 사업부간에 협업 리소스 비용을 줄이기 위한 기능들 개발.
 

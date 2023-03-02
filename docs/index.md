@@ -18,7 +18,5 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## TODO
 
-* unity sdk interface need to fix
 * check warning msg when android wrapper project rebuild
-* go api server integrating jenkins and docker docs
 * go-redirect-server
