@@ -93,6 +93,9 @@ nav:
         - yum: pm/yum.md
         - pnpm: pm/pnpm.md
         - PUB: pm/pub.md
+    - Project:
+        - AdReport Admin: project/ad-report-admin.md
+        - Adjust Admin: project/adjust-data-admin.md
 theme: material
 markdown_extensions:
     - admonition
