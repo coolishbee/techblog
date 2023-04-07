@@ -1,17 +1,23 @@
-# Welcome to MkDocs
+
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## GameObject.SendMessage
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+!!! example
 
-## Project layout
+    === "C#"
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+        ```c#
+        using UnityEngine;
+        using System.Collections;
+
+        public class ExampleClass : MonoBehaviour {
+            void ApplyDamage(float damage) {
+                print(damage);
+            }
+            void Example() {
+                gameObject.SendMessage("ApplyDamage", 5.0F);
+            }
+        }
+        ```

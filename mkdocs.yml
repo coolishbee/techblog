@@ -8,6 +8,7 @@ nav:
         - Features:
             - Go GC: go/go-gc.md
             - Go Build: go/go-build-linux-onWindows.md
+            - Goroutine: go/go-goroutine.md
         - Library:
             - Google API: go/go-google-api-usage.md
             - Apple Login Redirect Sever: go/apple-login-redirect.md
@@ -29,8 +30,10 @@ nav:
             - Create Framework: ios/app-with-framework.md
             - Cocoapod Usage: ios/cocoapod-usage.md
             - Cocoapod Private: ios/cocoapods-private.md
-            - Cocoapod Public: ios/cocoapods-public.md            
+            - Cocoapod Public: ios/cocoapods-public.md
             - Apple Login: ios/apple-login.md
+            - XcodeGen: ios/xcode-gen.md
+            - Carthage: ios/carthage.md
     - Android:
         - Grammar:
             - Kotlin: android/android-grammar.md
@@ -61,7 +64,7 @@ nav:
             - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
             - iOS Application Override: unity/unity-ios-application-override.md
         - Library:
-            - Asset: unity/unity-api.md
+            - Assets: unity/unity-assets.md
         - Editor:
             - Build Machine: unity/unity-build-machine-shell.md
     - DB:
@@ -99,6 +102,9 @@ nav:
         - Adjust Admin: project/adjust-data-admin.md
 theme: material
 markdown_extensions:
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true 
     - admonition
     - toc:
         permalink: "#"

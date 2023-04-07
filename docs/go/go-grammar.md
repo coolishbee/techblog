@@ -212,7 +212,7 @@ func PKCS5Padding(ciphertext []byte, blockSize int, after int) []byte {
 
 ## [time] YYYY-MM-DD date format 사용하기
 
-## Datetime Format Layout
+### Datetime Format Layout
 
 ```
 const (
@@ -298,7 +298,19 @@ func main() {
 ```
 
 !!! Reference
-	출처: https://gosamples.dev/date-format-yyyy-mm-dd/
+	[https://gosamples.dev/date-format-yyyy-mm-dd](https://gosamples.dev/date-format-yyyy-mm-dd)
+
+
+## [time] 문자열 파싱
+
+```go
+input := "2020-10-24"
+layout := "2006-01-02"
+
+t, _ := time.Parse(layout, input)
+fmt.Println(t)   // 2020-10-24 00:00:00 +0000 UTC
+```
+
 
 ## [ioutil.TempFile] 임시파일 생성하는 방법
 

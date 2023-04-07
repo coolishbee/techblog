@@ -17,138 +17,114 @@ dependencies {
 }
 ```
 
-```java
-public class GoogleBillingImpl implements PurchasesUpdatedListener {
-    private static final String TAG = "GoogleBillingImpl";
+!!! example
 
-    private final BillingClient mBillingClient;
-    private List<SkuDetails> skuDetailsList = new ArrayList<>();        
+    === "Kotlin"
 
-    public GoogleBillingImpl(@NonNull final Context applicationContext)
-    {        
-        mBillingClient = BillingClient.newBuilder(applicationContext)
-                .enablePendingPurchases()
+        ```kotlin
+        class BillingOneStoreImpl(
+            private val activity: Activity
+        ): PurchasesUpdatedListener {    
+
+            private var skuDetailsList: listOf<ProductDetail>()
+            private val billingClient = PurchaseClient.newBuilder(activity)
                 .setListener(this)
-                .build();
-    }
-    
-    public void init()
-    {
-        mBillingClient.startConnection(new BillingClientStateListener() {
-            @Override
-            public void onBillingSetupFinished(@NonNull BillingResult billingResult)
-            {
-                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK)
-                {
-                    // The billing client is ready. You can query purchases here.
-                    List<String> strList = new ArrayList<>();
-                    strList.add("test_1000");
-                    strList.add("test_2000");
+                .build()
 
-                    SkuDetailsParams.Builder params = SkuDetailsParams.newBuilder();
-                    params.setSkusList(strList).setType(BillingClient.SkuType.INAPP);
+            fun init(productList: List<String>) {
 
-                    mBillingClient.querySkuDetailsAsync(params.build(), new SkuDetailsResponseListener() {
-                        @Override
-                        public void onSkuDetailsResponse(@NonNull BillingResult billingResult, 
-                                                         @Nullable List<SkuDetails> list)
-                        {
-                            // Process the result.
-                            if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
-                                    && list != null)
-                            {
-                                if(list.isEmpty())
-                                {                                    
-                                    Log.d(TAG, "list is zero");
-                                }else{
-                                    skuDetailsList = list;
-                                }
+                val signInClient = GaaSignInClient.getClient(activity)
+                signInClient.silentSignIn { backgroundResult ->
+                    // Onestore login failed
+                    if (!backgroundResult.isSuccessful) {
+                        // error log
+                        signInClient.launchSignInFlow(activity) { foregroundResult ->
+                            if (!foregroundResult.isSuccessful) {
+                                // error log
                             }
+                        }else {
+                            queryProductDetailsAsync(productList)
                         }
-                    });
-                }else{
-                    Log.d(TAG, "google purchase error");                    
-                }
-            }
-
-            @Override
-            public void onBillingServiceDisconnected() {
-                // Try to restart the connection on the next request to
-                // Google Play by calling the startConnection() method.
-                Log.d(TAG, "onBillingServiceDisconnected");
-            }
-        });
-    }
-
-    public void purchase(Activity activity, String productId) 
-    {
-        BillingFlowParams flowParams = null;
-        BillingResult billingResult;
-
-        SkuDetails sku = getSkuDetail(productId);
-        if( sku != null )
-        {
-            flowParams = BillingFlowParams.newBuilder()
-                    .setSkuDetails(sku)
-                    .build();
-            billingResult = mBillingClient.launchBillingFlow(activity, flowParams);
-        }
-        else
-        {
-            Log.d(TAG, "sku is null");
-        }
-    }
-
-    @Override
-    public void onPurchasesUpdated(BillingResult billingResult, @Nullable List<Purchase> list) {
-        if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
-                && list != null) {
-            for (Purchase purchase : list) {
-                handlePurchase(purchase);
-            }
-        } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.USER_CANCELED) {
-            // Handle an error caused by a user cancelling the purchase flow.
-            Log.d(TAG, "user purchase cancel");
-        } else {
-            // Handle any other error codes.
-            Log.d(TAG, "google purchase error");
-        }
-    }
-
-    private void handlePurchase(Purchase purchase) {
-        String purchaseToken, payLoad;
-        purchaseToken = purchase.getPurchaseToken();
-        payLoad = purchase.getDeveloperPayload();
-
-        if(purchase.getPurchaseState() == Purchase.PurchaseState.PURCHASED)
-        {
-            ConsumeParams consumeParams =
-                ConsumeParams.newBuilder()
-                        .setPurchaseToken(purchaseToken)                        
-                        .build();
-
-            mBillingClient.consumeAsync(consumeParams, new ConsumeResponseListener() {
-                @Override
-                public void onConsumeResponse(@NonNull BillingResult billingResult, @NonNull String s)
-                {
-                    if(billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK) 
-                    {                                                
-                        Log.d(TAG, "google purchase success");                    
-                    }else{
-                        Log.d(TAG, "google purchase consume error");
+                    }
+                    // Onestore login succeeded
+                    else {
+                        billingClient.startConnection(object : PurchaseClientStateListener {
+                            override fun onSetupFinished(iapResult: IapResult) {
+                                if (iapResult.isSuccess) {
+                                    queryProductDetailsAsync(productList)
+                                }                        
+                            }
+                            override fun onServiceDisconnected() {                        
+                            }
+                        })
                     }
                 }
-            });
-        }        
-    }
+            }
 
-    private SkuDetails getSkuDetail(String productId) {
-        for(SkuDetails item : skuDetailsList) {
-            if(item.getSku().equals(productId)) {
-                return item;
+            fun queryProductDetailsAsync(productList: List<String>) {        
+
+                val params = ProductDetailsParams.newBuilder()
+                    .setProductIdList(productList)
+                    .setProductType(ProductType.INAPP)
+                    .build()
+
+                billingClient.queryProductDetailsAsync(params) { iapResult, productDetails ->
+                    if (iapResult.isSuccess) {
+                        skuDetailsList = productDetails                
+                    }            
+                }
+            }
+
+            fun purchase(activity: Activity,
+                        productId: String                          
+            ) {
+                val product = getProductDetail(productId)
+                if (product != null){
+                    val flowParams = PurchaseFlowParams.newBuilder()
+                        .setProductId(productId)
+                        .setProductType(ProductType.INAPP)
+                        .build()
+
+                    billingClient.launchPurchaseFlow(activity, flowParams)
+                }        
+            }
+
+            override fun onPurchasesUpdated(iapResult: IapResult,
+                                            list: MutableList<PurchaseData>?)
+            {
+                if (iapResult.isSuccess && list != null){
+                    for (purchase in list){
+                        consumeAsync(purchase)
+                    }
+                }       
+            }
+
+            private fun consumeAsync(purchase: PurchaseData)
+            {
+                val consumeParams = ConsumeParams.newBuilder()
+                    .setPurchaseData(purchase)
+                    .build()
+
+                billingClient.consumeAsync(consumeParams) { billingResult, purchaseData ->
+                    if (billingResult.isSuccess) {
+
+                        Log.d(TAG, purchaseData.originalJson)
+                        Log.d(TAG, purchaseData.purchaseToken)                
+                    }            
+                }
+            }    
+
+            private fun getProductDetail(marketProductId: String) : ProductDetail? {        
+                for (item in skuDetailsList){
+                    if (item.productId == marketProductId){
+                        return item
+                    }
+                }
+                return null
+            }
+
+            companion object {
+                    private const val TAG = "BillingOneStoreImpl"
             }
         }
-        return null;
-    }    
-}
-```
+        ```
