@@ -18,9 +18,9 @@ nav:
             - Gorilla WebSocket: go/go-gorilla-websocket.md
             - Gin CORS: go/gin-cors.md
     - iOS:
-        - Grammar:
-            - Swift: ios/ios-grammar.md
+        - Grammar: ios/ios-grammar.md
         - Features:
+            - Swift Class & Struct: ios/swift-struct-class.md
             - Swift ARC: ios/apple-arc.md
             - Framework Definition: ios/use_frameworks_definition.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
@@ -35,8 +35,7 @@ nav:
             - XcodeGen: ios/xcode-gen.md
             - Carthage: ios/carthage.md
     - Android:
-        - Grammar:
-            - Kotlin: android/android-grammar.md
+        - Grammar: android/android-grammar.md            
         - Features:
             - GC: android/android-gc.md
             - PackagenameRefactor: android/android-package-refactor.md
