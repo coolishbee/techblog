@@ -15,7 +15,7 @@
         <link rel="next" href="../go-gc/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
@@ -23,10 +23,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#strconv-convert-uint64-to-string" class="md-skip">
+        <a href="#25" class="md-skip">
           Skip to content
         </a>
       
@@ -79,7 +79,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Tech Blog" class="md-header__button md-logo" aria-label="Tech Blog" data-md-component="logo">
       
@@ -187,7 +189,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        News
+        About
       </a>
     </li>
   
@@ -201,8 +203,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        About
+      <a href="../../news/" class="md-nav__link">
+        News
       </a>
     </li>
   
@@ -223,16 +225,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -262,7 +264,7 @@
   
     <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
       
@@ -287,6 +289,206 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    문법 25개 키워드
+  </a>
+  
+    <nav class="md-nav" aria-label="문법 25개 키워드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#var" class="md-nav__link">
+    var
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    const
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    switch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case" class="md-nav__link">
+    case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallthrough" class="md-nav__link">
+    fallthrough
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#func" class="md-nav__link">
+    func
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defer" class="md-nav__link">
+    defer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package" class="md-nav__link">
+    package
+  </a>
+  
+    <nav class="md-nav" aria-label="package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    import
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+    <nav class="md-nav" aria-label="type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    struct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    go
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chan" class="md-nav__link">
+    chan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goto" class="md-nav__link">
+    goto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#strconv-convert-uint64-to-string" class="md-nav__link">
@@ -341,9 +543,10 @@
     [time] YYYY-MM-DD date format 사용하기
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="[time] YYYY-MM-DD date format 사용하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#datetime-format-layout" class="md-nav__link">
     Datetime Format Layout
   </a>
@@ -366,14 +569,26 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#yyyy-mm-dd-hhmmss" class="md-nav__link">
-    YYYY-MM-DD hh:mm:ss
+  <a href="#yyyy-mm-dd-hhss" class="md-nav__link">
+    YYYY-MM-DD hhss
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    [time] 문자열 파싱
+  </a>
   
 </li>
       
@@ -387,6 +602,13 @@
         <li class="md-nav__item">
   <a href="#ioioutil-io" class="md-nav__link">
     io/ioutil -&gt; io 옮겨간 메서드
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-int8" class="md-nav__link">
+    bool 에서 int8 로 변환하기
   </a>
   
 </li>
@@ -411,16 +633,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -455,6 +677,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../go-goroutine/" class="md-nav__link">
+        Goroutine
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -473,16 +709,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -613,16 +849,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           iOS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="iOS" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           iOS
@@ -634,25 +870,39 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../ios/ios-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_1" tabindex="0" aria-expanded="false">
-          Grammar
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
-          Grammar
+          Features
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -662,16 +912,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/ios-grammar/" class="md-nav__link">
-        Swift
+      <a href="../../ios/swift-struct-class/" class="md-nav__link">
+        Swift Class & Struct
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -682,27 +925,14 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_2" tabindex="0" aria-expanded="false">
-          Features
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_2">
-          <span class="md-nav__icon md-icon"></span>
-          Features
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../ios/xctest/" class="md-nav__link">
+        XCTest
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -764,16 +994,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -878,74 +1108,19 @@
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
-          Android
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Android" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Android
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
             
               
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_1" tabindex="0" aria-expanded="false">
-          Grammar
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Grammar
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item">
+      <a href="../../ios/xcode-gen/" class="md-nav__link">
+        XcodeGen
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -953,8 +1128,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/android-grammar/" class="md-nav__link">
-        Kotlin
+      <a href="../../ios/carthage/" class="md-nav__link">
+        Carthage
       </a>
     </li>
   
@@ -968,6 +1143,55 @@
 
             
           
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
             
               
   
@@ -979,16 +1203,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -1055,16 +1279,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -1215,16 +1439,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Gradle
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Gradle" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Gradle
@@ -1285,16 +1509,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Unity
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Unity" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Unity
@@ -1312,16 +1536,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
           Grammar
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           Grammar
@@ -1374,16 +1598,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_2">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -1464,16 +1688,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_3">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -1486,8 +1710,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unity/unity-api/" class="md-nav__link">
-        Asset
+      <a href="../../unity/unity-assets/" class="md-nav__link">
+        Assets
       </a>
     </li>
   
@@ -1512,16 +1736,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
           Editor
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Editor" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_4">
           <span class="md-nav__icon md-icon"></span>
           Editor
@@ -1568,16 +1792,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           DB
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="DB" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           DB
@@ -1659,16 +1883,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1722,16 +1946,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Shell
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Shell" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Shell
@@ -1799,16 +2023,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_10" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           CI/CD
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           CI/CD
@@ -1826,16 +2050,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
           Jenkins
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Jenkins" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_1">
           <span class="md-nav__icon md-icon"></span>
           Jenkins
@@ -1862,8 +2086,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ci/jenkins-usage/" class="md-nav__link">
-        Jenkins Usage
+      <a href="../../ci/jenkins-sdk-build-deploy/" class="md-nav__link">
+        Jenkins SDK Build and Deploy
       </a>
     </li>
   
@@ -1877,7 +2101,7 @@
   
     <li class="md-nav__item">
       <a href="../../ci/jenkins-python/" class="md-nav__link">
-        Jenkins Python
+        Python in Jenkins
       </a>
     </li>
   
@@ -1890,8 +2114,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ci/jenkins-docker/" class="md-nav__link">
-        Jenkins Docker
+      <a href="../../ci/jenkins-docker-build-deploy/" class="md-nav__link">
+        Docker Build and Deploy in Jenkins
       </a>
     </li>
   
@@ -1916,16 +2140,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
           Fastlane
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Fastlane" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_2">
           <span class="md-nav__icon md-icon"></span>
           Fastlane
@@ -1986,16 +2210,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Package Manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Package Manager" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Package Manager
@@ -2106,6 +2330,83 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/api-admin-server/" class="md-nav__link">
+        SDK API Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/ad-report-admin/" class="md-nav__link">
+        AdReport Admin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/adjust-data-admin/" class="md-nav__link">
+        Adjust Admin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2129,6 +2430,206 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    문법 25개 키워드
+  </a>
+  
+    <nav class="md-nav" aria-label="문법 25개 키워드">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#var" class="md-nav__link">
+    var
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#const" class="md-nav__link">
+    const
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for" class="md-nav__link">
+    for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#range" class="md-nav__link">
+    range
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break" class="md-nav__link">
+    break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue" class="md-nav__link">
+    continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#switch" class="md-nav__link">
+    switch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case" class="md-nav__link">
+    case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fallthrough" class="md-nav__link">
+    fallthrough
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if" class="md-nav__link">
+    if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#else" class="md-nav__link">
+    else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#func" class="md-nav__link">
+    func
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#return" class="md-nav__link">
+    return
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defer" class="md-nav__link">
+    defer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#package" class="md-nav__link">
+    package
+  </a>
+  
+    <nav class="md-nav" aria-label="package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    import
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type" class="md-nav__link">
+    type
+  </a>
+  
+    <nav class="md-nav" aria-label="type">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    struct
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#map" class="md-nav__link">
+    map
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    go
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chan" class="md-nav__link">
+    chan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select" class="md-nav__link">
+    select
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goto" class="md-nav__link">
+    goto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#strconv-convert-uint64-to-string" class="md-nav__link">
@@ -2183,9 +2684,10 @@
     [time] YYYY-MM-DD date format 사용하기
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="[time] YYYY-MM-DD date format 사용하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#datetime-format-layout" class="md-nav__link">
     Datetime Format Layout
   </a>
@@ -2208,14 +2710,26 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#yyyy-mm-dd-hhmmss" class="md-nav__link">
-    YYYY-MM-DD hh:mm:ss
+  <a href="#yyyy-mm-dd-hhss" class="md-nav__link">
+    YYYY-MM-DD hhss
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    [time] 문자열 파싱
+  </a>
   
 </li>
       
@@ -2229,6 +2743,13 @@
         <li class="md-nav__item">
   <a href="#ioioutil-io" class="md-nav__link">
     io/ioutil -&gt; io 옮겨간 메서드
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bool-int8" class="md-nav__link">
+    bool 에서 int8 로 변환하기
   </a>
   
 </li>
@@ -2248,11 +2769,451 @@
                   
 
 
-
   <h1>Grammar</h1>
 
+<h2 id="25">문법 25개 키워드<a class="headerlink" href="#25" title="Permanent link">#</a></h2>
+<h3 id="var">var<a class="headerlink" href="#var" title="Permanent link">#</a></h3>
+<p>변수 선언
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="kt">int</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">x</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="mi">0</span>
+<span class="mi">2</span>
+<span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div></p>
+<h3 id="const">const<a class="headerlink" href="#const" title="Permanent link">#</a></h3>
+<p>상수 선언
+<div class="highlight"><pre><span></span><code>func main() {
+    const x int = 1
+    println(x)
+    const (
+        a = 2
+        b = 3
+        c = 4
+    )
+    println(a + b + c)
+}
+//OUTPUT
+1
+9
+</code></pre></div></p>
+<h3 id="for">for<a class="headerlink" href="#for" title="Permanent link">#</a></h3>
+<p>반복문
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sum</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">i</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;sum :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">sum</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="nx">sum2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">i</span><span class="o">++</span>
+<span class="w">        </span><span class="nx">sum2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">i</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;sum2 :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">sum2</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">sum</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">55</span>
+<span class="nx">sum2</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">55</span>
+</code></pre></div></p>
+<h3 id="range">range<a class="headerlink" href="#range" title="Permanent link">#</a></h3>
+<p>컬렉션에서 각 요소의 인덱스와 값을 반환
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">numbers</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">num</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="mi">0</span><span class="w"> </span><span class="mi">1</span>
+<span class="mi">1</span><span class="w"> </span><span class="mi">2</span>
+<span class="mi">2</span><span class="w"> </span><span class="mi">3</span>
+</code></pre></div></p>
+<h3 id="break">break<a class="headerlink" href="#break" title="Permanent link">#</a></h3>
+<p><code>for</code>, <code>switch</code>, <code>select</code> 에서 빠져나올 때 사용
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">i</span><span class="o">++</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">break</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;i :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div></p>
+<h3 id="continue">continue<a class="headerlink" href="#continue" title="Permanent link">#</a></h3>
+<p><code>for</code> 루프 시작 부분으로 이동
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">i</span><span class="o">++</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">continue</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;i :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="nx">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="nx">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div></p>
+<h3 id="switch">switch<a class="headerlink" href="#switch" title="Permanent link">#</a></h3>
+<p>여러 값을 비교하는 조건문 표현
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 10&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 8&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is less than 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div></p>
+<h3 id="case">case<a class="headerlink" href="#case" title="Permanent link">#</a></h3>
+<p>조건문을 작성
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="nx">num</span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 1 or 2&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 3 or 4&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is more than 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="mi">2</span>
+</code></pre></div></p>
+<h3 id="default">default<a class="headerlink" href="#default" title="Permanent link">#</a></h3>
+<p>모든 <code>case</code>에 부합하지 않을 때 실행
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 10&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 8&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is less than 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">less</span><span class="w"> </span><span class="nx">than</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div></p>
+<h3 id="fallthrough">fallthrough<a class="headerlink" href="#fallthrough" title="Permanent link">#</a></h3>
+<p><code>case</code>를 만족해도 아래의 <code>case</code> 들을 실행하기 위해 fallthrough 를 사용</p>
+<blockquote>
+<p>go 컴파일러가 자동으로 <code>break</code> 문을 각 <code>case</code>문 블럭 마지막에 추가하므로, 조건문이 해당하는 경우 해당 <code>case</code>에서 <code>switch</code> 문이 종료된다.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is less than 10&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">fallthrough</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is less than 8&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="k">fallthrough</span>
+<span class="w">    </span><span class="k">default</span><span class="p">:</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is less than 5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">less</span><span class="w"> </span><span class="nx">than</span><span class="w"> </span><span class="mi">10</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">less</span><span class="w"> </span><span class="nx">than</span><span class="w"> </span><span class="mi">8</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">less</span><span class="w"> </span><span class="nx">than</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div>
+<h3 id="if">if<a class="headerlink" href="#if" title="Permanent link">#</a></h3>
+<p>조건문
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;a is 0&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;a is&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">a</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div></p>
+<h3 id="else">else<a class="headerlink" href="#else" title="Permanent link">#</a></h3>
+<p><code>if</code> 조건식이 모두 거짓일 때 실행
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;a is 0&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;a is 2&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;a is 1&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">a</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="mi">1</span>
+</code></pre></div></p>
+<h3 id="func">func<a class="headerlink" href="#func" title="Permanent link">#</a></h3>
+<p>함수 선언
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;sum :&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">a</span><span class="o">+</span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="return">return<a class="headerlink" href="#return" title="Permanent link">#</a></h3>
+<p>값을 반환
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">multiply</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">sum</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">sum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+<span class="w">    </span><span class="k">return</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">multiply</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">b</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="mi">15</span>
+<span class="mi">50</span>
+</code></pre></div></p>
+<h3 id="defer">defer<a class="headerlink" href="#defer" title="Permanent link">#</a></h3>
+<p>함수 내에서 제일 마지막에 실행
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;last&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;first&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">first</span>
+<span class="nx">last</span>
+</code></pre></div></p>
+<h3 id="package">package<a class="headerlink" href="#package" title="Permanent link">#</a></h3>
+<p>코드의 모듈화, 코드의 재사용 가능
+* main 패키지 : 실행 프로그램
+* 그 외 패키지 : 공유 패키지(라이브러리)</p>
+<h4 id="import">import<a class="headerlink" href="#import" title="Permanent link">#</a></h4>
+<p>다른 패키지를 사용하기 위해 포함시킬 것을 선언
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;fmt package&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">fmt</span><span class="w"> </span><span class="kn">package</span>
+</code></pre></div></p>
+<h3 id="type">type<a class="headerlink" href="#type" title="Permanent link">#</a></h3>
+<p>새로운 타입 정의</p>
+<h4 id="struct">struct<a class="headerlink" href="#struct" title="Permanent link">#</a></h4>
+<p>변수를 묶어서 새로운 자료형 정의 (Custom Data Type)
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">hotel</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="w">  </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">price</span><span class="w"> </span><span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">h1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">hotel</span><span class="p">{}</span>
+<span class="w">    </span><span class="nx">h1</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;abc&quot;</span>
+<span class="w">    </span><span class="nx">h1</span><span class="p">.</span><span class="nx">price</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5000</span>
+
+<span class="w">    </span><span class="nx">h2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">hotel</span><span class="p">{</span><span class="nx">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;cde&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">h1</span><span class="p">,</span><span class="w"> </span><span class="nx">h2</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="p">{</span><span class="nx">abc</span><span class="w"> </span><span class="mi">5000</span><span class="p">}</span><span class="w"> </span><span class="p">{</span><span class="nx">cde</span><span class="w"> </span><span class="mi">1000</span><span class="p">}</span>
+</code></pre></div></p>
+<h4 id="interface">interface<a class="headerlink" href="#interface" title="Permanent link">#</a></h4>
+<p>메소드들의 집합체
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">reserve</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">twoday</span><span class="p">()</span><span class="w"> </span><span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">type</span><span class="w"> </span><span class="nx">hotel</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="w">  </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">price</span><span class="w"> </span><span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">type</span><span class="w"> </span><span class="nx">airbnb</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="w">   </span><span class="kt">string</span>
+<span class="w">    </span><span class="nx">price</span><span class="w">  </span><span class="kt">int</span>
+<span class="w">    </span><span class="nx">coupon</span><span class="w"> </span><span class="kt">int</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">h</span><span class="w"> </span><span class="nx">hotel</span><span class="p">)</span><span class="w"> </span><span class="nx">twoday</span><span class="p">()</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">h</span><span class="p">.</span><span class="nx">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="nx">airbnb</span><span class="p">)</span><span class="w"> </span><span class="nx">twoday</span><span class="p">()</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">price</span><span class="o">*</span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">coupon</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">hotel</span><span class="p">{</span><span class="s">&quot;aaa&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">}</span>
+<span class="w">    </span><span class="nx">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">airbnb</span><span class="p">{</span><span class="s">&quot;bbb&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">makeReserve</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">makeReserve</span><span class="p">(</span><span class="nx">r</span><span class="w"> </span><span class="o">...</span><span class="nx">reserve</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">twoday</span><span class="p">())</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="mi">2000</span>
+<span class="mi">1500</span>
+</code></pre></div></p>
+<h3 id="map">map<a class="headerlink" href="#map" title="Permanent link">#</a></h3>
+<p>해시테이블을 구현한 자료구조
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">m</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kt">int</span><span class="p">{</span>
+<span class="w">        </span><span class="s">&quot;one&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">        </span><span class="s">&quot;two&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">m</span><span class="p">[</span><span class="s">&quot;five&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">5</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">k</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">m</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">println</span><span class="p">(</span><span class="nx">k</span><span class="p">,</span><span class="w"> </span><span class="nx">v</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">one</span><span class="w"> </span><span class="mi">1</span>
+<span class="nx">two</span><span class="w"> </span><span class="mi">2</span>
+<span class="nx">five</span><span class="w"> </span><span class="mi">5</span>
+</code></pre></div></p>
+<h3 id="go">go<a class="headerlink" href="#go" title="Permanent link">#</a></h3>
+<p><code>go</code> 키워드로 함수를 호출하면, goroutine 실행
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">num</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">num</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">num</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">num</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="mi">3</span>
+<span class="mi">1</span>
+<span class="mi">2</span>
+</code></pre></div></p>
+<h3 id="chan">chan<a class="headerlink" href="#chan" title="Permanent link">#</a></h3>
+<p>채널 선언
+* 채널 : 고루틴 사용시 값을 주고 받는 통로
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ch</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">ch</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">}()</span>
+
+<span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">ch</span>
+
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="nx">num</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="mi">1</span>
+</code></pre></div></p>
+<h3 id="select">select<a class="headerlink" href="#select" title="Permanent link">#</a></h3>
+<p>다중 채널사용시 채널 분기문으로 사용
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nx">c1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">c2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">(</span><span class="kd">chan</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">c1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;one&quot;</span>
+<span class="w">    </span><span class="p">}()</span>
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="kd">func</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">time</span><span class="p">.</span><span class="nx">Sleep</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Second</span><span class="p">)</span>
+<span class="w">        </span><span class="nx">c2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="s">&quot;two&quot;</span>
+<span class="w">    </span><span class="p">}()</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">select</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nx">msg1</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">c1</span><span class="p">:</span>
+<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;received&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">msg1</span><span class="p">)</span>
+<span class="w">        </span><span class="k">case</span><span class="w"> </span><span class="nx">msg2</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&lt;-</span><span class="nx">c2</span><span class="p">:</span>
+<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;received&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">msg2</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<h3 id="goto">goto<a class="headerlink" href="#goto" title="Permanent link">#</a></h3>
+<p>특정 레이블로 이동
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">num</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">goto</span><span class="w"> </span><span class="nx">ONE</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">goto</span><span class="w"> </span><span class="nx">OTHER</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="nx">ONE</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is 1&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">goto</span><span class="w"> </span><span class="nx">END</span>
+<span class="nx">OTHER</span><span class="p">:</span>
+<span class="w">    </span><span class="nb">println</span><span class="p">(</span><span class="s">&quot;num is not 1&quot;</span><span class="p">)</span>
+<span class="nx">END</span><span class="p">:</span>
+
+<span class="c1">//OUTPUT</span>
+<span class="nx">num</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p><a href="https://miryang.dev/blog/go-keyword">https://miryang.dev/blog/go-keyword</a></p>
+</div>
 <h2 id="strconv-convert-uint64-to-string">[strconv] Convert uint64 to string<a class="headerlink" href="#strconv-convert-uint64-to-string" title="Permanent link">#</a></h2>
-<pre><code>package main
+<div class="highlight"><pre><span></span><code>package main
 
 import (
     &quot;fmt&quot;
@@ -2265,27 +3226,27 @@ func main() {
     var myNumber uint64
     myNumber = 18446744073709551615
 
-    // Format to a string by passing the number and it's base.
+    // Format to a string by passing the number and it&#39;s base.
     str := strconv.FormatUint(myNumber, 10)
 
     // Print as string
-    // Will output: 'The number is: 18446744073709551615'
+    // Will output: &#39;The number is: 18446744073709551615&#39;
     fmt.Println(&quot;The number is: &quot; + str)
 }
-</code></pre>
+</code></pre></div>
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
 <p>https://golangcode.com/uint64-to-string/</p>
 </div>
 <h2 id="strconv-convert-uint8-to-string">[strconv] convert uint8 to string<a class="headerlink" href="#strconv-convert-uint8-to-string" title="Permanent link">#</a></h2>
-<pre><code>strconv.Itoa(int(123))
-</code></pre>
+<div class="highlight"><pre><span></span><code>strconv.Itoa(int(123))
+</code></pre></div>
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
 <p>https://stackoverflow.com/questions/19223277/how-to-convert-uint8-to-string</p>
 </div>
 <h2 id="osexec-in-go">[os/exec] 커맨드 명령어 실행하기 in go<a class="headerlink" href="#osexec-in-go" title="Permanent link">#</a></h2>
-<pre><code>package main
+<div class="highlight"><pre><span></span><code>package main
 
 import (
     &quot;fmt&quot;
@@ -2336,7 +3297,7 @@ func printOutput(outs []byte) {
         fmt.Printf(&quot;==&gt; Output: %s\n&quot;, string(outs))
     }
 }
-</code></pre>
+</code></pre></div>
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
 <p>출처: https://www.darrencoxall.com/golang/executing-commands-in-go</p>
@@ -2344,9 +3305,9 @@ func printOutput(outs []byte) {
 <h2 id="iconv-go-byte-to-string">[iconv-go] byte to string 변환시 한글깨짐 해결<a class="headerlink" href="#iconv-go-byte-to-string" title="Permanent link">#</a></h2>
 <p>간혹 byte를 string 으로 출력시 한글깨짐 현상을 겪을 수 있다.
 이때 가장 합리적인 해결 방안
-example:</p>
-<pre><code>result, _ := iconv.ConvertString(string(output), &quot;euc-kr&quot;, &quot;utf-8&quot;)
-</code></pre>
+example:
+<div class="highlight"><pre><span></span><code>result, _ := iconv.ConvertString(string(output), &quot;euc-kr&quot;, &quot;utf-8&quot;)
+</code></pre></div></p>
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
 <p>https://github.com/djimenez/iconv-go</p>
@@ -2357,102 +3318,102 @@ example:</p>
 인스톨 파일이 작동되지 않는다면 압축파일 받아서 ProgramFiles 에 압축해제해서 떨궈놓고 환경변수(mingw64/bin)만 셋팅하면 된다.</p>
 <h2 id="aes256-cbc">aes256 cbc 암호화 복호화<a class="headerlink" href="#aes256-cbc" title="Permanent link">#</a></h2>
 <h3 id="pkcs5padding">PKCS5Padding<a class="headerlink" href="#pkcs5padding" title="Permanent link">#</a></h3>
-<p>base64:</p>
-<pre><code class="language-go">import (
-    &quot;bytes&quot;
-    &quot;crypto/aes&quot;
-    &quot;crypto/cipher&quot;
-    &quot;encoding/base64&quot;
-    &quot;fmt&quot;
-)
+<p>base64:
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;bytes&quot;</span>
+<span class="w">    </span><span class="s">&quot;crypto/aes&quot;</span>
+<span class="w">    </span><span class="s">&quot;crypto/cipher&quot;</span>
+<span class="w">    </span><span class="s">&quot;encoding/base64&quot;</span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<span class="p">)</span>
 
-func AESEncrypt(src string, key []byte, iv string) string {
-    block, err := aes.NewCipher(key)
-    if err != nil {
-        fmt.Println(&quot;key error1&quot;, err)
-    }
-    if src == &quot;&quot; {
-        fmt.Println(&quot;plain content empty&quot;)
-    }
-    ecb := cipher.NewCBCEncrypter(block, []byte(iv))
-    content := []byte(src)
-    content = PKCS5Padding(content, block.BlockSize())
-    crypted := make([]byte, len(content))
-    ecb.CryptBlocks(crypted, content)
+<span class="kd">func</span><span class="w"> </span><span class="nx">AESEncrypt</span><span class="p">(</span><span class="nx">src</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nx">iv</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">aes</span><span class="p">.</span><span class="nx">NewCipher</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;key error1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">src</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;plain content empty&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ecb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">cipher</span><span class="p">.</span><span class="nx">NewCBCEncrypter</span><span class="p">(</span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">iv</span><span class="p">))</span>
+<span class="w">    </span><span class="nx">content</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">src</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">content</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">PKCS5Padding</span><span class="p">(</span><span class="nx">content</span><span class="p">,</span><span class="w"> </span><span class="nx">block</span><span class="p">.</span><span class="nx">BlockSize</span><span class="p">())</span>
+<span class="w">    </span><span class="nx">crypted</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">content</span><span class="p">))</span>
+<span class="w">    </span><span class="nx">ecb</span><span class="p">.</span><span class="nx">CryptBlocks</span><span class="p">(</span><span class="nx">crypted</span><span class="p">,</span><span class="w"> </span><span class="nx">content</span><span class="p">)</span>
 
-    return base64.StdEncoding.EncodeToString(crypted)
-}
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">base64</span><span class="p">.</span><span class="nx">StdEncoding</span><span class="p">.</span><span class="nx">EncodeToString</span><span class="p">(</span><span class="nx">crypted</span><span class="p">)</span>
+<span class="p">}</span>
 
-func AESDecrypt(cryptedStr string, key []byte, iv string) []byte {
-    encryptedData, _ := base64.StdEncoding.DecodeString(cryptedStr)
-    block, err := aes.NewCipher(key)
-    if err != nil {
-        fmt.Println(&quot;key error1&quot;, err)
-    }
-    if len(encryptedData) == 0 {
-        fmt.Println(&quot;plain content empty&quot;)
-    }
-    ecb := cipher.NewCBCDecrypter(block, []byte(iv))
-    decrypted := make([]byte, len(encryptedData))
-    ecb.CryptBlocks(decrypted, encryptedData)
+<span class="kd">func</span><span class="w"> </span><span class="nx">AESDecrypt</span><span class="p">(</span><span class="nx">cryptedStr</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nx">iv</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">encryptedData</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">base64</span><span class="p">.</span><span class="nx">StdEncoding</span><span class="p">.</span><span class="nx">DecodeString</span><span class="p">(</span><span class="nx">cryptedStr</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">aes</span><span class="p">.</span><span class="nx">NewCipher</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;key error1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">encryptedData</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;plain content empty&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ecb</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">cipher</span><span class="p">.</span><span class="nx">NewCBCDecrypter</span><span class="p">(</span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">iv</span><span class="p">))</span>
+<span class="w">    </span><span class="nx">decrypted</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">encryptedData</span><span class="p">))</span>
+<span class="w">    </span><span class="nx">ecb</span><span class="p">.</span><span class="nx">CryptBlocks</span><span class="p">(</span><span class="nx">decrypted</span><span class="p">,</span><span class="w"> </span><span class="nx">encryptedData</span><span class="p">)</span>
 
-    return PKCS5Trimming(decrypted)
-}
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">PKCS5Trimming</span><span class="p">(</span><span class="nx">decrypted</span><span class="p">)</span>
+<span class="p">}</span>
 
-func PKCS5Padding(ciphertext []byte, blockSize int) []byte {
-    padding := blockSize - len(ciphertext)%blockSize
-    padtext := bytes.Repeat([]byte{byte(padding)}, padding)
-    return append(ciphertext, padtext...)
-}
+<span class="kd">func</span><span class="w"> </span><span class="nx">PKCS5Padding</span><span class="p">(</span><span class="nx">ciphertext</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nx">blockSize</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">padding</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">blockSize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">ciphertext</span><span class="p">)</span><span class="o">%</span><span class="nx">blockSize</span>
+<span class="w">    </span><span class="nx">padtext</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Repeat</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nb">byte</span><span class="p">(</span><span class="nx">padding</span><span class="p">)},</span><span class="w"> </span><span class="nx">padding</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="nx">padtext</span><span class="o">...</span><span class="p">)</span>
+<span class="p">}</span>
 
-func PKCS5Trimming(encrypt []byte) []byte {
-    padding := encrypt[len(encrypt)-1]
-    return encrypt[:len(encrypt)-int(padding)]
-}
-</code></pre>
-<p>hex:</p>
-<pre><code class="language-go">func Ase256Encode(plaintext string, key string, iv string, blockSize int) string {
-    bKey := []byte(key)
-    bIV := []byte(iv)
-    bPlaintext := PKCS5Padding([]byte(plaintext), blockSize, len(plaintext))
-    block, err := aes.NewCipher(bKey)
-    if err != nil {
-        panic(err)
-    }
-    ciphertext := make([]byte, len(bPlaintext))
-    mode := cipher.NewCBCEncrypter(block, bIV)
-    mode.CryptBlocks(ciphertext, bPlaintext)
-    return hex.EncodeToString(ciphertext)
-}
+<span class="kd">func</span><span class="w"> </span><span class="nx">PKCS5Trimming</span><span class="p">(</span><span class="nx">encrypt</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">padding</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">encrypt</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="nx">encrypt</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">encrypt</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="nx">encrypt</span><span class="p">)</span><span class="o">-</span><span class="nb">int</span><span class="p">(</span><span class="nx">padding</span><span class="p">)]</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p>hex:
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">Ase256Encode</span><span class="p">(</span><span class="nx">plaintext</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">iv</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">blockSize</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">bKey</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">bIV</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">iv</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">bPlaintext</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">PKCS5Padding</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">plaintext</span><span class="p">),</span><span class="w"> </span><span class="nx">blockSize</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">plaintext</span><span class="p">))</span>
+<span class="w">    </span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">aes</span><span class="p">.</span><span class="nx">NewCipher</span><span class="p">(</span><span class="nx">bKey</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nx">ciphertext</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nb">make</span><span class="p">([]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">bPlaintext</span><span class="p">))</span>
+<span class="w">    </span><span class="nx">mode</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">cipher</span><span class="p">.</span><span class="nx">NewCBCEncrypter</span><span class="p">(</span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="nx">bIV</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">mode</span><span class="p">.</span><span class="nx">CryptBlocks</span><span class="p">(</span><span class="nx">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="nx">bPlaintext</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">hex</span><span class="p">.</span><span class="nx">EncodeToString</span><span class="p">(</span><span class="nx">ciphertext</span><span class="p">)</span>
+<span class="p">}</span>
 
-func Ase256Decode(cipherText string, encKey string, iv string) (decryptedString string) {
-    bKey := []byte(encKey)
-    bIV := []byte(iv)
-    cipherTextDecoded, err := hex.DecodeString(cipherText)
-    if err != nil {
-        panic(err)
-    }
+<span class="kd">func</span><span class="w"> </span><span class="nx">Ase256Decode</span><span class="p">(</span><span class="nx">cipherText</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">encKey</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">iv</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nx">decryptedString</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">bKey</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">encKey</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">bIV</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">iv</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">cipherTextDecoded</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">hex</span><span class="p">.</span><span class="nx">DecodeString</span><span class="p">(</span><span class="nx">cipherText</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
 
-    block, err := aes.NewCipher(bKey)
-    if err != nil {
-        panic(err)
-    }
+<span class="w">    </span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">aes</span><span class="p">.</span><span class="nx">NewCipher</span><span class="p">(</span><span class="nx">bKey</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">panic</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
 
-    mode := cipher.NewCBCDecrypter(block, bIV)
-    mode.CryptBlocks([]byte(cipherTextDecoded), []byte(cipherTextDecoded))
-    return string(cipherTextDecoded)
-}
+<span class="w">    </span><span class="nx">mode</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">cipher</span><span class="p">.</span><span class="nx">NewCBCDecrypter</span><span class="p">(</span><span class="nx">block</span><span class="p">,</span><span class="w"> </span><span class="nx">bIV</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">mode</span><span class="p">.</span><span class="nx">CryptBlocks</span><span class="p">([]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">cipherTextDecoded</span><span class="p">),</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="nx">cipherTextDecoded</span><span class="p">))</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">string</span><span class="p">(</span><span class="nx">cipherTextDecoded</span><span class="p">)</span>
+<span class="p">}</span>
 
-func PKCS5Padding(ciphertext []byte, blockSize int, after int) []byte {
-    padding := (blockSize - len(ciphertext)%blockSize)
-    padtext := bytes.Repeat([]byte{byte(padding)}, padding)
-    return append(ciphertext, padtext...)
-}
-</code></pre>
+<span class="kd">func</span><span class="w"> </span><span class="nx">PKCS5Padding</span><span class="p">(</span><span class="nx">ciphertext</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="p">,</span><span class="w"> </span><span class="nx">blockSize</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">after</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="kt">byte</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">padding</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="nx">blockSize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="nx">ciphertext</span><span class="p">)</span><span class="o">%</span><span class="nx">blockSize</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">padtext</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">Repeat</span><span class="p">([]</span><span class="kt">byte</span><span class="p">{</span><span class="nb">byte</span><span class="p">(</span><span class="nx">padding</span><span class="p">)},</span><span class="w"> </span><span class="nx">padding</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">append</span><span class="p">(</span><span class="nx">ciphertext</span><span class="p">,</span><span class="w"> </span><span class="nx">padtext</span><span class="o">...</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></p>
 <h2 id="time-yyyy-mm-dd-date-format">[time] YYYY-MM-DD date format 사용하기<a class="headerlink" href="#time-yyyy-mm-dd-date-format" title="Permanent link">#</a></h2>
-<h2 id="datetime-format-layout">Datetime Format Layout<a class="headerlink" href="#datetime-format-layout" title="Permanent link">#</a></h2>
-<pre><code>const (
-    Layout      = &quot;01/02 03:04:05PM '06 -0700&quot; // The reference time, in numerical order.
+<h3 id="datetime-format-layout">Datetime Format Layout<a class="headerlink" href="#datetime-format-layout" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>const (
+    Layout      = &quot;01/02 03:04:05PM &#39;06 -0700&quot; // The reference time, in numerical order.
     ANSIC       = &quot;Mon Jan _2 15:04:05 2006&quot;
     UnixDate    = &quot;Mon Jan _2 15:04:05 MST 2006&quot;
     RubyDate    = &quot;Mon Jan 02 15:04:05 -0700 2006&quot;
@@ -2470,9 +3431,9 @@ func PKCS5Padding(ciphertext []byte, blockSize int, after int) []byte {
     StampMicro = &quot;Jan _2 15:04:05.000000&quot;
     StampNano  = &quot;Jan _2 15:04:05.000000000&quot;
 )
-</code></pre>
+</code></pre></div>
 <h4 id="yyyy-mm-dd">YYYY-MM-DD<a class="headerlink" href="#yyyy-mm-dd" title="Permanent link">#</a></h4>
-<pre><code>package main
+<div class="highlight"><pre><span></span><code>package main
 
 import (
     &quot;fmt&quot;
@@ -2488,9 +3449,9 @@ func main() {
     fmt.Println(now.Format(YYYYMMDD))
 }
 //output: 2022-03-14
-</code></pre>
+</code></pre></div>
 <h4 id="ddmmyyyy">DD/MM/YYYY<a class="headerlink" href="#ddmmyyyy" title="Permanent link">#</a></h4>
-<pre><code>package main
+<div class="highlight"><pre><span></span><code>package main
 
 import (
     &quot;fmt&quot;
@@ -2506,9 +3467,9 @@ func main() {
     fmt.Println(now.Format(DDMMYYYY))
 }
 //output: 14/03/2022
-</code></pre>
-<h4 id="yyyy-mm-dd-hhmmss">YYYY-MM-DD hh:mm:ss<a class="headerlink" href="#yyyy-mm-dd-hhmmss" title="Permanent link">#</a></h4>
-<pre><code>package main
+</code></pre></div>
+<h4 id="yyyy-mm-dd-hhss">YYYY-MM-DD hh<img alt="🇲🇲" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/png/1f1f2-1f1f2.png" title=":mm:" />ss<a class="headerlink" href="#yyyy-mm-dd-hhss" title="Permanent link">#</a></h4>
+<div class="highlight"><pre><span></span><code>package main
 
 import (
     &quot;fmt&quot;
@@ -2524,18 +3485,25 @@ func main() {
     fmt.Println(now.Format(DDMMYYYYhhmmss))
 }
 //output: 2022-03-14 05:41:33
-</code></pre>
+</code></pre></div>
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
-<p>출처: https://gosamples.dev/date-format-yyyy-mm-dd/</p>
+<p><a href="https://gosamples.dev/date-format-yyyy-mm-dd">https://gosamples.dev/date-format-yyyy-mm-dd</a></p>
 </div>
+<h2 id="time">[time] 문자열 파싱<a class="headerlink" href="#time" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nx">input</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;2020-10-24&quot;</span>
+<span class="nx">layout</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;2006-01-02&quot;</span>
+
+<span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">_</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">time</span><span class="p">.</span><span class="nx">Parse</span><span class="p">(</span><span class="nx">layout</span><span class="p">,</span><span class="w"> </span><span class="nx">input</span><span class="p">)</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span><span class="w">   </span><span class="c1">// 2020-10-24 00:00:00 +0000 UTC</span>
+</code></pre></div>
 <h2 id="ioutiltempfile">[ioutil.TempFile] 임시파일 생성하는 방법<a class="headerlink" href="#ioutiltempfile" title="Permanent link">#</a></h2>
 <p><a href="https://golang.org/pkg/io/ioutil/">IO / ioutil</a> 패키지는 두 가지 기능을 포함하고 임시 디렉토리 <a href="https://golang.org/pkg/io/ioutil/#TempDir">TempDir</a> 및 임시 파일 <a href="https://golang.org/pkg/io/ioutil/#TempFile">TempFile</a> 을 만들 수 있습니다.</p>
 <p>유닉스 머신에서 기본적으로 TempDir 함수는/tmp/임시 디렉토리로반환됩니다.접두사가있는 디렉토리를 작성하기 위해 추가 매개 변수를 전달할 수 있습니다.</p>
 <p>TempFile 함수는 고유하고 임의의 숫자를 만듭니다.pattern매개 변수를 사용하여 파일의 접두사와 접미사를 제어 할 수 있습니다. 예로 *.tmp 를 전달하면 임시 파일이 생성됩니다.프로그램에서 임시 파일을 삭제하지 않고 나중에 임시 파일을 정리하는 일괄 삭제 작업을 원하는 경우에 유용합니다.</p>
 <p>파일을 만든 후에는 파일 형식 그대로 파일에 무엇이든 쓸 수 있습니다</p>
 <p>os.File.os.File은 io.ReadWriter 인터페이스를 구현하므로 Write메소드를 사용하여 파일에 쓸 수 있습니다.</p>
-<pre><code>package main
+<div class="highlight"><pre><span></span><code>package main
 
 import (
     &quot;fmt&quot;
@@ -2568,7 +3536,7 @@ func main() {
         fmt.Println(err)
     }
 }
-</code></pre>
+</code></pre></div>
 <h2 id="ioioutil-io">io/ioutil -&gt; io 옮겨간 메서드<a class="headerlink" href="#ioioutil-io" title="Permanent link">#</a></h2>
 <ul>
 <li>ioutil.ReadAll =&gt; io.ReadAll</li>
@@ -2581,6 +3549,26 @@ func main() {
 <div class="admonition reference">
 <p class="admonition-title">Reference</p>
 <p>https://runebook.dev/ko/docs/go/io/ioutil/index</p>
+</div>
+<h2 id="bool-int8">bool 에서 int8 로 변환하기<a class="headerlink" href="#bool-int8" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>package main
+
+import &quot;fmt&quot;
+
+func B2i(b bool) int8 {
+    if b {
+        return 1
+    }
+    return 0
+}
+func main() {
+    fmt.Println(B2i(true))  // 1
+    fmt.Println(B2i(false)) // 0    
+}
+</code></pre></div>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p>https://stackoverflow.com/questions/38627078/how-to-convert-bool-to-int8-in-golang</p>
 </div>
 
 
@@ -2619,10 +3607,10 @@ func main() {
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>

@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../jenkins-python/">
+        <link rel="prev" href="../ios-grammar/">
       
       
-        <link rel="next" href="../fastlane-setup/">
+        <link rel="next" href="../xctest/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
     
     
       
-        <title>Jenkins Docker - Tech Blog</title>
+        <title>Swift Class & Struct - Tech Blog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c4a75a56.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#class-struct" class="md-skip">
           Skip to content
         </a>
       
@@ -79,7 +79,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Tech Blog" class="md-header__button md-logo" aria-label="Tech Blog" data-md-component="logo">
       
@@ -100,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Jenkins Docker
+              Swift Class & Struct
             
           </span>
         </div>
@@ -187,7 +189,7 @@
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        News
+        About
       </a>
     </li>
   
@@ -201,8 +203,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/" class="md-nav__link">
-        About
+      <a href="../../news/" class="md-nav__link">
+        News
       </a>
     </li>
   
@@ -221,16 +223,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
           Go
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Go" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           Go
@@ -276,16 +278,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_3">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -320,6 +322,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-goroutine/" class="md-nav__link">
+        Goroutine
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -338,16 +354,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_4">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -471,23 +487,25 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           iOS
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="iOS" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           iOS
@@ -499,70 +517,38 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4_1" tabindex="0" aria-expanded="false">
-          Grammar
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
-        <label class="md-nav__title" for="__nav_4_1">
-          <span class="md-nav__icon md-icon"></span>
-          Grammar
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../ios/ios-grammar/" class="md-nav__link">
-        Swift
+      <a href="../ios-grammar/" class="md-nav__link">
+        Grammar
       </a>
     </li>
   
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
             
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_4_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_4_2">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -573,9 +559,99 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Swift Class & Struct
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Swift Class & Struct
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    Class 특성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#struct" class="md-nav__link">
+    Struct 특성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    차이점
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    초기화 예제
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="../../ios/apple-arc/" class="md-nav__link">
+      <a href="../xctest/" class="md-nav__link">
+        XCTest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../apple-arc/" class="md-nav__link">
         Swift ARC
       </a>
     </li>
@@ -589,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/use_frameworks_definition/" class="md-nav__link">
+      <a href="../use_frameworks_definition/" class="md-nav__link">
         Framework Definition
       </a>
     </li>
@@ -603,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/ios_exclude_simulator_architecture/" class="md-nav__link">
+      <a href="../ios_exclude_simulator_architecture/" class="md-nav__link">
         Exclude Architecture
       </a>
     </li>
@@ -629,16 +705,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_4_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_4_3">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -651,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/afnetworking-usage/" class="md-nav__link">
+      <a href="../afnetworking-usage/" class="md-nav__link">
         AfNetworking
       </a>
     </li>
@@ -665,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/ios-inapp-purchase-usage/" class="md-nav__link">
+      <a href="../ios-inapp-purchase-usage/" class="md-nav__link">
         InAppPurchase
       </a>
     </li>
@@ -679,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/app-with-framework/" class="md-nav__link">
+      <a href="../app-with-framework/" class="md-nav__link">
         Create Framework
       </a>
     </li>
@@ -693,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/cocoapod-usage/" class="md-nav__link">
+      <a href="../cocoapod-usage/" class="md-nav__link">
         Cocoapod Usage
       </a>
     </li>
@@ -707,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/cocoapods-private/" class="md-nav__link">
+      <a href="../cocoapods-private/" class="md-nav__link">
         Cocoapod Private
       </a>
     </li>
@@ -721,7 +797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/cocoapods-public/" class="md-nav__link">
+      <a href="../cocoapods-public/" class="md-nav__link">
         Cocoapod Public
       </a>
     </li>
@@ -735,8 +811,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/apple-login/" class="md-nav__link">
+      <a href="../apple-login/" class="md-nav__link">
         Apple Login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../xcode-gen/" class="md-nav__link">
+        XcodeGen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carthage/" class="md-nav__link">
+        Carthage
       </a>
     </li>
   
@@ -769,16 +873,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
       
       
       
-        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
           Android
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Android" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
           Android
@@ -790,49 +894,15 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_1" type="checkbox" id="__nav_5_1" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_1" tabindex="0" aria-expanded="false">
-          Grammar
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_1">
-          <span class="md-nav__icon md-icon"></span>
-          Grammar
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../android/android-grammar/" class="md-nav__link">
-        Kotlin
+        Grammar
       </a>
     </li>
   
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
             
               
   
@@ -844,16 +914,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_2">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -920,16 +990,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_3">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -1054,7 +1124,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/ios-serviceID-setting/" class="md-nav__link">
+      <a href="../ios-serviceID-setting/" class="md-nav__link">
         ServiceID Setting
       </a>
     </li>
@@ -1080,16 +1150,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
           Gradle
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Gradle" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Gradle
@@ -1150,16 +1220,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
       
       
       
-        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
           Unity
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Unity" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6">
           <span class="md-nav__icon md-icon"></span>
           Unity
@@ -1177,16 +1247,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
           Grammar
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_1">
           <span class="md-nav__icon md-icon"></span>
           Grammar
@@ -1239,16 +1309,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
           Features
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Features" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_2">
           <span class="md-nav__icon md-icon"></span>
           Features
@@ -1329,16 +1399,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_3" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
           Library
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Library" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_3">
           <span class="md-nav__icon md-icon"></span>
           Library
@@ -1351,8 +1421,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../unity/unity-api/" class="md-nav__link">
-        Asset
+      <a href="../../unity/unity-assets/" class="md-nav__link">
+        Assets
       </a>
     </li>
   
@@ -1377,16 +1447,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
       
       
       
-        <label class="md-nav__link" for="__nav_6_4" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
           Editor
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Editor" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_6_4">
           <span class="md-nav__icon md-icon"></span>
           Editor
@@ -1433,16 +1503,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
       
       
       
-        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
           DB
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="DB" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           DB
@@ -1524,16 +1594,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
       
       
       
-        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
           Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
           Docker
@@ -1587,16 +1657,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
       
       
       
-        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Shell
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Shell" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Shell
@@ -1657,25 +1727,23 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
       
       
       
-        <label class="md-nav__link" for="__nav_10" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
           CI/CD
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10">
           <span class="md-nav__icon md-icon"></span>
           CI/CD
@@ -1686,25 +1754,23 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_1" tabindex="0" aria-expanded="true">
+        <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
           Jenkins
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Jenkins" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_1">
           <span class="md-nav__icon md-icon"></span>
           Jenkins
@@ -1717,7 +1783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins-setup/" class="md-nav__link">
+      <a href="../../ci/jenkins-setup/" class="md-nav__link">
         Jenkins Setup
       </a>
     </li>
@@ -1731,8 +1797,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins-usage/" class="md-nav__link">
-        Jenkins Usage
+      <a href="../../ci/jenkins-sdk-build-deploy/" class="md-nav__link">
+        Jenkins SDK Build and Deploy
       </a>
     </li>
   
@@ -1745,8 +1811,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../jenkins-python/" class="md-nav__link">
-        Jenkins Python
+      <a href="../../ci/jenkins-python/" class="md-nav__link">
+        Python in Jenkins
       </a>
     </li>
   
@@ -1757,59 +1823,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Jenkins Docker
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Jenkins Docker
+    <li class="md-nav__item">
+      <a href="../../ci/jenkins-docker-build-deploy/" class="md-nav__link">
+        Docker Build and Deploy in Jenkins
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    빌드 및 푸시
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    배포
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1833,16 +1851,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" >
       
       
       
-        <label class="md-nav__link" for="__nav_10_2" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
           Fastlane
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Fastlane" data-md-level="2">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_10_2">
           <span class="md-nav__icon md-icon"></span>
           Fastlane
@@ -1855,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fastlane-setup/" class="md-nav__link">
+      <a href="../../ci/fastlane-setup/" class="md-nav__link">
         Fastlane Setup
       </a>
     </li>
@@ -1876,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../travis-ci/" class="md-nav__link">
+      <a href="../../ci/travis-ci/" class="md-nav__link">
         Travis
       </a>
     </li>
@@ -1903,16 +1921,16 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
       
       
       
-        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+        <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
           Package Manager
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Package Manager" data-md-level="1">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
           Package Manager
@@ -2023,6 +2041,83 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/api-admin-server/" class="md-nav__link">
+        SDK API Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/ad-report-admin/" class="md-nav__link">
+        AdReport Admin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/adjust-data-admin/" class="md-nav__link">
+        Adjust Admin
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2050,15 +2145,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    빌드 및 푸시
+  <a href="#class" class="md-nav__link">
+    Class 특성
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    배포
+  <a href="#struct" class="md-nav__link">
+    Struct 특성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    차이점
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    초기화 예제
   </a>
   
 </li>
@@ -2078,10 +2187,145 @@
                   
 
 
+<h1 id="class-struct">Class 와 Struct<a class="headerlink" href="#class-struct" title="Permanent link">#</a></h1>
+<p>모든 언어의 class 와 struct 정의는 거이 비슷하다. swift 내에서의 class, struct 의 특성 및 사용가이드를 정의해보고자 한다.</p>
+<h2 id="class">Class 특성<a class="headerlink" href="#class" title="Permanent link">#</a></h2>
+<ul>
+<li>Reference Type</li>
+<li>ARC로 메모리 관리</li>
+<li>상속 가능</li>
+<li>타입 캐스팅을 통해 런타임에서 클래스 인스턴스의 타입을 확인할 수 있다.</li>
+<li>인스턴스가 소멸될때 deinit 메서드가 호출된다. (참조타입이니까)</li>
+<li>참조 비교 연산자 사용가능( <code>===</code>, <code>!==</code> )</li>
+</ul>
+<h2 id="struct">Struct 특성<a class="headerlink" href="#struct" title="Permanent link">#</a></h2>
+<ul>
+<li>Value Type</li>
+<li>상속이 가능하지 않다</li>
+<li>여러 인스턴스를 만들고 값을 변경해도 , 각 인스턴스의 값은 다르다. (값 타입이니까;)</li>
+</ul>
+<h2 id="_1">차이점<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<ul>
+<li>구조체는 상속할 수 없다.</li>
+<li>타입캐스팅은 클래스의 인스턴스에만 허용된다.</li>
+<li>deinit은 클래스의 인스턴스에서만 호출된다.</li>
+<li>참조 횟수 계산은 클래스의 인스턴스에만 적용된다.</li>
+<li>구조체는 생성자를 구현하지 않아도 default initalizer 를 사용할 수 있다.</li>
+<li>구조체 내부에 구조체, 클래스 내부에 클래스 등 중첩타입의 정의 및 선언이 가능하다.</li>
+<li>반면에 구조체는 init은 사용 가능하다 deinit은 사용 불가능하다.</li>
+<li>Swift 표준 라이브러리의 기본 타입은 모두 구조체이다.(String, Bool, Int, Array, Dictionary, Set)</li>
+</ul>
+<h2 id="_2">초기화 예제<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<div class="admonition class">
+<p class="admonition-title">Class</p>
+<p><code>init</code> <code>convenience init</code> <code>required init</code></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">convenience</label><label for="__tabbed_1_2">required</label><label for="__tabbed_1_3">Inheritance</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">age</span><span class="p">:</span> <span class="nb">Int</span>
 
-<h1 id="_1">젠킨스로 도커연동<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
-<h2 id="_2">빌드 및 푸시<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<h2 id="_3">배포<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+    <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">age</span><span class="p">){</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+    <span class="p">}</span>
+
+    <span class="kr">convenience</span> <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">){</span>
+        <span class="kc">self</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="mi">27</span><span class="p">)</span> <span class="c1">// 지정 이니셜라이저 호출</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nv">aiden</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&quot;Aiden&quot;</span><span class="p">)</span><span class="c1">// Person(name: &quot;Aiden&quot;, age: 27)</span>
+<span class="c1">//==========================================================================</span>
+<span class="c1">// convenience init을 사용하고 싶지 않다면 프로퍼티에 초기값을 할당해줘도 된다.</span>
+<span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">age</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">27</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">){</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nv">aiden</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="s">&quot;Aiden&quot;</span><span class="p">)</span><span class="c1">// Person(name: &quot;Aiden&quot;, age: 27)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">SomeClass</span> <span class="p">{</span>
+    <span class="kr">required</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 이 곳에 이니셜라이저 구현 작성하기</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">SomeSubclass</span><span class="p">:</span> <span class="n">SomeClass</span> <span class="p">{</span>
+    <span class="kr">required</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 이 곳에 자식 클래스의 필수 이니셜라이저 구현 작성하기</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">class</span> <span class="nc">Shape</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">numberOfSides</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">0</span>
+    <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="n">name</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Square</span><span class="p">:</span> <span class="n">Shape</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">sideLength</span><span class="p">:</span> <span class="nb">Double</span> <span class="p">=</span> <span class="mf">0.0</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">sideLength</span><span class="p">:</span> <span class="nb">Double</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">sideLength</span> <span class="p">=</span> <span class="n">sideLength</span> <span class="c1">// 1. 자식 클래스의 속성에 값 할당</span>
+        <span class="kc">super</span><span class="p">.</span><span class="kd">init</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">)</span> <span class="c1">// 부모 클래스의 이니셜라이저 호출</span>
+        <span class="n">numberOfSides</span> <span class="p">=</span> <span class="mi">4</span> <span class="c1">// 부모 클래스가 정의한 속성 값 변경</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition struct">
+<p class="admonition-title">Struct</p>
+<p>nil 을 허용하는 형태의 var 만이 초기화시 자동 nil 할당.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">var</label><label for="__tabbed_2_2">let</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">People</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">weight</span><span class="p">:</span> <span class="nb">Double</span><span class="p">?</span>
+    <span class="kd">var</span> <span class="nv">footSize</span><span class="p">:</span> <span class="nb">Int</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">footSize</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">footSize</span> <span class="p">=</span> <span class="n">footSize</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nv">stark</span> <span class="p">=</span> <span class="n">People</span><span class="p">(</span><span class="n">footSize</span><span class="p">:</span> <span class="mi">270</span><span class="p">)</span>
+<span class="bp">print</span><span class="p">(</span><span class="n">stark</span><span class="p">)</span> <span class="c1">// People(weight: nil, footSize: 270)</span>
+<span class="n">stark</span><span class="p">.</span><span class="n">weight</span> <span class="p">=</span> <span class="mf">82.9</span>
+<span class="bp">print</span><span class="p">(</span><span class="n">stark</span><span class="p">)</span> <span class="c1">// People(weight: Optional(82.9), footSize: 270)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">People</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">footSize</span><span class="p">:</span> <span class="nb">Int</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">footSize</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">footSize</span> <span class="p">=</span> <span class="n">footSize</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nv">leedsStark</span> <span class="p">=</span> <span class="n">People</span><span class="p">(</span><span class="n">footSize</span><span class="p">:</span> <span class="mi">270</span><span class="p">)</span>
+<span class="bp">print</span><span class="p">(</span><span class="n">leedsStark</span><span class="p">)</span> <span class="c1">// People(footSize: 270)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
 
@@ -2119,10 +2363,10 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      <script src="../../assets/javascripts/bundle.efa0ade1.min.js"></script>
       
     
   </body>
