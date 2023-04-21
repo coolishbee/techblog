@@ -1,7 +1,7 @@
 site_name: Tech Blog
 nav:
-    - News: index.md
-    - About: about.md
+    - About: index.md
+    - News: news.md
     - Go:        
         - Develop Env: go/go-develop-env.md
         - Grammar: go/go-grammar.md            
@@ -21,6 +21,7 @@ nav:
         - Grammar: ios/ios-grammar.md
         - Features:
             - Swift Class & Struct: ios/swift-struct-class.md
+            - XCTest: ios/xctest.md
             - Swift ARC: ios/apple-arc.md
             - Framework Definition: ios/use_frameworks_definition.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
@@ -100,7 +101,8 @@ nav:
         - AdReport Admin: project/ad-report-admin.md
         - Adjust Admin: project/adjust-data-admin.md
 theme: material
-markdown_extensions:
+markdown_extensions:    
+    - pymdownx.emoji
     - pymdownx.superfences
     - pymdownx.tabbed:
         alternate_style: true 

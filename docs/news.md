@@ -2,9 +2,12 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## My Story
+## Commands
 
 ![Screenshot](img/screenshot.png)
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
 
 ## Project layout
 
@@ -18,3 +21,6 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     do/
         ind.md
 
+## TODO
+
+* go-redirect-server
