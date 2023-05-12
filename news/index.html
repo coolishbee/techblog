@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#go-120" class="md-skip">
           Skip to content
         </a>
       
@@ -209,8 +209,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           News
@@ -227,8 +225,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -237,22 +233,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#go-120" class="md-nav__link">
+    Go 1.20
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#swift-55" class="md-nav__link">
+    Swift 5.5
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pro" class="md-nav__link">
-    Pro
+  <a href="#go-119" class="md-nav__link">
+    Go 1.19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-118" class="md-nav__link">
+    Go 1.18
   </a>
   
 </li>
@@ -2108,6 +2111,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/grafana-loki/" class="md-nav__link">
+        Grafana Loki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project/push-server/" class="md-nav__link">
+        Push Server
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2131,8 +2162,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2141,22 +2170,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
-    Commands
+  <a href="#go-120" class="md-nav__link">
+    Go 1.20
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    Project layout
+  <a href="#swift-55" class="md-nav__link">
+    Swift 5.5
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#pro" class="md-nav__link">
-    Pro
+  <a href="#go-119" class="md-nav__link">
+    Go 1.19
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#go-118" class="md-nav__link">
+    Go 1.18
   </a>
   
 </li>
@@ -2183,27 +2219,84 @@
                   
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">#</a></h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">#</a></h2>
-<p><img alt="Screenshot" src="../img/screenshot.png" />
-* <code>mkdocs serve</code> - Start the live-reloading docs server.
-* <code>mkdocs build</code> - Build the documentation site.
-* <code>mkdocs -h</code> - Print help message and exit.</p>
-<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">#</a></h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-<h2 id="pro">Pro<a class="headerlink" href="#pro" title="Permanent link">#</a></h2>
-<pre><code>mk
-do/
-    ind.md
-</code></pre>
-<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">#</a></h2>
+  <h1>News</h1>
+
+<h2 id="go-120">Go 1.20<a class="headerlink" href="#go-120" title="Permanent link">#</a></h2>
 <ul>
-<li>go-redirect-server</li>
+<li>1.19 이후 6개월 만의 릴리즈. 하위호환 정책으로 기존 프로그램 컴파일/실행은 문제 없음</li>
+<li>언어에 4가지 변화<ul>
+<li>slice를 array로 변환 가능</li>
+<li>unsafe 패키지에 SliceData, String, StringData 함수 추가</li>
+<li>구조체의 필드값이 정의에 나타난 순서대로 하나씩 비교되도록 하고, 첫번째 미스매치에서 중단되도록 정의됨. 비슷하게 배결 값도 하나씩 인덱스 순으로 비교</li>
+<li>Comparable 타입들이 타입 인자가 strictly comparable 하지 않은 경우에도 comparable 조건을 충족 가능</li>
+</ul>
+</li>
+<li>GC 데이터 구조 개선으로 메모리 오버헤드가 줄어들고 전체 CPU 성능 최대 2% 향상</li>
+<li>그외 툴체인, 런타임, 라이브러리 구현등이 개선</li>
+</ul>
+<h2 id="swift-55">Swift 5.5<a class="headerlink" href="#swift-55" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>type checker의 품질 및 성능 향상에 투자.</p>
+<p>→ "expression too complex" 오류가 더 적게 표시됨</p>
+<p>→ 배열 리터컬의 타입 검사 성능 향상</p>
+</li>
+<li>
+<p>증분 빌드 속도를 높이기 위한 3가지 개선 사항</p>
+<ul>
+<li>incremental imports 지원 == 모듈이 변경 될 때 모듈을 가져오는 모든 소스파일을 더이상 다시 빌드 하지 않음.</li>
+<li>모듈 종속성 그래프를 미리 계산하여 변경된 내용만 증분 빌드 == 빠르게 시작 가능</li>
+<li>extensions과 함께 작동하도록 selective recompilation을 확장했음. == extension의 본문을 변경할 때 재 컴파일이 줄어든다.</li>
+</ul>
+</li>
+<li>메모리관리에 대한 효율 증가<ul>
+<li>ARC를 사용하여 객체에 대한 참조 수 추적.</li>
+</ul>
+</li>
+<li>async await 추가<ul>
+<li>비동기 처리가능.(콜백에 물리는 구조를 심플하게)    </li>
+</ul>
+</li>
+<li>Actor</li>
+<li>Concurrency</li>
+</ul>
+<h2 id="go-119">Go 1.19<a class="headerlink" href="#go-119" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p>메모리 모델을 C++/Java/Rust 등에서 사용하는 모델과 맞춤</p>
+<p>→ Atomic 값을 사용하기 쉽게 atomic.Int64 및 atomic.Pointer[T] 같은 타입을 추가</p>
+</li>
+<li>
+<p>가비지 수집기에 소프트 메모리 제한이 추가됐다. 이 제한을 통해 고 프로그램을 최적화해 메모리 양이 할당된 컨테이너에서 가능한 한 효율적으로 실행되도록 할 수 있다.</p>
+</li>
+<li>스택 카피라이팅을 줄이기 위한 코루틴 스택의 동적 크기 조정, 유닉스 시스템에서의 자동 추가 파일 설명자 사용, x86-64 및 Arm 64 상에서의 스위치 스테이트먼트용 점프 테이블, Arm64에서의 디버거 주입 함수 호출 지원이 지원된다. </li>
+<li>메소드 선언의 형식 매개변수가 수정됐다. 기존 프로그램은 영향을 받지 않는다.</li>
+<li>이제 문서 주석에서 링크, 목록, 제목 구문을 지원한다. 특히 대규모 API를 갖춘 패키지에서 명확한 문서 주석을 작성할 수 있다. </li>
+<li>보안을 위해 os/exec 패키지는 PATH 룩업에서 더 이상 상대 경로를 고려하지 않는다. </li>
+<li>대상 OS가 유닉스 계열 운영 체제일 때 새로운 빌드 제약 조건인 unix가 충족된다. </li>
+</ul>
+<h2 id="go-118">Go 1.18<a class="headerlink" href="#go-118" title="Permanent link">#</a></h2>
+<ul>
+<li>Generic    </li>
+<li>Fuzzing    </li>
+<li>Workspaces    </li>
+<li>20% Performance Improvements</li>
+</ul>
+<h2 id="todo">TODO<a class="headerlink" href="#todo" title="Permanent link">#</a></h2>
+<ul class="task-list">
+<li>
+<p>go-redirect-server</p>
+</li>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vestibulum convallis sit amet nisi a tincidunt<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> In hac habitasse platea dictumst</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> In scelerisque nibh non dolor mollis congue sed et metus</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Praesent sed risus massa</li>
+</ul>
+</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque</li>
 </ul>
 
 

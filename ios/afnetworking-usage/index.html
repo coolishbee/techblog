@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#afnetworking" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -667,9 +672,65 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          AfNetworking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         AfNetworking
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#afnetworking" class="md-nav__link">
+    AFNetworking 설치
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    GET
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    POST
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2053,6 +2114,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/grafana-loki/" class="md-nav__link">
+        Grafana Loki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/push-server/" class="md-nav__link">
+        Push Server
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -2077,6 +2166,48 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#afnetworking" class="md-nav__link">
+    AFNetworking 설치
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    Example
+  </a>
+  
+    <nav class="md-nav" aria-label="Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    GET
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    POST
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2092,7 +2223,93 @@
 
   <h1>AfNetworking</h1>
 
-<p>example</p>
+<h2 id="afnetworking">AFNetworking 설치<a class="headerlink" href="#afnetworking" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.0&#39;
+</code></pre></div>
+<h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h2>
+<h3 id="get">GET<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>- (void) getCarriersTracks:(NSString *)carrier_id
+                 onSuccess:(void (^)(NSString * _Nullable))onSuccess
+                 onFailure:(void (^)(NSError * _Nonnull))onFailure
+{
+    long long trackId = 1111111111111;
+    NSString *strUrl = [NSString stringWithFormat:@&quot;%@/carriers/%@/tracks/%lld&quot;, baseURL, @&quot;kr.epost&quot;, trackId];
+    NSURL *URL = [NSURL URLWithString:strUrl];
+
+    //NSString *strLog = [Log objectToJsonString:[info toDictionary]];
+    [Log print:@&quot;GET&quot; url:strUrl];
+
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@&quot;application/json&quot; forHTTPHeaderField:@&quot;Content-Type&quot;];
+
+    [manager    GET:URL.absoluteString
+         parameters:nil
+           progress:nil
+            success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable resp)
+    {
+
+        //NSLog(@&quot;Carriers Tracks GET JSON: %@&quot;, resp);
+        NSDictionary *respDict = resp;
+        NSString *strLog = [Log objectToJsonString:respDict];
+        [Log print:@&quot;200&quot; url:strUrl data:strLog];
+
+        onSuccess(strLog);
+    }failure:^(NSURLSessionDataTask *oper, NSError *err)
+    {
+        [Log print:[@(err.code) stringValue] url:strUrl data:err];
+
+        NSLog(@&quot;Error: %@&quot;, err);
+        onFailure(err);
+    }];
+}
+</code></pre></div>
+<h3 id="post">POST<a class="headerlink" href="#post" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>- (void) login:(NSString *)type
+     onSuccess:(void (^)(RespLogin * _Nonnull))onSuccess
+     onFailure:(void (^)(NSError * _Nonnull))onFailure
+{
+    NSString *strUrl = [NSString stringWithFormat:@&quot;%@/auth&quot;, localURL];
+    NSURL *reqURL = [NSURL URLWithString:strUrl];
+
+    ReqLogin* loginBody = [[ReqLogin alloc] init];
+    loginBody.login_type = type;
+    loginBody.login_token = @&quot;id_token&quot;;
+
+    NSString *strLog = [Log objectToJsonString:[loginBody toDictionary]];
+    [Log print:@&quot;POST&quot; url:strUrl data:strLog];    
+
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@&quot;application/json&quot; forHTTPHeaderField:@&quot;Content-Type&quot;];
+
+    [manager    POST:reqURL.absoluteString
+          parameters:[loginBody toDictionary]
+            progress:nil
+             success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable resp)
+    {
+        NSDictionary *respDict = resp;
+        NSError *error;
+        NSString *strLog = [Log objectToJsonString:respDict];
+
+        RespLogin* respLogin = [[RespLogin alloc] initWithDictionary:respDict error:&amp;error];
+        NSString *resultCode = [NSString stringWithFormat:@&quot;%ld&quot;, (long)respLogin.code];
+        [Log print:resultCode url:strUrl data:strLog];        
+        NSLog(@&quot;Error log: %@&quot;, error);
+
+        onSuccess(respLogin);
+    }failure:^(NSURLSessionDataTask *oper, NSError *error)
+    {
+        NSLog(@&quot;Error log: %@&quot;, error);
+        onFailure(error);
+    }];
+
+}
+</code></pre></div>
+<div class="admonition github">
+<p class="admonition-title">Github</p>
+<p><a href="https://github.com/coolishbee/AFNetworkingExample">https://github.com/coolishbee/AFNetworkingExample</a></p>
+</div>
 
 
 
