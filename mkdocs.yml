@@ -97,6 +97,7 @@ nav:
         - pnpm: pm/pnpm.md
         - PUB: pm/pub.md
     - Project:
+        - Gamepub SDK: project/gamepub-sdk.md
         - SDK API Server: project/api-admin-server.md
         - AdReport Admin: project/ad-report-admin.md
         - Adjust Admin: project/adjust-data-admin.md
