@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## Android Apple Login Flow
 
 ![apple login diagram](../img/mermaid-diagram-2023-02-28-144545.png)

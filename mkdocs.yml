@@ -100,8 +100,15 @@ nav:
         - SDK API Server: project/api-admin-server.md
         - AdReport Admin: project/ad-report-admin.md
         - Adjust Admin: project/adjust-data-admin.md
-theme: material
-markdown_extensions:    
+        - Grafana Loki: project/grafana-loki.md
+        - Push Server: project/push-server.md
+theme: 
+    name: material
+    custom_dir: overrides
+markdown_extensions:
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
     - pymdownx.emoji
     - pymdownx.superfences
     - pymdownx.tabbed:
