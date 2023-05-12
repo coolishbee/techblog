@@ -1,6 +1,8 @@
 
 An example logging system using Grafana Loki.
 
+장애로그를 위한 로키 설계
+
 ![grafana-loki](../img/GrafanaLoki.png)
 
 ### Docker
