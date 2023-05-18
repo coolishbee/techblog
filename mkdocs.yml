@@ -73,8 +73,9 @@ nav:
         - Redis: db/redis.md
         - LevelDB: db/leveldb.md
     - Docker:
+        - Usage: docker/docker-usage.md
         - Build Deploy: docker/docker-build-deploy.md
-        - Compose: docker/docker-compose.md    
+        - Compose: docker/docker-compose.md
     - Shell:
         - GPG Key: shell/gpg-usage.md
         - MAC Terminal: shell/mac-terminal.md
@@ -87,15 +88,11 @@ nav:
             - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
         - Fastlane:
             - Fastlane Setup: ci/fastlane-setup.md
-        - Travis: ci/travis-ci.md
+        
     - Package Manager:
         - Homebrew: pm/homebrew.md
         - Cocoapod: pm/cocoapod.md
-        - PIP: pm/pip.md
-        - apt: pm/apt.md
-        - yum: pm/yum.md
-        - pnpm: pm/pnpm.md
-        - PUB: pm/pub.md
+        
     - Project:
         - Gamepub SDK: project/gamepub-sdk.md
         - SDK API Server: project/api-admin-server.md
@@ -103,6 +100,7 @@ nav:
         - Adjust Admin: project/adjust-data-admin.md
         - Grafana Loki: project/grafana-loki.md
         - Push Server: project/push-server.md
+        - Lunch: project/python-lunch.md
 theme: 
     name: material
     custom_dir: overrides

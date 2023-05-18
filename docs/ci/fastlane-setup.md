@@ -4,6 +4,8 @@
 - brew
 - macOS 의 system ruby
 
+------
+
 ## Xcode command line tools (macOS)
 
 clt 는 git, svn, perl, python 등 여러 컴파일러를 제공해줍니다. (보통 homebrew 설치시 자동설치됩니다)

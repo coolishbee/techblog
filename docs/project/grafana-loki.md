@@ -1,36 +1,31 @@
+# 장애로그 모니터링 시스템 구축
 
-An example logging system using Grafana Loki.
+## 개요
 
-장애로그를 위한 로키 설계
+개발중인 SDK API 서버와 Admin 서버에서 심어놓은 로그파일들을 접근하기 용이하도록 시스템을 구축하였습니다.<br>
+기존에는 로그를 확인하려면 직접 각각 테스트 서버에 접속해야 하고 파일을 검색하고 키워드는 찾는데 번거로웠습니다.<br>
+이러한 불편함을 개선하고자 관련 서비스들의 로그들을 모아 시각화하였습니다.
+로그 모니터링 시스템은 서비스별 로그, 시간단위, 키워드 등으로 필터링하여 검색이 가능하고 그래프로도 확인이 가능합니다.
+그리고 로키의 쿼리시스템은 많은 양의 로그들도 빠른 속도로 처리해줍니다.
+
+## 설계 및 다이어그램
 
 ![grafana-loki](../img/GrafanaLoki.png)
 
-### Docker
+## loki
 
-```
-// start
-$ cd grafana-loki-example
-$ docker-compose up -d
+Promtail에서 받은 로그를 저장합니다.
 
-// stop
-$ docker-compose stop
-```
+## promtail
 
-### Grafana WebPage
+로그 파일에서 문자열 데이터를 수집하고 Loki로 보냅니다.
 
-```
-http://localhost:3000
-User: admin
-Pass: admin
-```
+## grafana
 
-## Container
+Loki의 데이터를 시각화합니다.
 
-* `server` - Log files are saved to `./server/logs`
-* `loki` - Store logs received from Promtail.
-* `promtail` - Collect string data from log files and send to Loki.
-* `grafana` - Visualize data from Loki.
+대시보드 스크린샷
 
-## Grafana Data Sources
-
-- Loki: `http://loki:3100`
+![](../img/grafana-loki01.png)
+![](../img/grafana-loki02.png)
+![](../img/grafana-loki03.png)
