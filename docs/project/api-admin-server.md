@@ -1,7 +1,20 @@
 
 ## 개요
 
+golang api server
+
+웹프레임워크 선정
+
+데이터베이스 mariadb redis mongodb
+
 ## API
+
+* 소셜 로그인 검증
+* 인증 및 회원관리
+* 결제 영수증 검증
+* 점검 및 업데이트
+* 이미지 배너
+* 공지사항
 
 ## Admin
 
