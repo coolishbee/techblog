@@ -190,8 +190,14 @@ NSString *myString = myURL.absoluteString;
 
 ## [objc] 콜백 리스너 예제(Blocks Sample Code)
 
-objc 에서 콜백함수에 대한 이벤트리스너를 만드려면 1. block(^) 2. selector 3. noti 4. delegate 가 있다고 한다.
-현재 상황에서 나에게 필요한건 block 이었기 때문에 혹시 필요하신 분들을 위해 샘플코드를 제공합니다.
+objc 에서 콜백함수에 대한 이벤트리스너를 만드려면
+
+1. block(^) 
+2. selector 
+3. noti 
+4. delegate 
+
+가 있다고 한다. 현재 상황에서 나에게 필요한건 block 이었기 때문에 혹시 필요하신 분들을 위해 샘플코드를 제공합니다.
 
 === "sample"
 
