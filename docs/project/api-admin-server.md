@@ -16,6 +16,16 @@ golang api server
 * 이미지 배너
 * 공지사항
 
+### 프레임워크 구조 설계
+
+api 와 db router 의 관계도
+
+go 언어 특성에 맞게 설계
+
+### API 문서
+
+swagger 사용
+
 ## Admin
 
 ## Jenkins 에서 Docker 빌드 및 배포
