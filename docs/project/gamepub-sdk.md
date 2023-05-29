@@ -13,14 +13,12 @@ c# 으로만 개발된 SDK 였기 때문에 네이티브 기능도 사용할 수
 
 ![sdk-diagram](../img/Gamepub-SDK.png)
 
-## 구현
-
-### Unity용 네이티브 플러그인
+## Unity SDK
 
 Unity에서는 그동안 계속해서 [네이티브 플러그인](https://docs.unity3d.com/kr/2021.3/Manual/Plugins.html)에 대한 지원이 발전되고 있었습니다. 이것을 이용해서 Native SDK 와 통신하는
 브릿지 프로젝트를 만들었습니다.
 
-#### API 요청 방식
+### API 요청 방식
 
 * iOS : Unity에서 제공되는 [iOS용 플러그인 빌드](https://docs.unity3d.com/kr/2021.3/Manual/PluginsForIOS.html)방식을 사용하여 각 네이티브 메서드를 호출합니다.
 * Android : Unity에서 제공되는 [AndroidJavaObject](https://docs.unity3d.com/ScriptReference/AndroidJavaObject.html)를 사용하여 각 네이티브 메서드를 호출합니다.
@@ -45,7 +43,7 @@ Unity에서는 그동안 계속해서 [네이티브 플러그인](https://docs.u
     }
     ```
 
-#### API 응답 방식
+### API 응답 방식
 
 네트워크 통신이 있는 API 경우엔 비동기 콜백처리가 필요하므로 네이티브 쪽에서 Unity의 메서드를 호출할 수 있어야 합니다.
 Unity에서는 Android와 iOS 마찬가지로 UnitySendMessage 메서드를 제공합니다.
@@ -88,22 +86,36 @@ Unity에서 이 콜을 받으려면
 전달받은 identifier를 확인하면 어떤 API가 호출했는지 알 수 있기 때문에 한 번의 UnitySendMessage 호출로 여러 다수의 API를 처리하는 장점을 갖습니다.<br>
 이렇게 이러한 방법을 통해 네이티브와 Unity C# 간에 데이터를 주고 받습니다.
 
-### iOS에서 SDK 통합(Swift)
+## Android SDK
 
-Objective-C 로 개발했었고 추후 Swift로 전환했습니다.
+네이티브 SDK가 Unity용 브릿지 프로젝트를 거쳐 Unity 와 통신하기 때문에 네이티브 SDK 는 maven 에 배포하여
+Unity용 브릿지 프로젝트내에서 랩핑하여 사용합니다. 브릿지 프로젝트는 aar 로 빌드되어 유니티 패키지를 통해 배포됩니다.
 
-### Android에서 SDK 통합
+### 결제 모듈 통합
 
-#### 커스텀 Gradle 템플릿을 사용해서 의존성 관리
+* 구글
+* 원스토어
+* 갤럭시스토어
+
+### 네트워크 통신
+
+Retrofit 사용
+
+### Unity에서 연동
 
 Android 플랫폼용 Unity 프로젝트에서는 Gradle 빌드 시스템을 사용합니다.
 Resolver 사용
 
-#### Target API 지원
+* 커스텀 Gradle 템플릿을 사용해서 의존성 관리
+* Target API 지원
 
-#### 결제 모듈 통합
+## iOS SDK
 
-#### 네트워크 통신
+Objective-C 로 개발했었고 추후 Swift로 전환했습니다.
+
+### 네트워크 통신
+
+### Unity에서 연동
 
 ## 배포
 
