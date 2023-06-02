@@ -28,15 +28,18 @@ fcm 은 경험상 지연되는 사례를 많이 겪어봐서 fcm, apns 둘다 �
 
 ## 설계 및 다이어그램
 
-## 푸시 모듈 개발
+![push-server](../img/PushServer.png)
+
+## 서버 푸시 모듈 개발
 
 ### fcm
 
 fcm api 기능중에 1000건씩 발송이 가능한 그룹발송용 api 가 있었다.
-발송 대상자가 만명일 경우 10번에 나눠서 발송되도록 했다. 그리고 DB가 success(푸시 발송된 수), failure(푸시 실패 수)를
+발송 대상자가 만명일 경우 10번에 나눠서 고루틴으로 처리했다. 그리고 DB가 success(푸시 발송된 수), failure(푸시 실패 수)를
 업데이트 할 수 있게 응답값을 리턴해주었다.
 
 백그라운드에서 알림팝업 표시 방법
+
 * 서버에서 푸시메시지를 전송할때 notification 이 아닌 data 로 보내야 한다.
 * 클라이언트에서는 NotificationManager.IMPORTANCE_HIGH 옵션을 사용해야 한다.
 https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko#handling_messages
@@ -48,5 +51,8 @@ fcm 과 달리 디바이스 토큰당 api 1회 호출. 1:1 발송 시스템 이�
 지연과 누락없이 발송되었다.
 그러나 10만건이상 동시 발송될 상황을 고려해 고루틴으로 처리하였다. 고루틴은
 
+## 클라이언트 푸시 연동
 
-![push-server](../img/PushServer.png)
+### fcm
+
+### apns
