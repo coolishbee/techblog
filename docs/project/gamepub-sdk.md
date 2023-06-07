@@ -105,6 +105,55 @@ Unity에서 이 콜을 받으려면
 
 ### 푸시(FCM)
 
+* google_services.json
+* push icon custom
+* target api 31 이상 지원
+* 헤드업 푸시알림 받기
+
+안드로이드 클라이언트가 백그라운드에서 알림 메시지를 수신할 경우 알림 팝업을 표시하지 않고 작업 표시줄에 아이콘만 표시합니다. 그러므로 알림 팝업을 언제나 표시하고 싶다면 서버 단에서 푸시 메시지를 작성할 때 notification 없이 data만 있는 메시지를 작성해야 합니다. [공식 문서](https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko#handling_messages)
+
+* 알림 채널과 중요도
+    * API 레벨 26 (Android 8 Oreo) 이상의 기기는 로컬 알림을 발송하는 하나의 앱 안에서 여러 개의 채널을 설정하여 채널별로 메시지를 보낼 수 있다.
+    * 코드에서 채널 생성시 해당 채널의 중요도(importance)를 함께 설정해야 하는데, 각 중요도의 의미는 다음과 같다. [공식 설명](https://developer.android.com/training/notify-user/channels?hl=ko#importance)
+        * IMPORTANCE_HIGH: 알림음이 울리며 헤드업 알림 표시
+        * IMPORTANCE_DEFAULT: 알림음이 울리며 상태 표시줄에 아이콘 표시
+        * IMPORTANCE_LOW: 알림음이 없고 상태 표시줄에 아이콘 표시
+        * IMPORTANCE_MIN: 알림음이 없고 상태 표시줄에 표시되지 않음
+
+
+* FCM 푸시 메시지는 JSON의 구성에 따라 알림 메시지와 데이터 메시지, 그리고 알림과 데이터를 모두 가진 메시지 3가지 종류가 있습니다.[공식 문서](https://firebase.google.com/docs/cloud-messaging/concept-options?hl=ko)
+
+알림(notification) 메시지 예시
+```
+{
+  "message":{
+    "token":"bk3RNwTe3H0:CI2k_HHwgIpoDKCIZvvDMExUdFQ3P1...",
+    "notification":{
+      "title":"Portugal vs. Denmark",
+      "body":"great match!" 
+    }
+  }
+}
+```
+
+데이터(data) 메시지 예시
+```
+{
+  "message":{
+    "token":"bk3RNwTe3H0:CI2k_HHwgIpoDKCIZvvDMExUdFQ3P1...",
+    "data":{
+      "Nick" : "Mario",
+      "body" : "great match!",
+      "Room" : "PortugalVSDenmark" 
+    }
+  }
+}
+```
+
+
+
+
+
 ### 네트워크 통신(Retrofit2)
 
 초기버전인 자바를 사용할 때는 콜백지옥 방식을 썼지만 코틀린 프로젝트에서는 Coroutine을 활용하여 비동기 코드를 최대한 단순화시켰습니다. 이 과정에서 APIService를 deferred로 구현했다가 suspend로 바꾸기도 하였습니다.
@@ -161,17 +210,17 @@ fun login(reqBody: ReqLogin,
 
 ### Unity에서 연동
 
-Unity 안드로이드에서 빌드시 두가지 의존성 관리방법을 제공합니다. gradle의 버전은 유니티 안에 내장된 gradle 버전에 따라야 하며 현재까지는 6.1.1까지 지원된 상태이고 조만간 7.x가 지원될 것 같습니다.
+Unity 안드로이드에서 빌드시 두가지 의존성 관리방법을 제공합니다.<br>
+그리고 gradle의 버전은 유니티 안에 내장된 gradle 버전에 따라야 하며 현재까지는 6.1.1까지 지원된 상태이고 조만간 7.x가 지원될 것 같습니다.
 
 * 커스텀 Gradle 템플릿
 ```
-buildscript {    
+buildscript {
     ...
- 
     dependencies {
         ...
+        classpath 'com.android.tools.build:gradle:4.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.61"
- 
     }
 }
 
@@ -181,7 +230,6 @@ dependencies {
     implementation 'io.github.gamepubcorp:pubsdk:2.1.10' 
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61'
- 
     ...
 }
 ```

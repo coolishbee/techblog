@@ -42,6 +42,7 @@ fcm api 기능중에 1000건씩 발송이 가능한 그룹발송용 api 가 있�
 
 * 서버에서 푸시메시지를 전송할때 notification 이 아닌 data 로 보내야 한다.
 * 클라이언트에서는 NotificationManager.IMPORTANCE_HIGH 옵션을 사용해야 한다.
+
 https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko#handling_messages
 
 
