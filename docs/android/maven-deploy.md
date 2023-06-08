@@ -39,6 +39,7 @@ Nexus repository manager 에서는 로그인만 제공되며 계정생성이 안
 
 자 이제 staging 이라는 저장소로 라이브러리를 스크립트로 통해 배포해 볼건데요.
 스크립트 작성에 앞서 GPG 키를 만들어야 합니다.
+
 * [Sonatype GPG 사용가이드](https://central.sonatype.org/publish/requirements/gpg)
 * [GPG 한글가이드](https://github.com/jameschun7/document/blob/main/android/gpg-usage.md)
 
@@ -183,10 +184,85 @@ dependencies {
 }
 ```
 
-## NEW
+## Maven Publish 플러그인으로 마이그레이션
 
-[Maven Publish 플러그인 사용](https://developer.android.com/studio/build/maven-publish-plugin?hl=ko)
+```
+plugins {
+	...
+    id 'com.android.library'	// 안드로이드 라이브러리임을 나타내는 플러그인
+    id 'maven-publish'			// 메이븐 배포용 플러그인
+    id 'signing'				// 서명용 플러그인
+}
 
-[[nexus] Gradle을 이용한 jar 파일 업로드(publish)](https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle)
+// 프로젝트 정보
+group 'io.github.coolishbee'
+version '0.1'
 
-[Maven Publish Plugin 7.6](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation)
+// 메이븐 배포 작업 지시사항
+afterEvaluate {	
+	
+    // 배포하기
+    publishing {
+    
+    	// 배포할 레포지토리 지정
+        repositories {
+            maven {
+                name 'sonatype'
+                url 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+                
+                // 인증 정보 기입 (nexus manager 계정)
+                credentials {
+                    username ossrhUsername
+                    password ossrhPassword
+                }
+            }
+        }
+        
+		// 배포할 아티팩트의 정보
+        publications {
+            release(MavenPublication){
+                from components.release
+				
+                // dependencies로 표시될 문자열 (ex. io.github.coolishbee:universalsdk:0.1)
+                groupId 'io.github.coolishbee'
+                artifactId 'universalsdk'
+                version '0.1'
+
+				// 상세정보
+                pom {
+                    name = 'Universal Android SDK'
+                    description = 'The Universal SDK for Android provides a modern way of implementing open APIs.'
+                    url = 'https://github.com/coolishbee/MyLibrary'
+                    licenses {
+                        license {
+                            name = 'Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = 'coolishbee'
+                            name = 'James'
+                            email = 'coolishbee@gmail.com'
+                        }
+                    }
+                    scm {
+                        url = 'https://github.com/coolishbee/MyLibrary.git'
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 서명 작업 지시사항
+signing {
+    sign publishing.publications
+}
+```
+
+!!! Reference
+
+    [https://developer.android.com/studio/build/maven-publish-plugin?hl=ko](https://developer.android.com/studio/build/maven-publish-plugin?hl=ko)
+    [https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle](https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle)
+    [https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation](https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation)

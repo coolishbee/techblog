@@ -16,8 +16,8 @@ c# 으로만 개발된 SDK 였기 때문에 네이티브 기능도 사용할 수
 
 ## Unity SDK
 
-Unity에서는 그동안 계속해서 [네이티브 플러그인](https://docs.unity3d.com/kr/2021.3/Manual/Plugins.html)에 대한 지원이 발전되고 있었습니다. 이것을 이용해서 Native SDK 와 통신하는
-브릿지 프로젝트를 만들었습니다.
+Unity에서는 그동안 계속해서 [네이티브 플러그인](https://docs.unity3d.com/kr/2021.3/Manual/Plugins.html)에 대한 지원이 발전되고 있었습니다. 이것을 이용해서 Native SDK 를 래핑하는 Unity용 Android Bridge 프로젝트를 만들었습니다.<br>
+이렇게 했을 때 얻을 수 있는 장점은 사용자 API 인터페이스만 바뀌지 않는다면 네이티브 SDK 구현부 배포를 리모트로 할 수 있다는 점입니다.
 
 ### API 요청 방식
 
@@ -250,11 +250,19 @@ dependencies {
 
 ### 배포
 
-네이티브 SDK가 Unity용 브릿지 프로젝트를 거쳐 Unity 와 통신하기 때문에 네이티브 SDK 는 maven 에 배포하여
-Unity용 브릿지 프로젝트내에서 랩핑하여 사용합니다. 
-브릿지 프로젝트는 aar 로 빌드되어 유니티 패키지를 통해 배포됩니다.
+네이티브 SDK가 Unity용 Android Bridge 프로젝트를 거쳐 Unity 와 통신하기 때문에 네이티브 SDK 는 maven 에 배포하여 Unity용 브릿지 프로젝트내에서 랩핑하여 사용합니다.<br>
+그리고 Unity용 Android Bridge 프로젝트는 aar 로 빌드되어 유니티 패키지를 통해 배포됩니다.
 
-jenkins, fastlane
+#### 배포 순서
+
+* [네이티브 SDK maven 배포](../android/maven-deploy.md)
+* Unity용 Android Bridge 빌드 Export
+* SDK Unity 프로젝트에 import
+* SDK Unity Package export
+
+#### 배포 구조
+
+![GamepubSDK-Android-Deploy](../img/GamepubSDK-Android-Deploy.png)
 
 ### Target API 지원
 
@@ -273,6 +281,18 @@ Unity iOS에서 SDK를 연동하려면 브릿지 프로젝트는 Objective-C++�
 ### Unity에서 연동
 
 CocoaPods와 Carthage중 유니티개발자들이 주로 사용하는 의존성 관리도구인 Resolver에서 CocoaPods을 제공하기 때문에 CocoaPods에 배포하기로 했습니다.
+
+### 배포
+
+#### 배포 순서
+
+* fastlane 으로 프레임워크 빌드 Export
+* SDK Unity 프로젝트에 프레임워크 및 Unity용 Objective-C++ Bridge 소스 import
+* SDK Unity Package export
+
+#### 배포 구조
+
+![GamepubSDK-iOS-Deploy](../img/GamepubSDK-iOS-Deploy.png)
 
 ## 소셜로그인
 
