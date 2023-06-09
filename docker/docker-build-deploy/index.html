@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../db/leveldb/">
+        <link rel="prev" href="../docker-usage/">
       
       
         <link rel="next" href="../docker-compose/">
@@ -1550,6 +1550,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../docker-usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -1920,20 +1934,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ci/travis-ci/" class="md-nav__link">
-        Travis
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1997,76 +1997,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pip/" class="md-nav__link">
-        PIP
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/apt/" class="md-nav__link">
-        apt
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/yum/" class="md-nav__link">
-        yum
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pnpm/" class="md-nav__link">
-        pnpm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pub/" class="md-nav__link">
-        PUB
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -2101,6 +2031,20 @@
           Project
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/gamepub-sdk/" class="md-nav__link">
+        Gamepub SDK
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2166,6 +2110,20 @@
     <li class="md-nav__item">
       <a href="../../project/push-server/" class="md-nav__link">
         Push Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/python-lunch/" class="md-nav__link">
+        Lunch
       </a>
     </li>
   
@@ -2281,9 +2239,8 @@
                   
 
 
-<h1 id="docker">Docker 빌드 및 배포<a class="headerlink" href="#docker" title="Permanent link">#</a></h1>
-<p>설명 및 구조
-<a href="https://golang.org/doc/install">공식사이트</a> 를 통해 설치합니다.</p>
+<h1 id="docker">Docker 빌드 및 배포 가이드<a class="headerlink" href="#docker" title="Permanent link">#</a></h1>
+<p><a href="https://golang.org/doc/install">공식사이트</a> 를 통해 설치합니다.</p>
 <h2 id="registry">Registry 구축<a class="headerlink" href="#registry" title="Permanent link">#</a></h2>
 <ul>
 <li>
@@ -2294,6 +2251,16 @@
 <li>
 <p>docker registry 실행
 <div class="highlight"><pre><span></span><code>$ docker run -d -p 5000:5000 --restart always --name docker-repo registry:latest
+</code></pre></div></p>
+</li>
+<li>
+<p>registry 저장소 image 조회
+<div class="highlight"><pre><span></span><code>$ curl -X GET [registry_url]//v2/_catalog
+</code></pre></div></p>
+</li>
+<li>
+<p>registry 저장소 image tag 조회
+<div class="highlight"><pre><span></span><code>$ curl -X GET [registry_url]/v2/[image_name]/tags/list
 </code></pre></div></p>
 </li>
 </ul>
@@ -2310,12 +2277,14 @@ ENTRYPOINT [&quot;./ads-report-go&quot;]
 <h3 id="project-build">Project Build<a class="headerlink" href="#project-build" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code>$ docker build -t ads-report-go .
 </code></pre></div>
+<p><img alt="" src="../../img/docker-guide01.png" /></p>
 <h2 id="docker-tag">Docker tag 설정<a class="headerlink" href="#docker-tag" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>$ docker tag ads-report-go ad-report.com:443/ads-report-go:1.1
 </code></pre></div>
 <h2 id="docker-push">Docker push<a class="headerlink" href="#docker-push" title="Permanent link">#</a></h2>
-<div class="highlight"><pre><span></span><code>$ docker push ad-report.com:443/ads-report-go:1.1
+<p><div class="highlight"><pre><span></span><code>$ docker push ad-report.com:443/ads-report-go:1.1
 </code></pre></div>
+<img alt="" src="../../img/docker-guide02.png" /></p>
 <h2 id="docker-image-pull">Docker Image Pull<a class="headerlink" href="#docker-image-pull" title="Permanent link">#</a></h2>
 <div class="highlight"><pre><span></span><code>$ docker pull ad-report.com:443/ads-report-go:1.1
 </code></pre></div>

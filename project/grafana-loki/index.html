@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#docker" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -1550,6 +1550,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../docker/docker-usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../docker/docker-build-deploy/" class="md-nav__link">
         Build Deploy
       </a>
@@ -1822,20 +1836,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ci/travis-ci/" class="md-nav__link">
-        Travis
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1899,76 +1899,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pip/" class="md-nav__link">
-        PIP
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/apt/" class="md-nav__link">
-        apt
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/yum/" class="md-nav__link">
-        yum
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pnpm/" class="md-nav__link">
-        pnpm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pub/" class="md-nav__link">
-        PUB
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -2005,6 +1935,20 @@
           Project
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gamepub-sdk/" class="md-nav__link">
+        Gamepub SDK
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2060,6 +2004,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Grafana Loki
@@ -2076,6 +2022,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2084,29 +2032,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
+  <a href="#_2" class="md-nav__link">
+    개요
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grafana-webpage" class="md-nav__link">
-    Grafana WebPage
+  <a href="#_3" class="md-nav__link">
+    설계 및 다이어그램
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#container" class="md-nav__link">
-    Container
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grafana-data-sources" class="md-nav__link">
-    Grafana Data Sources
+  <a href="#loki" class="md-nav__link">
+    Loki
   </a>
   
 </li>
@@ -2128,6 +2069,20 @@
     <li class="md-nav__item">
       <a href="../push-server/" class="md-nav__link">
         Push Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-lunch/" class="md-nav__link">
+        Lunch
       </a>
     </li>
   
@@ -2157,6 +2112,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2165,29 +2122,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
+  <a href="#_2" class="md-nav__link">
+    개요
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#grafana-webpage" class="md-nav__link">
-    Grafana WebPage
+  <a href="#_3" class="md-nav__link">
+    설계 및 다이어그램
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#container" class="md-nav__link">
-    Container
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#grafana-data-sources" class="md-nav__link">
-    Grafana Data Sources
+  <a href="#loki" class="md-nav__link">
+    Loki
   </a>
   
 </li>
@@ -2207,33 +2157,47 @@
                   
 
 
-  <h1>Grafana Loki</h1>
-
-<p>An example logging system using Grafana Loki.</p>
-<p><img alt="grafana-loki" src="../../img/GrafanaLoki.png" /></p>
-<h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>// start
-$ cd grafana-loki-example
-$ docker-compose up -d
-
-// stop
-$ docker-compose stop
-</code></pre></div>
-<h3 id="grafana-webpage">Grafana WebPage<a class="headerlink" href="#grafana-webpage" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>http://localhost:3000
-User: admin
-Pass: admin
-</code></pre></div>
-<h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">#</a></h2>
+<h1 id="_1">장애로그 모니터링 시스템 구축<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h2 id="_2">개요<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>개발중인 SDK API 서버와 Admin 서버에서 심어놓은 로그파일들을 접근하기 용이하도록 시스템을 구축하였습니다.<br>
+기존에는 로그를 확인하려면 직접 각각 테스트 서버에 접속해야 하고 파일을 검색하고 키워드는 찾는데 번거로웠습니다.<br>
+이러한 불편함을 개선하고자 관련 서비스들의 로그들을 모아 시각화하였습니다.
+로그 모니터링 시스템은 서비스별 로그, 시간단위, 키워드 등으로 필터링하여 검색이 가능하고 그래프로도 확인이 가능합니다.
+그리고 로키의 쿼리시스템은 많은 양의 로그들도 빠른 속도로 처리해줍니다.</p>
+<p>실 서비스에서도 사용하기 용이하도록 Docker Compose 로 환경을 구성했습니다.</p>
 <ul>
-<li><code>server</code> - Log files are saved to <code>./server/logs</code></li>
-<li><code>loki</code> - Store logs received from Promtail.</li>
-<li><code>promtail</code> - Collect string data from log files and send to Loki.</li>
-<li><code>grafana</code> - Visualize data from Loki.</li>
+<li>
+<p>loki
+<div class="highlight"><pre><span></span><code>Promtail에서 받은 로그를 저장합니다.
+</code></pre></div></p>
+</li>
+<li>
+<p>promtail
+<div class="highlight"><pre><span></span><code>로그 파일에서 문자열 데이터를 수집하고 Loki로 보냅니다.
+</code></pre></div></p>
+</li>
+<li>
+<p>grafana
+<div class="highlight"><pre><span></span><code>Loki의 데이터를 시각화합니다.
+</code></pre></div>
+<img alt="" src="../../img/grafana-loki01.png" />
+<img alt="" src="../../img/grafana-loki02.png" />
+<img alt="" src="../../img/grafana-loki03.png" /></p>
+</li>
 </ul>
-<h2 id="grafana-data-sources">Grafana Data Sources<a class="headerlink" href="#grafana-data-sources" title="Permanent link">#</a></h2>
+<h2 id="_3">설계 및 다이어그램<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p><img alt="grafana-loki" src="../../img/GrafanaLoki.png" /></p>
+<h2 id="loki">Loki<a class="headerlink" href="#loki" title="Permanent link">#</a></h2>
+<p>Grafana Loki는 다른 logging system과 다르게 log의 label만 indexing 하고 message는 indexing하지 않으므로 더 가볍게 설계됐습니다.<br>
+그리고 loki로 전달된 log는 index(label) 와 chunk(message)로 나뉘어 저장됩니다.<br></p>
+<p>특징</p>
 <ul>
-<li>Loki: <code>http://loki:3100</code></li>
+<li>로그 인덱싱을 위한 효율적인 메모리 사용 : 레이블 집합에 대한 인덱싱</li>
+<li>멀티 테넌시 : 여러 테넌트가 단일 Loki인스턴스를 사용하게할 수 있음</li>
+<li>LogQL, Loki의 쿼리 언어 : data metric 사용가능한 쿼리 언어</li>
+<li>확장성 : 대규모 설치를 위한 확장가능한 설계 구조, 각 마이크로서비스 구성요소는 별도의 프로세스로 나누어 구성 가능함</li>
+<li>agent 유연성 : 많은 agent가 플러그인으로 지원함</li>
+<li>grafana 통합 : grafana와 원할하게 통합되어 stack으로 제공</li>
 </ul>
 
 

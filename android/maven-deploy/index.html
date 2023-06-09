@@ -1222,8 +1222,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#new" class="md-nav__link">
-    NEW
+  <a href="#maven-publish" class="md-nav__link">
+    Maven Publish 플러그인으로 마이그레이션
   </a>
   
 </li>
@@ -1673,6 +1673,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../docker/docker-usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../docker/docker-build-deploy/" class="md-nav__link">
         Build Deploy
       </a>
@@ -1945,20 +1959,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ci/travis-ci/" class="md-nav__link">
-        Travis
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -2022,76 +2022,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pip/" class="md-nav__link">
-        PIP
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/apt/" class="md-nav__link">
-        apt
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/yum/" class="md-nav__link">
-        yum
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pnpm/" class="md-nav__link">
-        pnpm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../pm/pub/" class="md-nav__link">
-        PUB
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -2126,6 +2056,20 @@
           Project
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/gamepub-sdk/" class="md-nav__link">
+        Gamepub SDK
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -2191,6 +2135,20 @@
     <li class="md-nav__item">
       <a href="../../project/push-server/" class="md-nav__link">
         Push Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/python-lunch/" class="md-nav__link">
+        Lunch
       </a>
     </li>
   
@@ -2310,8 +2268,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#new" class="md-nav__link">
-    NEW
+  <a href="#maven-publish" class="md-nav__link">
+    Maven Publish 플러그인으로 마이그레이션
   </a>
   
 </li>
@@ -2361,9 +2319,11 @@ Nexus repository manager 에서는 로그인만 제공되며 계정생성이 안
 <p>이런 페이지가 나올 것이고 Profile &gt; User Token &gt; Access User Token 를 누르면 토큰을 발급 받을 수 있는데 제 경우에는 토큰이 필요 없었습니다. 아마 pom.xml 을 직접 컨트롤하지 않고 gradle 스크립트를 이용해서 그런 것 같은데요. 일단 진행 해봅시다.</p>
 <h2 id="_3">배포 스크립트 설정<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
 <p>자 이제 staging 이라는 저장소로 라이브러리를 스크립트로 통해 배포해 볼건데요.
-스크립트 작성에 앞서 GPG 키를 만들어야 합니다.
-* <a href="https://central.sonatype.org/publish/requirements/gpg">Sonatype GPG 사용가이드</a>
-* <a href="https://github.com/jameschun7/document/blob/main/android/gpg-usage.md">GPG 한글가이드</a></p>
+스크립트 작성에 앞서 GPG 키를 만들어야 합니다.</p>
+<ul>
+<li><a href="https://central.sonatype.org/publish/requirements/gpg">Sonatype GPG 사용가이드</a></li>
+<li><a href="https://github.com/jameschun7/document/blob/main/android/gpg-usage.md">GPG 한글가이드</a></li>
+</ul>
 <h3 id="gpg">GPG 키 인증<a class="headerlink" href="#gpg" title="Permanent link">#</a></h3>
 <p>GPG 를 통해 발급받은 정보들을 프로젝트내 <code>gradle.properties</code> 파일에 설정해줍니다.
 <div class="highlight"><pre><span></span><code>signing.keyId=YourKeyId
@@ -2482,10 +2442,86 @@ dependencies {
     implementation &#39;io.github.jameschun7:universalsdk:0.2.4&#39;    
 }
 </code></pre></div>
-<h2 id="new">NEW<a class="headerlink" href="#new" title="Permanent link">#</a></h2>
-<p><a href="https://developer.android.com/studio/build/maven-publish-plugin?hl=ko">Maven Publish 플러그인 사용</a></p>
-<p><a href="https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle">[nexus] Gradle을 이용한 jar 파일 업로드(publish)</a></p>
-<p><a href="https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation">Maven Publish Plugin 7.6</a></p>
+<h2 id="maven-publish">Maven Publish 플러그인으로 마이그레이션<a class="headerlink" href="#maven-publish" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code>plugins {
+    ...
+    id &#39;com.android.library&#39;    // 안드로이드 라이브러리임을 나타내는 플러그인
+    id &#39;maven-publish&#39;          // 메이븐 배포용 플러그인
+    id &#39;signing&#39;                // 서명용 플러그인
+}
+
+// 프로젝트 정보
+group &#39;io.github.coolishbee&#39;
+version &#39;0.1&#39;
+
+// 메이븐 배포 작업 지시사항
+afterEvaluate { 
+
+    // 배포하기
+    publishing {
+
+        // 배포할 레포지토리 지정
+        repositories {
+            maven {
+                name &#39;sonatype&#39;
+                url &#39;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&#39;
+
+                // 인증 정보 기입 (nexus manager 계정)
+                credentials {
+                    username ossrhUsername
+                    password ossrhPassword
+                }
+            }
+        }
+
+        // 배포할 아티팩트의 정보
+        publications {
+            release(MavenPublication){
+                from components.release
+
+                // dependencies로 표시될 문자열 (ex. io.github.coolishbee:universalsdk:0.1)
+                groupId &#39;io.github.coolishbee&#39;
+                artifactId &#39;universalsdk&#39;
+                version &#39;0.1&#39;
+
+                // 상세정보
+                pom {
+                    name = &#39;Universal Android SDK&#39;
+                    description = &#39;The Universal SDK for Android provides a modern way of implementing open APIs.&#39;
+                    url = &#39;https://github.com/coolishbee/MyLibrary&#39;
+                    licenses {
+                        license {
+                            name = &#39;Apache License, Version 2.0&#39;
+                            url = &#39;http://www.apache.org/licenses/LICENSE-2.0.txt&#39;
+                        }
+                    }
+                    developers {
+                        developer {
+                            id = &#39;coolishbee&#39;
+                            name = &#39;James&#39;
+                            email = &#39;coolishbee@gmail.com&#39;
+                        }
+                    }
+                    scm {
+                        url = &#39;https://github.com/coolishbee/MyLibrary.git&#39;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 서명 작업 지시사항
+signing {
+    sign publishing.publications
+}
+</code></pre></div>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p><a href="https://developer.android.com/studio/build/maven-publish-plugin?hl=ko">https://developer.android.com/studio/build/maven-publish-plugin?hl=ko</a>
+<a href="https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle">https://blog.leocat.kr/notes/2018/11/01/nexus-publish-jar-artifact-with-gradle</a>
+<a href="https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation">https://docs.gradle.org/current/userguide/publishing_maven.html#publishing_maven:relocation</a></p>
+</div>
 
 
 
