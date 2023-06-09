@@ -93,7 +93,7 @@ Unity에서 이 콜을 받으려면
 
 첫번째 버전은 자바로 개발했었고 출시이후 조금씩 코틀린으로 전환해나갔습니다. 다행히 자바와 코틀린은 한 프로젝트내에서도 문제없이
 작동하였고 추후 새로운 코틀린 프로젝트를 동일한 maven repository에 업로드하여 사용할 수 있어서 생각보다 쉽게 전환할 수 있었습니다.
-그리고 초기에는 jcenter를 저장소로 사용했었지만 서비스종료됨에 따라 maven으로 이관했었습니다.
+그리고 초기에는 [jcenter](../android/jcenter.md)를 저장소로 사용했었지만 서비스종료됨에 따라 maven으로 이관했었습니다.
 
 ### 결제 모듈 통합
 
@@ -177,7 +177,7 @@ interface ApiService {
                       @Body data: ReqLogin): Response<RespLogin>
     ...
 ```
-
+HttpClient.kt :
 ```
 fun login(reqBody: ReqLogin,
           onSuccess: ((RespLogin) -> Unit)?,
@@ -206,6 +206,21 @@ fun login(reqBody: ReqLogin,
         }
     }
 }
+```
+Usage :
+```
+val reqLogin = ReqLogin.createReqLogin(socialProfile)
+HttpClient.login(reqLogin,
+    onSuccess = {
+        // it. (Resp Login)
+    },
+    onFailed = {
+        // it. (API Error)
+    },
+    onError = {
+        // it. (Network Error)
+    }
+)
 ```
 
 ### Unity에서 연동
@@ -278,9 +293,164 @@ Unity iOS에서 SDK를 연동하려면 브릿지 프로젝트는 Objective-C++�
 
 ### 네트워크 통신
 
+Objective-C 버전에선 [AFNetworking](https://github.com/coolishbee/AFNetworkingExample)을 사용했었고
+Swift 버전에서는 [Alamofire](https://github.com/coolishbee/AlamofireExample)을 사용했습니다.<br>
+Android SDK와 동일하게 최대한 인터페이스 디자인을 단순화 시키기 위해서 고민하고 여러 오픈소스들을 참고하여 
+여러 방식으로 테스트하여 만들었습니다.
+
+그리고 Android 와 달리 로그를 출력해주는 기능이 별도로 없기 때문에 커스텀하여 사용했습니다.
+
+PubHttpRouter.swift :
+```
+enum PubHttpRouter: URLRequestConvertible {
+    case login(_ login: ReqLogin)
+
+    private var method: HTTPMethod {
+        return .post
+    }
+
+    private var path: String {
+        switch self {        
+        case .login:
+            return String(format: "/login/%d",
+                          PubAPIConfiguration.shared.projectID)        
+        }
+    }
+
+    private var parameters: Parameters? {
+        switch self {        
+        case .login(let login):
+            do{
+                return try login.encode()
+            }catch{
+                return nil
+            }        
+        }
+    }
+
+    func asURLRequest() throws -> URLRequest {        
+        let strUrl = String(format: "%@%@", Constants.LiveServer.baseURL, path)
+        let url = try strUrl.asURL()
+        
+        var urlRequest = URLRequest(url: url)
+        
+        urlRequest.method = method
+        urlRequest.addValue(ContentType.json.rawValue,
+                            forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)        
+        
+        if let parameters = parameters {
+            do {
+                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+            } catch {
+                throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
+            }
+        }
+        
+        return urlRequest
+    }
+```
+
+PubHttpClient.swift :
+```
+public enum PubHttpClient {
+    static let session: Session = {
+        let configuration = URLSessionConfiguration.af.default
+        let apiLogger = PubHttpLogger()
+        return Session(configuration: configuration, eventMonitors: [apiLogger])
+    }()
+    
+    @discardableResult
+    private static func performRequest<T:Decodable>(_ route:PubHttpRouter,
+                                                    decoder: JSONDecoder = JSONDecoder(),
+                                                    _ completion:@escaping (Result<T, AFError>)->Void) -> DataRequest {
+        return session.request(route).responseDecodable(decoder: decoder) { (response: DataResponse<T, AFError>) in
+            completion(response.result)
+        }
+    }
+
+    public static func login(_ login: ReqLogin,
+                             completion:@escaping (Result<RespLogin, AFError>)->Void) {
+        performRequest(PubHttpRouter.login(login), completion)
+    }
+}
+```
+
+PubHttpLogger.swift :
+```
+class PubHttpLogger: EventMonitor {
+    let queue = DispatchQueue(label: "APIEventLogger")
+    
+    func requestDidFinish(_ request: Request) {
+        
+        print((request.request?.httpMethod ?? "") +
+              (" --> ") +
+              (request.request?.url?.absoluteString ?? "")
+        )
+        print(request.request?.allHTTPHeaderFields ?? [:])
+        print(request.request?.httpBody?.toPrettyPrintedString ?? "")
+    }
+    
+    func request<Value>(_ request: DataRequest,
+                        didParseResponse response: DataResponse<Value, AFError>) {
+        
+        print("\(response.response?.statusCode ?? 0)" +
+              (" --> ") +
+              (request.request?.url?.absoluteString ?? "")
+        )
+        print(response.data?.toPrettyPrintedString ?? "")
+    }
+}
+
+extension Data {
+    var toPrettyPrintedString: String? {
+        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
+              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
+              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
+        return prettyPrintedString as String
+    }
+}
+```
+
+Usage :
+```
+let reqLogin = ReqLogin(profile: socialProfile)
+
+PubHttpClient.login(reqLogin) { result in
+    switch result {
+    case .success(let respLogin):
+        break
+    case .failure(let error):        
+        break
+    }
+}
+```
+
 ### Unity에서 연동
 
-CocoaPods와 Carthage중 유니티개발자들이 주로 사용하는 의존성 관리도구인 Resolver에서 CocoaPods을 제공하기 때문에 CocoaPods에 배포하기로 했습니다.
+처음에는 Android SDK 처럼 원격 저장소를 이용해서 배포하려고 CocoaPods와 Carthage를 고려했었습니다.
+그래서 CocoaPods와 Carthage중 유니티개발자들이 주로 사용하는 의존성 관리도구인 [Resolver](https://github.com/googlesamples/unity-jar-resolver)에서 CocoaPods을 제공하기 때문에 CocoaPods에 배포하기로 했습니다.<br>
+우선 Cocoapods에 라이브러리를 배포하려면 [Podspec](https://guides.cocoapods.org/syntax/podspec.html)에 대해 알아야 하고
+private 과 public 배포 방식이 달랐기 때문에 두 가지 중 선택해야 했습니다.
+
+정확하게 어떤 것이 합리적인지 알 수 없다면 늘 해왔듯이 두 가지 방법이 있으면 두 가지를 다 해보고 세 가지가 있다면 세 가지를 다 해보고 결정을 했습니다.
+물론 시간이 더 걸릴지 몰라도 나중에 다시 돌아갔을때 더 쉽게 전환이 가능하기 때문입니다.
+
+참! 초기에는 Firebase Auth와 FCM을 사용했었습니다. 그렇기 때문에 Cocoapods에 라이브러리 배포시 의존성 문제가 발생했었습니다.
+현재는 직접 서버에서 인증처리를 하고 FCM 대신 APNS 를 쓰지만 그 당시에는 [이렇게 해결](https://github.com/coolishbee/cocoapod-google-firebase-dependency-solution)을 했었습니다.
+문제는 Firebase 모듈에서는 ios 시뮬레이터용 아키텍쳐를 제공해주지 않아서 였고 그래서 Spec 스크립트단에서 제외시켜주는 옵션을 추가해서
+해결했습니다.
+
+그리고 podspec 에서 source 에 대한 검증을 git repo를 통해 하는데 회사 소스 주소는 private이기 때문에 사용 할 수 없었습니다.
+그래서 알고 있던 오픈소스들은 어떻게 할까 싶어서 podspec 파일을 하나하나 열어 보던 중 크래시리포트에 관심이 있어서 분석하던 [PLCrashReporter](https://github.com/microsoft/plcrashreporter)는 좀 다르게 되어 있었습니다.
+라이브러리를 zip파일로 압축해서 배포하고 그 zip링크만 http 프로토콜로 연결하고 있었습니다. 여기서 힌트를 얻어
+소스없이 framework 만 zip로 압축해서 배포하는 git public 저장소를 만들었고 그 저장소의 zip링크를 활용하여 pod spec lint 유효성체크에
+통과했습니다.
+
+하지만 최종 결과적으로는 Cocoapods 을 사용하지 않기로 했습니다.
+
+1. 
+2. 
+3. 
 
 ### 배포
 
@@ -300,4 +470,6 @@ CocoaPods와 Carthage중 유니티개발자들이 주로 사용하는 의존성 
 
 ## 가이드 문서
 
-gitbook
+처음에는 github wiki도 활용해보고 여러 고민을 해보았지만 우리 회사 특성상 유료제품에 돈을 쓰기 어렵기 때문에 
+무료사용이 가능한 gitbook에 대해 알고 나서는 바로 gitbook으로 갈아탔다.<br>
+이 gitbook의 장점은 참 많은데 일단 돈 안 들이고 커스텀 도메인을 설정할 수 있다는 점이 맘에 들었다.
