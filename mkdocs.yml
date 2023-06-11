@@ -82,9 +82,7 @@ nav:
         - Linux Terminal: shell/linux-terminal.md
     - CI/CD:
         - Jenkins:
-            - Jenkins Setup: ci/jenkins-setup.md
-            - Jenkins SDK Build and Deploy: ci/jenkins-sdk-build-deploy.md
-            - Python in Jenkins: ci/jenkins-python.md
+            - Jenkins Setup: ci/jenkins-setup.md            
             - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
         - Fastlane:
             - Fastlane Setup: ci/fastlane-setup.md
@@ -101,6 +99,8 @@ nav:
         - Grafana Loki: project/grafana-loki.md
         - Push Server: project/push-server.md
         - Lunch: project/python-lunch.md
+        - Jenkins SDK Build and Deploy: project/jenkins-sdk-build-deploy.md
+        - Python in Jenkins: project/jenkins-python.md
 theme: 
     name: material
     custom_dir: overrides
