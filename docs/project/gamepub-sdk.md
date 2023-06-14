@@ -17,7 +17,7 @@ c# 으로만 개발된 SDK 였기 때문에 네이티브 기능도 사용할 수
 ## Unity SDK
 
 Unity에서는 그동안 계속해서 [네이티브 플러그인](https://docs.unity3d.com/kr/2021.3/Manual/Plugins.html)에 대한 지원이 발전되고 있었습니다. 이것을 이용해서 Native SDK 를 래핑하는 Unity용 Android Bridge 프로젝트를 만들었습니다.<br>
-이렇게 했을 때 얻을 수 있는 장점은 사용자 API 인터페이스만 바뀌지 않는다면 네이티브 SDK 구현부 배포를 리모트로 할 수 있다는 점입니다.
+이렇게 했을 때 얻을 수 있는 장점은 사용자 API 인터페이스만 바뀌지 않는다면 네이티브 SDK 구현부 배포를 원격으로 할 수 있다는 점입니다.
 
 ### API 요청 방식
 
@@ -86,14 +86,18 @@ Unity에서 이 콜을 받으려면
     }
     ```
 
-전달받은 identifier를 확인하면 어떤 API가 호출했는지 알 수 있기 때문에 한 번의 UnitySendMessage 호출로 여러 다수의 API를 처리하는 장점을 갖습니다.<br>
+전달받은 identifier를 확인하면 어떤 API가 호출했는지 알 수 있기 때문에 하나의 메소드 정의로 여러 다수의 API를 처리하는 장점을 갖습니다.<br>
 이렇게 이러한 방법을 통해 네이티브와 Unity C# 간에 데이터를 주고 받습니다.
 
 ## Android SDK
 
-첫번째 버전은 자바로 개발했었고 출시이후 조금씩 코틀린으로 전환해나갔습니다. 다행히 자바와 코틀린은 한 프로젝트내에서도 문제없이
+첫 번째 버전은 자바로 개발했었고 출시 이후 조금씩 코틀린으로 전환해나갔습니다. 다행히 자바와 코틀린은 한 프로젝트 내에서도 문제없이
 작동하였고 추후 새로운 코틀린 프로젝트를 동일한 maven repository에 업로드하여 사용할 수 있어서 생각보다 쉽게 전환할 수 있었습니다.
 그리고 초기에는 [jcenter](../android/jcenter.md)를 저장소로 사용했었지만 서비스종료됨에 따라 maven으로 이관했었습니다.
+
+### 의존성 관리
+
+Unity는 공식적으로 Gradle 빌드 시스템을 지원하기 때문에 네이티브 SDK와의 의존성 문제는 아주 쉽게 해결할 수 있었습니다.
 
 ### 결제 모듈 통합
 
@@ -105,23 +109,57 @@ Unity에서 이 콜을 받으려면
 
 ### 푸시(FCM)
 
-* google_services.json
-* push icon custom
-* target api 31 이상 지원
-* 헤드업 푸시알림 받기
+#### 인증
 
-안드로이드 클라이언트가 백그라운드에서 알림 메시지를 수신할 경우 알림 팝업을 표시하지 않고 작업 표시줄에 아이콘만 표시합니다. 그러므로 알림 팝업을 언제나 표시하고 싶다면 서버 단에서 푸시 메시지를 작성할 때 notification 없이 data만 있는 메시지를 작성해야 합니다. [공식 문서](https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko#handling_messages)
+Firebase 제품군을 사용하기 위해서는 `google_services.json`의 값을 액세스하는 [Google 서비스 Gradle 플러그인](https://developers.google.com/android/guides/google-services-plugin?hl=ko)이 필요합니다. 이 플러그인은 자바코드로 읽을 수 있는 `xml`형태로 변환되며 유니티내에서는 Firebase SDK 모듈내에서 그 역할을 해줍니다.
 
-* 알림 채널과 중요도
-    * API 레벨 26 (Android 8 Oreo) 이상의 기기는 로컬 알림을 발송하는 하나의 앱 안에서 여러 개의 채널을 설정하여 채널별로 메시지를 보낼 수 있다.
-    * 코드에서 채널 생성시 해당 채널의 중요도(importance)를 함께 설정해야 하는데, 각 중요도의 의미는 다음과 같다. [공식 설명](https://developer.android.com/training/notify-user/channels?hl=ko#importance)
-        * IMPORTANCE_HIGH: 알림음이 울리며 헤드업 알림 표시
-        * IMPORTANCE_DEFAULT: 알림음이 울리며 상태 표시줄에 아이콘 표시
-        * IMPORTANCE_LOW: 알림음이 없고 상태 표시줄에 아이콘 표시
-        * IMPORTANCE_MIN: 알림음이 없고 상태 표시줄에 표시되지 않음
+그러나 GamepubSDK 내에서 이미 FCM모듈을 포함하고 있었기 때문에 Firebase SDK for Unity 의존성 없이 `google_services.json`을 액세스할 방법을 찾아보았습니다. 그래서 제가 찾은 해결책은 [파일 변환](https://dandar3.github.io/android/google-services-json-to-xml.html)후 `Assets/Plugins/Android/FirebaseApp.androidlib/res/values`에 위치하면 컴파일시 읽을 수 있었습니다.
 
+#### 푸시 아이콘 커스텀
 
-* FCM 푸시 메시지는 JSON의 구성에 따라 알림 메시지와 데이터 메시지, 그리고 알림과 데이터를 모두 가진 메시지 3가지 종류가 있습니다.[공식 문서](https://firebase.google.com/docs/cloud-messaging/concept-options?hl=ko)
+푸시 알림 아이콘 설정도 동일한 방법으로 설정이 가능합니다. [Noti Icon generator](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_ic_notification)를 이용해서 사이즈별 파일을 `Assets/Plugins/Android/FirebaseApp.androidlib/res/drawable-...` 경로에 추가하면 됩니다.
+그리고 `Assets/Plugins/Android/AndroidManifest.xml`에 아래 내용을 추가해야 합니다.
+```
+...
+<application
+    ...
+    <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_ic_notification" />
+</application>
+...
+```
+
+#### 푸시알림 설정
+
+FCM에서는 2가지 유형의 메시지를 클라이언트로 보낼 수 있습니다.
+
+* Notification : 종종 '표시 메시지'로 간주됩니다. FCM SDK에서 자동으로 처리합니다.
+* Data : 클라이언트 앱에서 처리합니다.
+
+보통 서버에선 Notification 타입으로 푸시메시지를 보내곤 하는데 그렇게 되면 클라이언트가 백그라운드에서 수신시 헤드업 푸시알림을 표시하지 않고
+작업 표시줄에만 아이콘으로 표시합니다. 그래서 항상 헤드업 푸시알림을 표시하고 싶다면 서버에서 data 타입으로 메시지를 보내야 합니다.
+
+[공식 문서](https://firebase.google.com/docs/cloud-messaging/android/receive?hl=ko#handling_messages)를 참고하면 이렇습니다.
+
+포그라운드, 백그라운드 모두 헤드업 푸시알림을 하려면
+
+* 알림 채널과 중요도 설정(IMPORTANCE_HIGH)
+* 서버에서 data 타입으로 메시지 전송
+
+이 두가지가 중요합니다.
+
+그리고 채널의 용도는 다음과 같습니다.
+
+* API 레벨 26 (Android 8 Oreo) 이상의 기기는 로컬 알림을 발송하는 하나의 앱 안에서 여러 개의 채널을 설정하여 채널별로 메시지를 보낼 수 있다.
+
+중요도의 [정의](https://developer.android.com/training/notify-user/channels?hl=ko#importance)
+        
+* IMPORTANCE_HIGH: 알림음이 울리며 헤드업 알림 표시
+* IMPORTANCE_DEFAULT: 알림음이 울리며 상태 표시줄에 아이콘 표시
+* IMPORTANCE_LOW: 알림음이 없고 상태 표시줄에 아이콘 표시
+* IMPORTANCE_MIN: 알림음이 없고 상태 표시줄에 표시되지 않음
+
 
 알림(notification) 메시지 예시
 ```
@@ -150,8 +188,9 @@ Unity에서 이 콜을 받으려면
 }
 ```
 
+#### Target api 31 이상 지원
 
-
+* target api 31 이상 지원
 
 
 ### 네트워크 통신(Retrofit2)
@@ -288,6 +327,10 @@ Android SDK와 마찬가지로 Objective-C로 개발해서 서비스 론칭했�
 
 Unity iOS에서 SDK를 연동하려면 브릿지 프로젝트는 Objective-C++로 작성되어야 하며 Objective-C 와 Swift 간에 통신도 해결되야 합니다.
 
+
+### 의존성 관리
+
+cocoadpos carthage [spm](https://github.com/apple/swift-package-manager)
 
 ### 푸시(APNS)
 
