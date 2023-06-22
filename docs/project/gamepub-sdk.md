@@ -256,7 +256,12 @@ HttpClient.login(reqLogin,
 ### Unity에서 연동
 
 Unity 안드로이드에서 빌드시 두가지 의존성 관리방법을 제공합니다.<br>
+
+1. gradle을 이용한 원격 저장소 사용
+2. aar파일 직접 사용
+
 그리고 gradle의 버전은 유니티 안에 내장된 gradle 버전에 따라야 하며 현재까지는 6.1.1까지 지원된 상태이고 조만간 7.x가 지원될 것 같습니다.
+Unity 버전에 따라 [Unity 안에 내장된 gradle 버전](https://docs.unity3d.com/kr/2023.2/Manual/android-gradle-overview.html)이 다르므로 함부로 gradle의 최신 버전을 사용해선 안됩니다.
 
 * 커스텀 Gradle 템플릿
 ```
@@ -333,7 +338,17 @@ private 과 public 배포 방식이 달랐기 때문에 두 가지 중 선택해
 문제는 Firebase 모듈에서는 ios 시뮬레이터용 아키텍쳐를 제공해주지 않아서 였고 그래서 Spec 스크립트단에서 제외시켜주는 옵션을 추가해서
 해결했습니다.
 
-그리고 podspec 에서 source 에 대한 검증을 git repo를 통해 하는데 회사 소스 주소는 private이기 때문에 사용 할 수 없었습니다.
+```
+Pod::Spec.new do |spec|    
+  spec.module_name         = "PubSDK"
+  ...
+  spec.source           = { :git => "https://github.com/../pub-sdk-ios.git", :tag => "#{spec.version}" }  
+  spec.source           = { :http => 'https://github.com/../releases/download/0.3.29/PubSDK-0.3.29.zip' }
+  ...
+end
+```
+
+그리고 위와 같이 podspec에서 source에 대한 검증을 git repo를 통해 하는데 회사 소스 주소는 private이기 때문에 사용할 수 없었습니다.
 그래서 알고 있던 오픈소스들은 어떻게 할까 싶어서 podspec 파일을 하나하나 열어 보던 중 크래시리포트에 관심이 있어서 분석하던 [PLCrashReporter](https://github.com/microsoft/plcrashreporter)는 좀 다르게 되어 있었습니다.
 라이브러리를 zip파일로 압축해서 배포하고 그 zip링크만 http 프로토콜로 연결하고 있었습니다. 여기서 힌트를 얻어
 소스없이 framework 만 zip로 압축해서 배포하는 git public 저장소를 만들었고 그 저장소의 zip링크를 활용하여 pod spec lint 유효성체크에
@@ -609,9 +624,9 @@ Unity iOS에서 Framework를 추가하는 방법은 Unity Editor에서 추가하
 
 ### 페이스북
 
-소셜 로그인들 중 가장 난제로 꼽을 수 있는 로그인 모듈입니다.
+최근 소셜 로그인들 중 가장 문제가 많이 발생하는 SDK인 것 같습니다.
 
-일단 구글, 애플과 다르게 아직 [oidc를 지원하지 않고](https://developers.facebook.com/docs/reference/androidsdk/current/facebook/com/facebook/authenticationtoken.html/) 있었는데요 특이하게도 정책 때문인지 iOS SDK 최신 버전에서만 [oidc를 지원](https://developers.facebook.com/docs/facebook-login/limited-login)하고 있었습니다.<br>
+일단 구글, 애플과 다르게 아직 [oidc를 지원하지 않고](https://developers.facebook.com/docs/reference/androidsdk/current/facebook/com/facebook/authenticationtoken.html/) 있었는데요 이유는 모르겠지만 정책 때문인지 iOS SDK 최신 버전에서만 [oidc를 지원](https://developers.facebook.com/docs/facebook-login/limited-login)하고 있었습니다.<br>
 물론 테스트는 못해봤습니다. 왜냐하면 iOS에서 최신버전을 사용시 앱이 출동하는 현상이 발생했기 때문입니다.<br>
 그래서 현재도 Facebook iOS SDK의 버전은 11.x를 사용중이고 여러차례 최신버전으로 마이그레이션을 시도해보았으나 해결하지 못했습니다.
 
@@ -620,15 +635,54 @@ Unity iOS에서 Framework를 추가하는 방법은 Unity Editor에서 추가하
 
 ### 애플
 
-애플로그인은 당연히 안드로이드에서가 관건입니다.
-애플정책상 앱스토어에 애플로그인이 아닌 IDP를 제공하려면 필수적으로 애플로그인을 연동해야 합니다.
-그런데 게임유저 입장에서는 안드로이드와 iOS를 빈번히 오가며 플레이하는 경우가 많습니다. 그렇기 때문에 안드로이드에서도 애플로그인을 연동하는 것이 사용자 경험을 높인다고 생각했습니다.
+!!! note "참고"
+
+    Apple은 지난 6월 WWDC(Worldwide Developers Conference)에서 신제품인 Apple로 로그인(Sign in with Apple)을 발표했습니다. 9월 19일 iOS 13 릴리스를 앞두고 App Store 심사 지침도 업데이트되었습니다. 이제 새로운 애플리케이션은 타사 또는 소셜 로그인 서비스를 사용하려면 Apple로 로그인 옵션을 함께 제공해야 하며, 기존 애플리케이션은 2020년 4월부터 이 규정을 준수해야 합니다. 이번 변경사항은 Apple 개발자 사이트에서 자세히 확인할 수 있습니다.
+
+Apple 로그인은 안드로이드에서의 구현이 까다롭습니다. 
+
+공식적인 라이브러리를 지원하지 않으므로 직접 구현해야 하기 때문입니다.
+그런데 게임유저 입장에서는 안드로이드와 iOS를 빈번히 오가며 플레이하는 경우가 많습니다. 그렇기 때문에 안드로이드에서도 Apple 로그인을 연동하는 것이 사용자 경험을 높인다고 생각했습니다.
 이미 대형 게임개발사에서는 그렇게 많이 하고 있었고 저희 또한 분명히 필요성을 느꼈습니다.
-이렇게 안드로이드에서 애플로그인 작업을 시작하였고
 
-1. 웹뷰 인증
-2. Custom Tabs 인증
+#### 안드로이드 Apple 로그인 Flow
 
+``` mermaid
+sequenceDiagram
+    autonumber
+    actor A as Unity Client
+    participant B as Android
+    participant C as AppleID Service
+    participant D as User Redirect Server
+
+    A->>B: Apple Login Request    
+    B->>C: Authenticate User
+    C->>D: Login Info Result(POST Method)
+    activate D
+    D->>D: POST Body Redirect
+    deactivate D
+    D->>B: Login Info(onNewIntent)
+    activate B
+    B->>B: parseUri
+    deactivate B
+    B->>A: Login Result
+```
+
+안드로이드에서 Apple 로그인을 구현하려면 Apple 인증서버에서 보내주는 인증정보를 수신하고 Redirect해줄 서버가 필요합니다.
+
+#### WebView 구현
+
+기본적으로 Apple 로그인은 웹 환경을 지원하기 때문에 웹뷰로 구현할 수 있습니다.
+여기서 핵심은 백엔드 서버(Redirect 서버)에서 넘겨주는 정보를 어떻게 받을지가 관건이었습니다.
+
+일단 WebView 콜백 메소드로 데이터를 받아야 하는데 이 중에서 onPageFinished 대신 shouldOverrideUrlLoading로 처리한 이유는 이렇습니다.
+onPageFinished에 비해 매번 호출되지 않았고 서버에서 Redirect시 정확하게 호출되는 것을 확인했기 때문입니다.
+
+#### Custom Tabs 구현
+
+이미 WebView 이용하여 구현해보았기 때문에 WebView의 shouldOverrideUrlLoading가 하는 역할만 만들어주면 되겠다고 생각했습니다.
+
+[](https://joebirch.co/android/oauth-on-android-with-custom-tabs/)
 
 ## 가이드 문서
 

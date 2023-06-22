@@ -82,7 +82,9 @@ nav:
         - Linux Terminal: shell/linux-terminal.md
     - CI/CD:
         - Jenkins:
-            - Jenkins Setup: ci/jenkins-setup.md            
+            - Jenkins Setup: ci/jenkins-setup.md
+            - Jenkins SDK Build and Deploy: ci/jenkins-sdk-build-deploy.md
+            - Python in Jenkins: ci/jenkins-python.md
             - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
         - Fastlane:
             - Fastlane Setup: ci/fastlane-setup.md
@@ -99,8 +101,6 @@ nav:
         - Grafana Loki: project/grafana-loki.md
         - Push Server: project/push-server.md
         - Lunch: project/python-lunch.md
-        - Jenkins SDK Build and Deploy: project/jenkins-sdk-build-deploy.md
-        - Python in Jenkins: project/jenkins-python.md
 theme: 
     name: material
     custom_dir: overrides
@@ -109,7 +109,11 @@ markdown_extensions:
     - pymdownx.tasklist:
         custom_checkbox: true
     - pymdownx.emoji
-    - pymdownx.superfences
+    - pymdownx.superfences:
+        custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
     - pymdownx.tabbed:
         alternate_style: true 
     - admonition
