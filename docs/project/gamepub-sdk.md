@@ -645,6 +645,8 @@ Apple 로그인은 안드로이드에서의 구현이 까다롭습니다.
 그런데 게임유저 입장에서는 안드로이드와 iOS를 빈번히 오가며 플레이하는 경우가 많습니다. 그렇기 때문에 안드로이드에서도 Apple 로그인을 연동하는 것이 사용자 경험을 높인다고 생각했습니다.
 이미 대형 게임개발사에서는 그렇게 많이 하고 있었고 저희 또한 분명히 필요성을 느꼈습니다.
 
+그래서 제가 최종적으로 Custom Tabs을 사용해서 구현한 안드로이드에서의 Apple 로그인 흐름은 이렇습니다.
+
 #### 안드로이드 Apple 로그인 Flow
 
 ``` mermaid
@@ -667,7 +669,7 @@ sequenceDiagram
     deactivate B
     B->>A: Login Result
 ```
-
+<br>
 안드로이드에서 Apple 로그인을 구현하려면 Apple 인증서버에서 보내주는 인증정보를 수신하고 Redirect해줄 서버가 필요합니다.
 
 #### WebView 구현
@@ -678,11 +680,110 @@ sequenceDiagram
 일단 WebView 콜백 메소드로 데이터를 받아야 하는데 이 중에서 onPageFinished 대신 shouldOverrideUrlLoading로 처리한 이유는 이렇습니다.
 onPageFinished에 비해 매번 호출되지 않았고 서버에서 Redirect시 정확하게 호출되는 것을 확인했기 때문입니다.
 
+```
+@Override
+public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {    
+    return isUrlOverridden(view, request.getUrl());    
+}
+
+private boolean isUrlOverridden(WebView view, Uri url)
+{
+    boolean ret = false;
+    if(url == null) {
+        ret = false;
+    }else if(url.toString().contains("appleid.apple.com")){
+        view.loadUrl(url.toString());
+        ret = true;
+    }else if (url.toString().contains(redirect_url)){
+        String codeParam = url.getQueryParameter("code");
+        String stateParam = url.getQueryParameter("state");
+        String idTokenParam = url.getQueryParameter("id_token");
+        String userParam = url.getQueryParameter("user");
+
+        if(codeParam == null){
+            onAuthFailedFinished(
+                    PubLoginResult.internalError("code not returned."));
+        }else if(stateParam != null && !stateParam.equals(state)){
+            onAuthFailedFinished(
+                    PubLoginResult.internalError("state does not match."));
+        }
+        ...
+    }
+```
+
+이렇게 shouldOverrideUrlLoading 메소드를 통해서 인증정보를 파싱하여 처리했고 최근까지도 이렇게 사용하고 있습니다.
+하지만 얼마전부터 구글에서는 웹뷰로 인증하는 행위에 대해 권장하지 않는다 라는 경고메시지를 안내해주고 있습니다.<br>
+그래서 Custom Tabs으로 전환하기 위해 고려했습니다.
+
 #### Custom Tabs 구현
 
 이미 WebView 이용하여 구현해보았기 때문에 WebView의 shouldOverrideUrlLoading가 하는 역할만 만들어주면 되겠다고 생각했습니다.
 
-[](https://joebirch.co/android/oauth-on-android-with-custom-tabs/)
+구글링을 통하여 방법을 찾던 중에 [이 사이트](https://joebirch.co/android/oauth-on-android-with-custom-tabs/)에서 힌트를 얻었습니다. 
+shouldOverrideUrlLoading 메소드는 http프로토콜이어야지만 호출이 되는 특성이 있었는데 그와 달리 스키마 프로토콜은 http나 https을 사용할 수 없고 
+커스텀된 스키마명이어야 했습니다. 
+딥링크라는 자체가 브라우저로 통신하는 것이기 때문에 브라우저단에서 단순 데이터 스트링으로 판단하는 것이 아니라 url주소로 판단한다.
+그래서 수신하는 서버가 없다면 DNS 주소를 찾을 수 없다고 오류가 납니다.
+
+```
+<activity
+    android:name=".auth.AppleLoginActivity"
+    android:exported="true"
+    android:launchMode="singleTask"
+    android:theme="@style/PubSdk_AuthenticationActivity">
+
+    <!-- for OAuth2.0 redirection deep linking -->
+    <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <data
+            android:host="callback"
+            android:scheme="auth"/>
+    </intent-filter>
+</activity>
+```
+
+어쨌뜬 이 자료를 참고하여 액티비티 딥링크 방식으로 로그인을 호출하고 리다이렉트에 대한 수신은 onNewIntent을 통해서 받았습니다.
+
+추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
+기본브라우저로 실행하도록 예외처리 하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
+활용하는 라이브러리들은 어떻게 처리하는지 벤치마킹했습니다.
+
+```
+val customTabsIntent = CustomTabsIntent.Builder().build()
+customTabsIntent.intent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
+CustomTabActivityHelper.openCustomTabAppleLogin(
+    this,
+    customTabsIntent,
+    url,
+    AppleLoginBrowserFallback())
+```
+
+```
+override fun onNewIntent(intent: Intent?) {
+    if (intent?.data != null) {
+        parseUri(intent.data!!)
+    } else {
+        onAuthFailedFinished(
+            PubLoginResult.authenticationAgentError("intent is null"))
+    }
+}
+```
+
+추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
+기본브라우저로 실행하도록 Fallback 하였습니다.
+
+이때 
+
+```
+class AppleLoginBrowserFallback : AppleLoginFallback{
+    override fun openUri(activity: Activity?, uri: Uri?) {
+        val browserIntent = Intent(Intent.ACTION_VIEW, uri)
+        activity?.startActivity(browserIntent)
+    }
+}
+```
 
 ## 가이드 문서
 
