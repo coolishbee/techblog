@@ -685,30 +685,6 @@ onPageFinished에 비해 매번 호출되지 않았고 서버에서 Redirect시 
 public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {    
     return isUrlOverridden(view, request.getUrl());    
 }
-
-private boolean isUrlOverridden(WebView view, Uri url)
-{
-    boolean ret = false;
-    if(url == null) {
-        ret = false;
-    }else if(url.toString().contains("appleid.apple.com")){
-        view.loadUrl(url.toString());
-        ret = true;
-    }else if (url.toString().contains(redirect_url)){
-        String codeParam = url.getQueryParameter("code");
-        String stateParam = url.getQueryParameter("state");
-        String idTokenParam = url.getQueryParameter("id_token");
-        String userParam = url.getQueryParameter("user");
-
-        if(codeParam == null){
-            onAuthFailedFinished(
-                    PubLoginResult.internalError("code not returned."));
-        }else if(stateParam != null && !stateParam.equals(state)){
-            onAuthFailedFinished(
-                    PubLoginResult.internalError("state does not match."));
-        }
-        ...
-    }
 ```
 
 이렇게 shouldOverrideUrlLoading 메소드를 통해서 인증정보를 파싱하여 처리했고 최근까지도 이렇게 사용하고 있습니다.
@@ -721,16 +697,14 @@ private boolean isUrlOverridden(WebView view, Uri url)
 
 구글링을 통하여 방법을 찾던 중에 [이 사이트](https://joebirch.co/android/oauth-on-android-with-custom-tabs/)에서 힌트를 얻었습니다. 
 shouldOverrideUrlLoading 메소드는 http프로토콜이어야지만 호출이 되는 특성이 있었는데 그와 달리 스키마 프로토콜은 http나 https을 사용할 수 없고 
-커스텀된 스키마명이어야 했습니다. 
-딥링크라는 자체가 브라우저로 통신하는 것이기 때문에 브라우저단에서 단순 데이터 스트링으로 판단하는 것이 아니라 url주소로 판단한다.
+고유한 스키마명이어야 했습니다. 
+딥링크 방식 자체가 브라우저로 동작하는 것이기 때문에 브라우저단에서 단순 데이터 스트링으로 판단하는 것이 아니라 url주소로 판단합니다.
 그래서 수신하는 서버가 없다면 DNS 주소를 찾을 수 없다고 오류가 납니다.
 
 ```
 <activity
-    android:name=".auth.AppleLoginActivity"
-    android:exported="true"
-    android:launchMode="singleTask"
-    android:theme="@style/PubSdk_AuthenticationActivity">
+    android:name=".auth.AppleLoginActivity"    
+    android:launchMode="singleTop"
 
     <!-- for OAuth2.0 redirection deep linking -->
     <intent-filter>
@@ -744,11 +718,8 @@ shouldOverrideUrlLoading 메소드는 http프로토콜이어야지만 호출이 
 </activity>
 ```
 
-어쨌뜬 이 자료를 참고하여 액티비티 딥링크 방식으로 로그인을 호출하고 리다이렉트에 대한 수신은 onNewIntent을 통해서 받았습니다.
-
-추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
-기본브라우저로 실행하도록 예외처리 하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
-활용하는 라이브러리들은 어떻게 처리하는지 벤치마킹했습니다.
+그리고 인텐트 Flag 값은 `FLAG_ACTIVITY_SINGLE_TOP`을 설정하여 새로운 태스크를 만들지 않고
+기존 태스크위에 올라오도록 하여 성공이나 실패시 완전히 Destory되도록 했습니다.
 
 ```
 val customTabsIntent = CustomTabsIntent.Builder().build()
@@ -760,21 +731,19 @@ CustomTabActivityHelper.openCustomTabAppleLogin(
     AppleLoginBrowserFallback())
 ```
 
+어쨌뜬 이 자료를 참고하여 Custom Tabs로 로그인을 호출하고 리다이렉트에 대한 수신은 onNewIntent을 통해서 받았습니다.
+
 ```
 override fun onNewIntent(intent: Intent?) {
     if (intent?.data != null) {
         parseUri(intent.data!!)
-    } else {
-        onAuthFailedFinished(
-            PubLoginResult.authenticationAgentError("intent is null"))
     }
 }
 ```
 
 추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
-기본브라우저로 실행하도록 Fallback 하였습니다.
-
-이때 
+기본브라우저로 실행하도록 Fallback 하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
+활용하는 라이브러리들은 어떻게 처리하는지 참고했습니다.
 
 ```
 class AppleLoginBrowserFallback : AppleLoginFallback{
@@ -789,7 +758,7 @@ class AppleLoginBrowserFallback : AppleLoginFallback{
 
 처음에는 github wiki도 활용해보고 여러 고민을 해보았지만 우리 회사 특성상 유료제품에 돈을 쓰기 어렵기 때문에 
 무료사용이 가능한 gitbook에 대해 알고 나서는 바로 gitbook으로 갈아탔다.<br>
-이 gitbook의 장점은 참 많은데 일단 돈 안 들이고 커스텀 도메인을 설정할 수 있다는 점이 맘에 들었다.
+이 gitbook의 장점은 참 많은데 우리 상황에서 가장 매력적인 부분은 돈 안 들이고 커스텀 도메인을 설정할 수 있다는 점이었다.
 
 [Gamepub SDK 가이드 문서](https://docs.igamepub.co.kr/sdk-guide/get-started)
 
