@@ -627,8 +627,12 @@ Unity iOS에서 Framework를 추가하는 방법은 Unity Editor에서 추가하
 최근 소셜 로그인들 중 가장 문제가 많이 발생하는 SDK인 것 같습니다.
 
 일단 구글, 애플과 다르게 아직 [oidc를 지원하지 않고](https://developers.facebook.com/docs/reference/androidsdk/current/facebook/com/facebook/authenticationtoken.html/) 있었는데요 이유는 모르겠지만 정책 때문인지 iOS SDK 최신 버전에서만 [oidc를 지원](https://developers.facebook.com/docs/facebook-login/limited-login)하고 있었습니다.<br>
-물론 테스트는 못해봤습니다. 왜냐하면 iOS에서 최신버전을 사용시 앱이 출동하는 현상이 발생했기 때문입니다.<br>
-그래서 현재도 Facebook iOS SDK의 버전은 11.x를 사용중이고 여러차례 최신버전으로 마이그레이션을 시도해보았으나 해결하지 못했습니다.
+그래서 iOS라도 jwt토큰 검증을 해보려고 여러차례 시도해보았지만 facebook sdk 최신버전 사용시 
+런타임중에 facebook 라이브러리 단에서 계속적인 충돌하는 현상이 발생했습니다.
+
+이때 Carthage나 SPM으로 변경하거나 버전을 다양하게 변경하여 테스트를 해봤지만 동일한 현상이 발생했고 
+결국 facebook github 사이트에서 xcframework를 직접 다운받아 해결이 가능했으나 유지 보수 입장에서는 너무 파편화돼버리기 때문에
+직접 검증한 v11.2.1을 사용하였습니다.
 
 반면 Android에서는 큰 문제 없이 마이너 버전에서 최신 버전으로 마이그레이션하였으나 oidc를 지원하지 않기 때문에 서버사이드에서 토큰 검증 시 API 호출을
 할 수밖에 없습니다.
@@ -704,7 +708,7 @@ shouldOverrideUrlLoading 메소드는 http프로토콜이어야지만 호출이 
 ```
 <activity
     android:name=".auth.AppleLoginActivity"    
-    android:launchMode="singleTop"
+    android:launchMode="singleTask"
 
     <!-- for OAuth2.0 redirection deep linking -->
     <intent-filter>
@@ -743,7 +747,11 @@ override fun onNewIntent(intent: Intent?) {
 
 추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
 기본브라우저로 실행하도록 Fallback 하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
-활용하는 라이브러리들은 어떻게 처리하는지 참고했습니다.
+활용하는 라이브러리들은 어떻게 처리하는지 참고했습니다.<br>
+Fallback 처리시에는 위에 activity 매니페스트 설정에서 `android:launchMode`을 꼭 `singleTask`로 해줘야 합니다.<br>
+그렇지 않으면 `onNewIntent`호출이 되지 않을 수도 있습니다. 보통 Custom Tabs가 사용 가능한 상황에서는 `singleTop`을 쓰지만
+그렇게 사용하면 기본 브라우저는 다른 Task이기 때문에 동일한 Activity가 존재하지 않아서 새로 생성되어 `onNewIntent`가 호출되지 않는 상황이 생깁니다.
+`onNewIntent`가 호출되는 조건은 이미 생성된 Activity를 재사용될 때 호출됩니다.
 
 ```
 class AppleLoginBrowserFallback : AppleLoginFallback{
