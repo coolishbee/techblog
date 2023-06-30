@@ -63,6 +63,7 @@ nav:
             - AndroidX Use: unity/unity2017-androidx-use.md
             - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
             - iOS Application Override: unity/unity-ios-application-override.md
+            - Memory Manage: unity/unity-memory-mng.md
         - Library:
             - Assets: unity/unity-assets.md
         - Editor:
