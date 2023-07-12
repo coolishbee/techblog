@@ -1,3 +1,37 @@
+
+## 쿼리문 연습
+
+### 데이터 삽입
+
+```
+INSERT INTO `tb_sdk_page_permit` (`pagseq`, `admseq`, `permit`, `delflag`, `reguserid`, `regip`, `regdate`, `moduserid`, `modip`, `moddate`)
+VALUES
+	(5,9,200,0,'admin','127.0.0.1','2022-05-27 11:16:10','user23','127.0.0.1','2022-06-08 15:52:57'),
+	(6,9,200,0,'admin','127.0.0.1','2022-05-27 11:16:10','user23','127.0.0.1','2022-06-08 15:52:57'),
+	(7,9,200,0,'admin','127.0.0.1','2022-05-27 11:16:10','user23','127.0.0.1','2022-06-08 15:52:57'),
+	(8,9,200,0,'admin','127.0.0.1','2022-05-27 11:16:10','user23','127.0.0.1','2022-06-08 15:52:57'),
+	(9,9,200,0,'admin','127.0.0.1','2022-05-27 11:16:10','user23','127.0.0.1','2022-06-08 15:52:57'),
+	(10,9,200,0,'admin','127.0.0.1','2022-05-27 11:16:10','user23','127.0.0.1','2022-06-08 15:52:57'),
+	(38,9,100,0,'admin','127.0.0.1','2022-10-19 14:19:05','admin','127.0.0.1','2022-10-19 14:19:05');
+```
+
+### 날짜별 데이터 조회
+
+```
+SELECT*
+from table_name
+where updated_at between '2023-06-01' and '2023-07-13'
+order by updated_at desc
+```
+
+```
+select *from table_name 
+where project = 'mytail' and filedate = '2023-02-17';
+
+select *from tb_sdk_page_permit where admseq=7;
+select *from tb_sdk_page_permit where moduserid='chc3484';
+```
+
 ## [MariaDB/mysql] root 초기 비번 설정
 ### mariadb 접속
 ```

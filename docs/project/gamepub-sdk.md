@@ -614,6 +614,24 @@ Unity iOS에서 Framework를 추가하는 방법은 Unity Editor에서 추가하
 
 ![GamepubSDK-iOS-Deploy](../img/GamepubSDK-iOS-Deploy.png)
 
+### Unit Test
+
+iOS의 경우엔 안드로이드와 달리 Swift로 구현된 API를 Objective-C 에서 호출하려면 제약이 따릅니다.<br>
+말하자면 Objective-C 에서 Swift로 개발한 API들이 정상적으로 호출이 가능한지 제대로 작동되는지 체크하려면 Unity iOS 빌드해서
+확인하기에는 너무 사이클이 길다는 얘기죠.
+
+그렇기 때문에 XCTest를 이용해 유닛 테스트를 구현해보았습니다.
+
+!!! Example
+    이렇게 하면 Unity로 배포되기 전 미리 테스트를 해볼 수 있습니다.
+
+    === "Objc"
+        ![xctest-unit01](../img/xctest-unit01.png)
+    
+    === "Swift"
+        ![xctest-unit02](../img/xctest-unit02.png)
+
+
 ## 소셜로그인
 
 ### 구글
@@ -693,7 +711,11 @@ public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request
 
 이렇게 shouldOverrideUrlLoading 메소드를 통해서 인증정보를 파싱하여 처리했고 최근까지도 이렇게 사용하고 있습니다.
 하지만 얼마전부터 구글에서는 웹뷰로 인증하는 행위에 대해 권장하지 않는다 라는 경고메시지를 안내해주고 있습니다.<br>
-그래서 Custom Tabs으로 전환하기 위해 고려했습니다.
+그래서 Custom Tabs으로 전환하기 위해 몇가지 사항을 고려했습니다.
+
+1. Custom Tabs가 지원되지 않는 디바이스나 앱플레이어에 대해서 어떻게 대체할 것인가
+2. 서버로부터 리다이렉트 수신을 받을 수 있는가
+3. 새로운 액티비티 위에 Custom Tabs를 올릴 수 있는가
 
 #### Custom Tabs 구현
 

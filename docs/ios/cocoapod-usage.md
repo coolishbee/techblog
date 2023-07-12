@@ -134,3 +134,15 @@ end
 * target: 프로젝트의 특정 타겟에서만 반영되는 추가 설정. 주로 테스트 타겟의 경우에 테스트용 라이브러리 설정에 사용된다.
 * xcodeproj: 프로젝트 이름과 워크스페이스 이름이 다른 경우 설정 옵션.
 
+## 테스트
+
+```
+//private
+pod spec lint --verbose UniversalSDK.podspec
+pod repo push universal-sdk-ios UniversalSDK.podspec
+pod repo add universal-sdk-ios https://github.com/coolishbee/specs.git
+//public
+pod spec lint --verbose UniversalSDK.podspec
+pod trunk push UniversalSDK.podspec
+pod repo update
+```
