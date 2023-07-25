@@ -83,9 +83,7 @@ nav:
         - Linux Terminal: shell/linux-terminal.md
     - CI/CD:
         - Jenkins:
-            - Jenkins Setup: ci/jenkins-setup.md
-            - Jenkins SDK Build and Deploy: ci/jenkins-sdk-build-deploy.md
-            - Python in Jenkins: ci/jenkins-python.md
+            - Jenkins Setup: ci/jenkins-setup.md            
             - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
         - Fastlane:
             - Fastlane Setup: ci/fastlane-setup.md
