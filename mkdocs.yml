@@ -25,6 +25,7 @@ nav:
             - Swift ARC: ios/apple-arc.md
             - Framework Definition: ios/use_frameworks_definition.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
+            - NotificationCenter: ios/notification_center.md
         - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
@@ -35,6 +36,7 @@ nav:
             - Apple Login: ios/apple-login.md
             - XcodeGen: ios/xcode-gen.md
             - Carthage: ios/carthage.md
+            - SkeletonView: ios/skeleton-view.md
     - Android:
         - Grammar: android/android-grammar.md            
         - Features:

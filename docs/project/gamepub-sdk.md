@@ -85,7 +85,7 @@ Unity에서 이 콜을 받으려면
 === "Unity"
     ```c#
     void CallbackMethod(string json) {
-        // json 데이터 직렬화
+        // identifier가 포함된 json 데이터 역직렬화
     }
     ```
 
