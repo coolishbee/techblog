@@ -1,0 +1,2281 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../unity-ios-application-override/">
+      
+      
+        <link rel="next" href="../unity-assets/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
+    
+    
+      
+        <title>Memory Manage - Tech Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.558e4712.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Tech Blog" class="md-header__button md-logo" aria-label="Tech Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tech Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Memory Manage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Tech Blog" class="md-nav__button md-logo" aria-label="Tech Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tech Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/" class="md-nav__link">
+        News
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="false">
+          Go
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Go" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Go
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-develop-env/" class="md-nav__link">
+        Develop Env
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" tabindex="0" aria-expanded="false">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-gc/" class="md-nav__link">
+        Go GC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-build-linux-onWindows/" class="md-nav__link">
+        Go Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-goroutine/" class="md-nav__link">
+        Goroutine
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" tabindex="0" aria-expanded="false">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-google-api-usage/" class="md-nav__link">
+        Google API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/apple-login-redirect/" class="md-nav__link">
+        Apple Login Redirect Sever
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-gin-swagger/" class="md-nav__link">
+        Gin Swagger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/google-play-developer-api/" class="md-nav__link">
+        Google Play Developer API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-gin-mongodb/" class="md-nav__link">
+        Gin MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/go-gorilla-websocket/" class="md-nav__link">
+        Gorilla WebSocket
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../go/gin-cors/" class="md-nav__link">
+        Gin CORS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          iOS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="iOS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          iOS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" tabindex="0" aria-expanded="false">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/swift-struct-class/" class="md-nav__link">
+        Swift Class & Struct
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/xctest/" class="md-nav__link">
+        XCTest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/apple-arc/" class="md-nav__link">
+        Swift ARC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/use_frameworks_definition/" class="md-nav__link">
+        Framework Definition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios_exclude_simulator_architecture/" class="md-nav__link">
+        Exclude Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/notification_center/" class="md-nav__link">
+        NotificationCenter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" tabindex="0" aria-expanded="false">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/afnetworking-usage/" class="md-nav__link">
+        AfNetworking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios-inapp-purchase-usage/" class="md-nav__link">
+        InAppPurchase
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/app-with-framework/" class="md-nav__link">
+        Create Framework
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/cocoapod-usage/" class="md-nav__link">
+        Cocoapod Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/cocoapods-private/" class="md-nav__link">
+        Cocoapod Private
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/cocoapods-public/" class="md-nav__link">
+        Cocoapod Public
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/apple-login/" class="md-nav__link">
+        Apple Login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/xcode-gen/" class="md-nav__link">
+        XcodeGen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/carthage/" class="md-nav__link">
+        Carthage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/skeleton-view/" class="md-nav__link">
+        SkeletonView
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" tabindex="0" aria-expanded="false">
+          Android
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Android" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Android
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-grammar/" class="md-nav__link">
+        Grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" tabindex="0" aria-expanded="false">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-gc/" class="md-nav__link">
+        GC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-package-refactor/" class="md-nav__link">
+        PackagenameRefactor
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-proguard/" class="md-nav__link">
+        Proguard
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" tabindex="0" aria-expanded="false">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/acra-usage/" class="md-nav__link">
+        ACRA
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-google-billing-usage/" class="md-nav__link">
+        GoogleBilling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-onestore-billing-usage/" class="md-nav__link">
+        OneStoreBilling
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/create-library/" class="md-nav__link">
+        Create Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/only-library/" class="md-nav__link">
+        Create Only Module
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/gson/" class="md-nav__link">
+        Gson
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/retrofit2/" class="md-nav__link">
+        Retrofit2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-appleLogin/" class="md-nav__link">
+        AppleLogin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios-serviceID-setting/" class="md-nav__link">
+        ServiceID Setting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" tabindex="0" aria-expanded="false">
+          Gradle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gradle" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Gradle
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/maven-deploy/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/jcenter/" class="md-nav__link">
+        Jcenter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" tabindex="0" aria-expanded="true">
+          Unity
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Unity" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Unity
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1" tabindex="0" aria-expanded="false">
+          Grammar
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Grammar" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Grammar
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c%23-grammar/" class="md-nav__link">
+        C#
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity-api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_2" type="checkbox" id="__nav_6_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_2" tabindex="0" aria-expanded="true">
+          Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Features" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_2">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gradle-version-manage/" class="md-nav__link">
+        Android Gradle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity2017-androidx-use/" class="md-nav__link">
+        AndroidX Use
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity_xcode_AddInAppPurchase/" class="md-nav__link">
+        iOS Capability
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity-ios-application-override/" class="md-nav__link">
+        iOS Application Override
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Memory Manage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Memory Manage
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    유니티 어플리케이션이 사용하는 메모리 종류
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    어플리케이션 코드 영역 메모리 최적화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managed-heap" class="md-nav__link">
+    Managed Heap 영역의 메모리 최적화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-heap" class="md-nav__link">
+    Native Heap 영역의 메모리 최적화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    리소스 로딩을 수동으로 관리하기
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_3" tabindex="0" aria-expanded="false">
+          Library
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Library" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Library
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity-assets/" class="md-nav__link">
+        Assets
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4" tabindex="0" aria-expanded="false">
+          Editor
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Editor" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Editor
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unity-build-machine-shell/" class="md-nav__link">
+        Build Machine
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7" tabindex="0" aria-expanded="false">
+          DB
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="DB" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          DB
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/mysql/" class="md-nav__link">
+        Mysql/MariaDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/mongodb/" class="md-nav__link">
+        MongoDB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/redis/" class="md-nav__link">
+        Redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../db/leveldb/" class="md-nav__link">
+        LevelDB
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8" tabindex="0" aria-expanded="false">
+          Docker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Docker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Docker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker-usage/" class="md-nav__link">
+        Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker-build-deploy/" class="md-nav__link">
+        Build Deploy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docker/docker-compose/" class="md-nav__link">
+        Compose
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9" tabindex="0" aria-expanded="false">
+          Shell
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Shell" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Shell
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell/gpg-usage/" class="md-nav__link">
+        GPG Key
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell/mac-terminal/" class="md-nav__link">
+        MAC Terminal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../shell/linux-terminal/" class="md-nav__link">
+        Linux Terminal
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10" tabindex="0" aria-expanded="false">
+          CI/CD
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CI/CD" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          CI/CD
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_1" type="checkbox" id="__nav_10_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_1" tabindex="0" aria-expanded="false">
+          Jenkins
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Jenkins" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_1">
+          <span class="md-nav__icon md-icon"></span>
+          Jenkins
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/jenkins-setup/" class="md-nav__link">
+        Jenkins Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/jenkins-docker-build-deploy/" class="md-nav__link">
+        Docker Build and Deploy in Jenkins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_10_2" type="checkbox" id="__nav_10_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10_2" tabindex="0" aria-expanded="false">
+          Fastlane
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Fastlane" data-md-level="2">
+        <label class="md-nav__title" for="__nav_10_2">
+          <span class="md-nav__icon md-icon"></span>
+          Fastlane
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ci/fastlane-setup/" class="md-nav__link">
+        Fastlane Setup
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11" tabindex="0" aria-expanded="false">
+          Package Manager
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Package Manager" data-md-level="1">
+        <label class="md-nav__title" for="__nav_11">
+          <span class="md-nav__icon md-icon"></span>
+          Package Manager
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pm/homebrew/" class="md-nav__link">
+        Homebrew
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pm/cocoapod/" class="md-nav__link">
+        Cocoapod
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12" tabindex="0" aria-expanded="false">
+          Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_12">
+          <span class="md-nav__icon md-icon"></span>
+          Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/gamepub-sdk/" class="md-nav__link">
+        Gamepub SDK
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/sdk-api-server/" class="md-nav__link">
+        SDK API Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/ad-report-admin/" class="md-nav__link">
+        AdReport Admin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/adjust-data-admin/" class="md-nav__link">
+        Adjust Admin
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/grafana-loki/" class="md-nav__link">
+        Grafana Loki
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/push-server/" class="md-nav__link">
+        Push Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project/python-lunch/" class="md-nav__link">
+        Lunch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    유니티 어플리케이션이 사용하는 메모리 종류
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    어플리케이션 코드 영역 메모리 최적화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managed-heap" class="md-nav__link">
+    Managed Heap 영역의 메모리 최적화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#native-heap" class="md-nav__link">
+    Native Heap 영역의 메모리 최적화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    리소스 로딩을 수동으로 관리하기
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">유니티의 메모리 관리<a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<p>유니티 문서를 보면 언급되는 Managed Memory란 단서에서 흔히 추측하기로 유니티가 알아서 모든 메모리를 잘 관리하고 있을 것 처럼 생각되지만 사실은 그렇지 않다는 것이 함정.</p>
+<p>사실은 유니티 시스템은 메모리를 어떻게 처리할 것인가에 대한 단서를 당신이 만드는 코드내에서 제공해주기를 원한다. 따라서 잘못된 코드는 줄줄 새는 메모리로 당신의 앱을 디바이스에서 뻗어 버리게 만들것이다. 요즘은 모바일 디바이스에서 조차 64bit 시스템(iPhone 5s)가 올라가고 기본 장착 메모리가 2Gb 이상이 되는 등 모바일 앱으로서는 무한한 자원이 있는것 같지만 사실상 아직도 지구상의 대부분의 유저는 허접한 디바이스로 연명하고 있다는 것을 기억해야 한다.</p>
+<h2 id="_2">유니티 어플리케이션이 사용하는 메모리 종류<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<p>유니티에서 사용하는 메모리는 3가지 종류의 영역이 있다.</p>
+<p>첫번째는 코드 영역으로 유니티 엔진과 라이브러리 그리고 당신이 만든 게임코드가 컴파일 되어서 디바이스의 메모리 코드 영역에 로딩되게 된다. 사실상 이 부분을 최적화 할 필요성은 크지 않다. 실제로 유니티 프로젝트에서 코드 텍스트 파일들이 차지하는 용량이 얼마나 되는지만 계산 해 봐도 알 수 있다. 유니티 코드가 얼마나 클지는 모르지만 예상컨데 큰 사이즈의 그림 파일 몇장에도 못 미치는 용량일것이다.</p>
+<p>다음은 Managed Heap영역인데, 이 부분은 Mono가 관리하고 있는 영역이다. 아시다시피 Mono란 .Net Framework의 오픈 소스 버전이다. 이 Managed Heap영역에 클래스가 instantiated object, variable 들이 거주하게 되는 영역이다. "Managed"인 이유는 Mono Framework이 이 영역의 메모리를 할당하거나 해제하면서 "관리"를 하고 있기 때문이다. 실제로 어플리케이션이 실행중에 이따금씩 Mono가 garbage collection 작업을 통해 할당 되었으나 더이상 참조가 존재하지 않는 메모리 영역을 해제한다. 당신의 코드에서 더이상 사용되지 않는 변수나 클래스 오브젝트를 실수든 부주의에 의해서든 참조를 유지하고 있다면 해당 메모리 영역은 절대 해제되지 않고 메모리를 차지하고 있게 된다.</p>
+<p>마지막으로 Native Heap 영역인데 이 부분은 Unity 엔진이 OS에서 메모리를 할당 받아 texture, sound effect, level data 등을 저장하고 있는 영역이다. 유니티 엔진이 이 영역을 담당하여 Mono가 메모리를 관리하는 것 처럼 현재 scene에서 필요 없게 된 리소스가 차지하는 메모리 영역을 해제하는 작업을 수행하기도 하나 manual하게 할당된 리소스에 대해서는 유니티가 관리를 하지 못하므로 부주의 하다면 심각한 메모리 부족 사태에 이를 수 있다.</p>
+<h2 id="_3">어플리케이션 코드 영역 메모리 최적화<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<p>어플리케이션 코드 영역을 최적화하는 작업은 비교적 쉽게 프로젝트 세팅을 바꾸어 주는 것 만으로도 해결할 수 있다. 그러나 이 최적화 옵션을 바꿈으로 인해 사용가능하지 않을 feature를 당신의 어플리케이션이 사용하지 않을 것 인지 확인할 필요가 있다.</p>
+<p>사실 Mono Framework는 수많은 .Net 라이브러리를 포함하고 있는데 이 모든 라이브러리를 로딩하는데 꽤 많은 메모리 리소스를 소모하게 된다. 유니티에서는 이 overhead를 줄일 수 있는 옵션을 제공하는데 유니티 메뉴중 Edit &gt; Project Settings &gt; Player 메뉴를 선택하여 보자.</p>
+<p><img alt="" src="http://3.bp.blogspot.com/-bE_kvYsfQ3U/UkJFSed9MSI/AAAAAAAAEBI/x8pvxRMTD9U/s400/unity_option.jpg" /></p>
+<p>위와 같은 옵션을 볼 수 있을 것인데 중요한것은 아래쪽 Optimization 부분의 옵션들이다. "Api Compatibility Level"옵션을 ".NET 2.0 Subset"으로 바꾸어 유니티에게 더 적은 수의 .Net 라이브러리를 사용하도록 알릴 수 있다. 그리고 그 아래 "Stripping Level"의 옵션을 바꾸어 더 적은 용량의 빌드된 코드를 사용하도록 할 수 있다.  (Stripping Level 옵션의 자세한 내용에 대해서는 <a href="http://docs.unity3d.com/Documentation/Manual/iphone-playerSizeOptimization.html">링크</a>를 참조하도록 하자.) 해당 옵션의 수정을 통해 빌드 사이즈를 줄일 수 있으며 줄어든 빌드 사이즈는 곧 더 적은 메모리 사용을 의미한다. Stripping Level옵션은 Unity Pro에서만 제공되는 기능이다.</p>
+<p>그럼 그냥 가장 minimal한 것으로 설정을 하면 되겠지 싶은데 세상일이 그렇게 간단하지 않다. 그 전에 당신의 어플리케이션이 옵션 조정으로 인해 빠지게 되는 라이브러리를 사용하지 않는지 확인할 필요가 있다. 가장 많이 쓰지만 이외로 minimize되서 빠지게 되는 라이브러리 중에는 System.Xml이 있다. 이 경우는 3rd party minimal 라이브러리를 사용하면 된다.</p>
+<p>옵션에 따라 지원되는 라이브러리를 확인할 수 있는 페이지는 <a href="http://docs.unity3d.com/410/Documentation/ScriptReference/MonoCompatibility.html">이곳</a>을 참조하도록 하자. 실제로 빠지게 되는 많은 라이브러리들이 게임을 개발할 때는 잘 사용되지 않는 것들이 많다. 따라서 한번 시도해 볼만한 가치가 충분히 있다고 본다.</p>
+<h2 id="managed-heap">Managed Heap 영역의 메모리 최적화<a class="headerlink" href="#managed-heap" title="Permanent link">#</a></h2>
+<p>유니티에서 최근에 Managed Heap 영역의 메모리를 관리하는 법에 대해 훌륭한 <a href="http://docs.unity3d.com/Documentation/Manual/UnderstandingAutomaticMemoryManagement.html">메뉴얼</a>을 추가하였다. Managed Heap영역은 당신이 만든 코드에서 new 키워드나 Instantiate() 함수를 통해 할당한 메모리가 Mono Framework에 의해 관리되는 영역이다. 만약 메모리가 필요해 할당을 하는데 Manges Heap영역에 메모리가 모자랄 경우 heap 사이즈를 키우게 된다. 이 경우가 실제로 디바이스 상에서 메모리가 부족해지는 경우이다.</p>
+<p>일반적으로는 어떤 인스턴스가 더이상 필요해지지 않을때 해당 인스턴스를 참조하는 곳이 없어지게 된다. 주기적으로 Mono의 Garbage Collector가 이러한 참조가 없어진 인스턴스 등을 찾아 Manged Heap상에서 해제하게 된다. 그러나 Garbage Collector가 메모리를 수거하는 작업을 하는 동안에는 framerate가 떨어지거나 어플리케이션의 반응이 늦어질 수가 있기 때문에 일반적으로 어플리케이션이 활발히 동작하고 있는 동안에 Garbage Collector의 동작을 원치는 않을 것이다. 따라서 메모리가 새는 것을 방지하기 위해 할당한 변수나 오브젝트가 필요가 없어지게 되면 null을 할당하거나 Destory로 명시적으로 메모리상에서 제거되도록 표시를 해두어야 하지만 동시에 수많은 메모리 해제로 과도한 Garbage Collector의 동작을 바라지도 않을 것이다.</p>
+<p>특히 게임의 경우 Destory를 호출해야만 하는 수많은 object가 게임 플레이 도중에 생성될 수 있다. 예를 들면 대포가 수많은 대포알을 발사하는 경우가 그렇다. 각 대포알을 발포 되기전에 메모리를 할당 받고 대포알이 사라지는 순간 해제해야 하는데 이러한 작업이 각 대포알에게 일어나야 하는 것은 너무나도 낭비적인 일이 아닐 수 없다. 이 문제를 해결하는 일반적인 방법은 해당 오브젝트를 생성후 필요 없게 되는 때에 Destory하지 않고 일단 숨긴 후 필요할 때 다시 Activate시켜서 사용하는 이른바 Object Recycling 기법이 있다. 항상 이 방법이 유용한것은 아니지만 과도한 Garbage Collection을 피하는 훌륭한 방법이다. </p>
+<p>Automatic Memory Management와 Object Pool에 관련해서는 <a href="http://docs.unity3d.com/Documentation/Manual/UnderstandingAutomaticMemoryManagement.html">이곳</a>의 유니티 문서를 통해 자세한 사항을 확인하도록 하자.</p>
+<p>Garbage Collection이 일어나는 것을 막거나 컨트롤 할 수 있는 방법은 딱히 없지만 시스템에 적당한 시점에 지금이 바로 Garbage Collection을 하기에 좋은 타이밍이라는 것을 힌트를 줄 수는 있다. System.GC.Collect()를 호출하는 방법이 그것인데 이 함수를 호출하는 것이 바로 Garbage Collection을 하도록 하지는 않고 정말 단지 지금이 좋은 타이밍이라는 것을 알려줄 수 있을 뿐이지만 적당한 시점에 예를 들어 화면이 전환되는 시점이나 리소스 로딩이 일어나는 시점에 호출해준다면 큰 효과를 볼 수 있다. </p>
+<h2 id="native-heap">Native Heap 영역의 메모리 최적화<a class="headerlink" href="#native-heap" title="Permanent link">#</a></h2>
+<p>Unity에서 Scene을 로드하면 그 Scene 에 포함된 모든 Asset들을 같이 메모리 상에 로드되고 이어서 해당 Scene이 유저에게 보여진다. 그리고 해당 Scene이 끝나서 다음 Scene으로 넘어갈 경우 이전 Scene의 리소스중 다음 Scene에서도 사용되지 않는 다면 Asset은 메모리상에서 자동으로 해제된다.</p>
+<p>그러나 어떤 두가지의 경우에 Asset이 자동으로 해제되지 않는 경우가 있는데, 첫번째로는 DontDestroyOnLoad(Object target) 함수를 통해 개발자에 의해 다른 Scene이 Loading 되더라도 Destroy되지 않도록 지정해둔 경우로 이 경우 해당 GameObject와 GameObject의 Child GameObject, 연계된 Asset 모두가 Scene 전환에 따라 자동 해제되지 않는다. 실제로 이 함수는 모든 Scene간에 보존되어야 하는 데이터를 전달하는 방법으로 사용되고 있는데 이 경우에 보존되는 Object가 무거운 Asset을 참조하거나 그 자체가 아니도록 주의하여야 한다.</p>
+<p>또 다른 경우는 Script내에서 Scene Object를 참조하고 있는 경우이다. 대부분 Script의 참조는 Scene이 전환됨에 따라 같이 파괴되게 되지만 Scene이 전환되더라도 남아 있는 GameObject가 있고 해당 GameObject 가 Script를 가지고 있는데 이 Script내에서 다른 Asset 예를 들어 사운드 이펙트나 텍스쳐에 대한 참조를 유지하고 있는 경우 무심코 필요하지 않은 리소스가 메모리상에 남아서 메모리 자원부족에 이르게 할 위험이 있다. 또 Static 변수 혹은 Singleton인스턴스가 자원에 대한 참조를 가지고 있는 경우도 마찬가지 문제가 발생할 소지가 있다.</p>
+<p>따라서 스크립트내에서 이러한 참조를 유지하고 있다면 필요없게 되는 시점에 잊지않고 Destroy함수를 호출하거나 null을 할당하여 참조를 해제할 필요가 있다. </p>
+<p>유니티는 Scene이 Load되는 시점에 해당 Scene의 모든 Asset을 자동으로 같이 Load하지만 이러한 Asset을 해제할 유일한 방법은 Scene을 다시 로드하거나 다른 Scene으로 전환하는 방법밖에 없다는 것에 주의할 필요가 있다.</p>
+<h2 id="_4">리소스 로딩을 수동으로 관리하기<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<p>약간의 노동이 필요하지만 수동으로 Asset을 현재 Scene에 Load할 방법도 당연히 존재한다. Resources 라는 폴더를 만들어서 Asset들을 그 안에 위치시키면 해당 Asset들은 Resources.Load(resourcePath)함수를 통해 수동으로 Load할 수 있게 된다.  이 Asset들은 텍스쳐, 오디오파일, 프리팹, 매터리얼등이다. </p>
+<p>해당 자원에 대한 이용이 끝났다면 그 자원에 할당된 메모리를 Resources.UnloadUnusedAssets() 함수를 호출하여 강제로 해제할 수 있는데, 유니티가 해당 자원을 해제하기 위해서는 스크립트에서 해당 자원에 대한 참조가 모두 없어져야 한다. (Destroy혹은 null을 할당해서) 그리고 이 함수는 Resources.Load() 함수를 통해서 할당된 자원만 해제를 하고 유니티가 Scene을 Load하면서 자동으로 같이 Load한 자원은 해당되지 않는다는 점에 주의할 필요가 있다.</p>
+<div class="admonition reference">
+<p class="admonition-title">Reference</p>
+<p><a href="http://la-stranger.blogspot.kr">http://la-stranger.blogspot.kr</a></p>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
+      
+    
+  </body>
+</html>
