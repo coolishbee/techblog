@@ -50,6 +50,8 @@ mariadb가 메인디비였고 redis는 메인디비 부하를 막아줄 용도�
 
 ## API
 
+### 기능 목록
+
 * 소셜 로그인 검증
 * 인증 및 회원관리
 * 결제 영수증 검증
@@ -57,11 +59,13 @@ mariadb가 메인디비였고 redis는 메인디비 부하를 막아줄 용도�
 * 이미지 배너
 * 공지사항
 
-### 프레임워크 구조 설계
+### 프로젝트 구조
 
-api 와 db router 의 관계도
+| Image      | Description                          |
+| ----------- | ------------------------------------ |
+| ![Image title](../img/project-dir.png){ align=left, width="150" } | • conf : 데이터베이스 접속 및 시스템 설정 파일<br>• docs : swagger 설정<br>• models : 데이터베이스 연결 및 요청<br>• app : 요청과 응답에 대한 정의<br>• config : conf 파일리더기<br>• e : 예외처리<br>• file : 파일 및 폴더 io 관련<br>• geoip : geoip 관리<br>• gredis : redis db 연결 및 요청<br>• iap : 결제 영수증 검증<br>• logging : 로그 저장 및 관리<br>• setting : 서버 설정<br>• util : 유틸리티<br>• routers : 라우터 및 api 정의<br>• service : api에서 db 요청을 연결하는 서비스<br>  |
 
-### API 문서
+### 문서
 
 테스트 환경과 문서를 동시에 개발할 수 있는 [swagger](https://github.com/swaggo/swag)를 사용했습니다.
 
