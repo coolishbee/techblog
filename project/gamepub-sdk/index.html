@@ -795,6 +795,66 @@
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/higher-order-function/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HigherOrder Function
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/combine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/swiftui/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SwiftUI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2974,6 +3034,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../jenkins-sdk-build-deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SDK Build Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../python-lunch/" class="md-nav__link">
         
   
@@ -3413,7 +3493,7 @@ Unity에서는 Android와 iOS 마찬가지로 UnitySendMessage 메서드를 제�
 <h3 id="fcm">푸시(FCM)<a class="headerlink" href="#fcm" title="Permanent link">#</a></h3>
 <h4 id="_4">인증<a class="headerlink" href="#_4" title="Permanent link">#</a></h4>
 <p>Firebase 제품군을 사용하기 위해서는 <code>google_services.json</code>의 값을 액세스하는 <a href="https://developers.google.com/android/guides/google-services-plugin?hl=ko">Google 서비스 Gradle 플러그인</a>이 필요합니다. 이 플러그인은 자바코드로 읽을 수 있는 <code>xml</code>형태로 변환되며 유니티내에서는 Firebase SDK 모듈내에서 그 역할을 해줍니다.</p>
-<p>그러나 GamepubSDK 내에서 이미 FCM모듈을 포함하고 있었기 때문에 Firebase SDK for Unity 의존성 없이 <code>google_services.json</code>을 액세스할 방법을 찾아보았습니다. 그래서 제가 여러 테스트 끝에 <a href="https://dandar3.github.io/android/google-services-json-to-xml.html">파일 변환</a>후 <code>Assets/Plugins/Android/FirebaseApp.androidlib/res/values</code>에 위치하면 컴파일시 읽을 수 있었습니다.</p>
+<p>그러나 GamepubSDK 내에서 이미 FCM모듈을 포함하고 있었기 때문에 Firebase SDK for Unity 의존성 없이 <code>google_services.json</code>을 액세스할 방법을 찾아보았습니다. 그래서 여러 테스트 끝에 <a href="https://dandar3.github.io/android/google-services-json-to-xml.html">파일 변환</a>후 <code>Assets/Plugins/Android/FirebaseApp.androidlib/res/values</code>에 위치하면 컴파일시 읽을 수 있었습니다.</p>
 <h4 id="_5">푸시 아이콘 커스텀<a class="headerlink" href="#_5" title="Permanent link">#</a></h4>
 <p>푸시 알림 아이콘 설정도 동일한 방법으로 설정이 가능합니다. <a href="http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&amp;source.clipart=ac_unit&amp;source.space.trim=1&amp;source.space.pad=0&amp;name=ic_stat_ic_notification">Noti Icon generator</a>를 이용해서 사이즈별 파일을 <code>Assets/Plugins/Android/FirebaseApp.androidlib/res/drawable-...</code> 경로에 추가하면 됩니다.
 그리고 <code>Assets/Plugins/Android/AndroidManifest.xml</code>에 아래 내용을 추가해야 합니다.
@@ -3967,8 +4047,8 @@ CustomTabActivityHelper.openCustomTabAppleLogin(
     }
 }
 </code></pre></div>
-<p>추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
-기본브라우저로 실행하도록 Fallback 하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
+<p>추가로 앱플레이어나 특정 디바이스에서 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
+기본브라우저로 실행하도록 Fallback 처리하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
 활용하는 라이브러리들은 어떻게 처리하는지 참고했습니다.<br>
 Fallback 처리시에는 위에 activity 매니페스트 설정에서 <code>android:launchMode</code>을 꼭 <code>singleTask</code>로 해줘야 합니다.<br>
 그렇지 않으면 <code>onNewIntent</code>호출이 되지 않을 수도 있습니다. 보통 Custom Tabs가 사용 가능한 상황에서는 <code>singleTop</code>을 쓰지만
