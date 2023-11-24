@@ -1,4 +1,53 @@
 
+
+## 배열 인덱스와 값 출력
+```swift
+let seoul = ["Jane", "Kim"]
+for (idx, name) in seoul.enumerated() {
+    print("\(idx), \(name)")
+}
+```
+
+## 배열 일치하는 값의 인덱스 찾기
+
+```swift
+let seoul = ["Jane", "Kim"]
+print("\(seoul.firstIndex(of: "Kim")!)")
+```
+
+## 배열 내림차순으로 정렬후 인덱스 순으로 배열 반환
+
+```swift
+let emergency = [3, 76, 24]
+let result = emergency.map {
+    emergency.sorted(by: > ).firstIndex(of: $0)!
+}
+print(result)
+```
+
+## 배열 내림차순으로 정렬후 순차적으로 값 뽑기
+
+```swift
+let emergency = [3, 76, 24]
+for i in emergency.sorted(by: >) {
+    print(i)
+}
+```
+
+## 배열 중복 인덱스 제거
+
+```swift
+userInfo.removeAll(where: { $0.name == "민이" })
+```
+
+## 배열의 특정 index 찾기
+
+```swift
+if let index = userInfo.firstIndex(where: { $0.name == "민이" }) {
+    print(userInfo[index].phone)
+}
+```
+
 ## unix 와 같은 13자리 timestamp 얻기
 
 === "swift"

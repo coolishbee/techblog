@@ -116,7 +116,7 @@ Unity는 공식적으로 Gradle 빌드 시스템을 지원하기 때문에 네�
 
 Firebase 제품군을 사용하기 위해서는 `google_services.json`의 값을 액세스하는 [Google 서비스 Gradle 플러그인](https://developers.google.com/android/guides/google-services-plugin?hl=ko)이 필요합니다. 이 플러그인은 자바코드로 읽을 수 있는 `xml`형태로 변환되며 유니티내에서는 Firebase SDK 모듈내에서 그 역할을 해줍니다.
 
-그러나 GamepubSDK 내에서 이미 FCM모듈을 포함하고 있었기 때문에 Firebase SDK for Unity 의존성 없이 `google_services.json`을 액세스할 방법을 찾아보았습니다. 그래서 제가 여러 테스트 끝에 [파일 변환](https://dandar3.github.io/android/google-services-json-to-xml.html)후 `Assets/Plugins/Android/FirebaseApp.androidlib/res/values`에 위치하면 컴파일시 읽을 수 있었습니다.
+그러나 GamepubSDK 내에서 이미 FCM모듈을 포함하고 있었기 때문에 Firebase SDK for Unity 의존성 없이 `google_services.json`을 액세스할 방법을 찾아보았습니다. 그래서 여러 테스트 끝에 [파일 변환](https://dandar3.github.io/android/google-services-json-to-xml.html)후 `Assets/Plugins/Android/FirebaseApp.androidlib/res/values`에 위치하면 컴파일시 읽을 수 있었습니다.
 
 #### 푸시 아이콘 커스텀
 
@@ -767,8 +767,8 @@ override fun onNewIntent(intent: Intent?) {
 }
 ```
 
-추가로 앱플레이어나 특정 디바이스에서는 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
-기본브라우저로 실행하도록 Fallback 하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
+추가로 앱플레이어나 특정 디바이스에서 크롬앱이 설치되어있지 않은 경우에는 Custom Tabs사용이 제한되기 때문에 
+기본브라우저로 실행하도록 Fallback 처리하였습니다. 이 또한 Firebase나 Facebook처럼 모바일에서 OAuth인증을 
 활용하는 라이브러리들은 어떻게 처리하는지 참고했습니다.<br>
 Fallback 처리시에는 위에 activity 매니페스트 설정에서 `android:launchMode`을 꼭 `singleTask`로 해줘야 합니다.<br>
 그렇지 않으면 `onNewIntent`호출이 되지 않을 수도 있습니다. 보통 Custom Tabs가 사용 가능한 상황에서는 `singleTop`을 쓰지만

@@ -48,4 +48,4 @@ Grafana Loki는 다른 logging system과 다르게 log의 label만 indexing 하�
 * LogQL, Loki의 쿼리 언어 : data metric 사용가능한 쿼리 언어
 * 확장성 : 대규모 설치를 위한 확장가능한 설계 구조, 각 마이크로서비스 구성요소는 별도의 프로세스로 나누어 구성 가능함
 * agent 유연성 : 많은 agent가 플러그인으로 지원함
-* grafana 통합 : grafana와 원할하게 통합되어 stack으로 제공
+* grafana 통합 : grafana와 원활하게 통합되어 stack으로 제공

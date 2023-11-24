@@ -26,6 +26,9 @@ nav:
             - Framework Definition: ios/use_frameworks_definition.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
             - NotificationCenter: ios/notification_center.md
+            - HigherOrder Function: ios/higher-order-function.md
+            - Combine: ios/combine.md
+            - SwiftUI: ios/swiftui.md
         - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
@@ -101,6 +104,7 @@ nav:
         - Adjust Admin: project/adjust-data-admin.md
         - Grafana Loki: project/grafana-loki.md
         - Push Server: project/push-server.md
+        - SDK Build Deploy: project/jenkins-sdk-build-deploy.md
         - Lunch: project/python-lunch.md
 theme: 
     name: material

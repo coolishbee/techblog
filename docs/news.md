@@ -1,3 +1,45 @@
+## Flutter 3.13
+
+- iOS 임펠러 엔진 성능개선(렌더링 최적화)
+- Foldable API 추가
+- AppLifecycleListener class 추가
+- Scrolling
+    - 가로/세로 양방향 스크롤가능한 layout
+- Android 14/ API 34를 지원
+- iOS 스크린 회전시 찌그러지는 현상 개선.
+- Preparing for iOS 17 and Xcode 15
+- Android Jelly Bean API levels (16, 17, and 18) 지원종료.
+
+## Flutter 3.10
+
+- iOS 임펠러 엔진이 기본값으로 적용.
+- Web 환경 향상
+- WASM 지원에 대해 향상
+- iOS 무선 디버깅 지원
+- Dart 3.0
+    - 100% sound null safty
+    - record, pattern
+    - class 용도 구분 키워드 추가 (interface, base, final)
+
+## Flutter 3.0.0
+
+- Cross-Platform 지원
+    - Flutter 3.0을 사용하면 개발자는 iOS, Android, 웹 및 데스크톱 등 다양한 플랫폼에서 사용할 수 있는 앱을 만들 수 있습니다. 이를 통해 이전보다 더 쉽게 모든 기기에서 앱을 사용할 수 있게 되어 사용자와의 폭넓은 도달 및 참여를 보장할 수 있습니다.
+- Apple Silicon 지원
+    - Intel 맥뿐만 아니라 M1 칩에 대해서도 지원하게 되었습니다.
+- Foldable 디바이스 지원
+- Desktop Window 지원
+    - 이제 개발자는 창 UI(사용자 인터페이스)에 대한 향상된 지원 덕분에 모바일 장치뿐만 아니라 Mac OS X 또는 Windows PC와 같은 데스크톱 장치에서도 Flutter 3.0을 사용할 수 있습니다. 즉, 이제 모바일 장치에서 사용하는 것과 동일한 프레임워크를 사용하여 강력한 데스크톱 애플리케이션을 만들 수 있으므로 크로스 플랫폼 개발이 이전보다 훨씬 쉬워졌습니다!
+- Web 기능 향상
+    - Flutter Framework, Engine, Contents 로딩을 제어할 수 있는 새로운 API 추가
+    - Image Decoding 성능 개선
+- Material Design3 지원
+- Dart 2.17
+    - Enhanced enums with members
+    - Super initializers
+    - Named args everywhere
+- 캐주얼 게임 툴킷 제공
+
 ## Go 1.20
 
 - 1.19 이후 6개월 만의 릴리즈. 하위호환 정책으로 기존 프로그램 컴파일/실행은 문제 없음
@@ -44,18 +86,17 @@
 
 ## Go 1.18
 
-- Generic    
-- Fuzzing    
-- Workspaces    
+- Generic (제네릭) 추가
+- Fuzzing (퍼징, 퍼즈 테스트) 추가
+- Workspaces (work) 기능 추가
 - 20% Performance Improvements
-
 
 
 ## TODO
 
 - [x] go-redirect-server
-- [ ] Test1
+<!-- - [ ] Test1
     * [x] Test2
     * [x] Test3
     * [ ] Test4
-- [ ] Test5
+- [ ] Test5 -->
