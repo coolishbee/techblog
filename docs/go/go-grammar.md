@@ -585,20 +585,22 @@ func printOutput(outs []byte) {
 
 ## [iconv-go] byte to string 변환시 한글깨짐 해결
 
-간혹 byte를 string 으로 출력시 한글깨짐 현상을 겪을 수 있다.
-이때 가장 합리적인 해결 방안
-example:
-```
+간혹 byte를 string 으로 출력시 한글깨짐 현상을 겪을 수 있다.<br>
+이때 가장 합리적인 해결 방안.
+
+```go
 result, _ := iconv.ConvertString(string(output), "euc-kr", "utf-8")
 ```
 
+윈도우 사용자:<br>
+윈도우는 gcc 활성화를 위해서 [MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/)를 설치해야 한다.(키보드 관련 go 라이브러리도 마찬가지)
+
+![res](https://velog.velcdn.com/images/james-chun-dev/post/8a4d7e17-d24a-462b-8a8e-12ca2c704f55/image.png)
+
+인스톨 파일이 작동되지 않는다면 압축파일 받아서 ProgramFiles 에 압축해제해서 떨궈놓고 환경변수(mingw64/bin)만 셋팅하면 된다.
+
 !!! Reference
 	https://github.com/djimenez/iconv-go
-
-윈도우 사용자:
-윈도우는 gcc 활성화를 위해서 [MinGW](https://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/8.1.0/threads-win32/seh/)를 설치해야 한다.(키보드 관련 go 라이브러리도 마찬가지)
-![res](https://velog.velcdn.com/images/james-chun-dev/post/8a4d7e17-d24a-462b-8a8e-12ca2c704f55/image.png)
-인스톨 파일이 작동되지 않는다면 압축파일 받아서 ProgramFiles 에 압축해제해서 떨궈놓고 환경변수(mingw64/bin)만 셋팅하면 된다.
 
 ## aes256 cbc 암호화 복호화
 

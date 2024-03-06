@@ -13,7 +13,7 @@
 
 ![img-banner](https://user-images.githubusercontent.com/20632507/189065003-7a076188-9748-4a1a-aeb9-f15905a4c007.png)
 
-#### 젠킨스 쉘스크립트
+#### 젠킨스 쉘스크립트로 실행될 파이썬 스크립트
 
 ```
 #!/usr/bin/env python3
@@ -118,7 +118,7 @@ update_banner_name(filename, file_list)
 
 ![maintenance](https://user-images.githubusercontent.com/20632507/189065057-e89d4293-07ce-468d-accf-43e94771e2fe.png)
 
-#### 젠킨스 쉘스크립트
+#### 젠킨스 쉘스크립트로 실행될 파이썬 스크립트
 
 ```
 #!/usr/bin/env python3

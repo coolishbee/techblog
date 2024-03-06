@@ -17,6 +17,16 @@ nav:
             - Gin MongoDB: go/go-gin-mongodb.md
             - Gorilla WebSocket: go/go-gorilla-websocket.md
             - Gin CORS: go/gin-cors.md
+    - Flutter:
+        - Develop Env: flutter/flutter-getstarted.md
+        - Grammar: flutter/dart-grammar.md
+        - Features:
+            - Breaking Changes: flutter/flutter-breaking-changes.md
+        - Library:
+            - WebRTC: flutter/flutter-webrtc.md
+            - GetX: flutter/flutter-getx.md
+            - BloC: flutter/flutter-bloc.md
+            - Provider: flutter/flutter-provider.md
     - iOS:
         - Grammar: ios/ios-grammar.md
         - Features:
@@ -105,11 +115,13 @@ nav:
         - Grafana Loki: project/grafana-loki.md
         - Push Server: project/push-server.md
         - SDK Build Deploy: project/jenkins-sdk-build-deploy.md
+        - Python in Jenkins: project/jenkins-python.md
         - Lunch: project/python-lunch.md
 theme: 
     name: material
     custom_dir: overrides
 markdown_extensions:
+    - tables
     - attr_list
     - md_in_html
     - def_list

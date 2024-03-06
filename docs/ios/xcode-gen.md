@@ -6,9 +6,9 @@ brew install xcodegen
 
 ## project.yml 파일 편집:
 ```
-name: ProjectName
+name: [ProjectName]
 targets:
-  ProjectName:
+  [ProjectName]:
     type: application
     platform: iOS
     deploymentTarget: "15.0"

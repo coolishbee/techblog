@@ -85,7 +85,9 @@ https://accounts.google.com/o/oauth2/token
 HEADER
 "Content-Type" : "application/x-www-form-urlencoded"
 ```
+
 [Request Body (FormData)]
+
 | Key  | Description     | Type   |
 | ---- | --------------- | ------ |
 | refresh_token   | 위에서 발급받은 토큰   | string |
@@ -169,10 +171,14 @@ fmt.Println("  Body       :\n", reportResp)
 
     동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.
 
-<!-- !!! warning
-
-    동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다.
-
-!!! danger
-
-	동일한 방식으로 구글 영수증검증, 환불목록 조회 API 등 모든 API 사용이 가능합니다. -->
+<!-- warning
+abstract
+info
+success
+danger
+question
+failure
+bug
+example
+quote
+note -->
