@@ -35,17 +35,18 @@ nav:
             - Swift ARC: ios/apple-arc.md
             - Framework Definition: ios/use_frameworks_definition.md
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
-            - NotificationCenter: ios/notification_center.md
+            - NotificationCenter: ios/notification-center.md
             - HigherOrder Function: ios/higher-order-function.md
             - Combine: ios/combine.md
             - SwiftUI: ios/swiftui.md
-        - Library:            
+        - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
             - Create Framework: ios/app-with-framework.md            
             - Apple Login: ios/apple-login.md
             - XcodeGen: ios/xcode-gen.md
             - Carthage: ios/carthage.md
+            - RxSwift: ios/ios-rxswift.md
             - SkeletonView: ios/skeleton-view.md
     - Android:
         - Grammar: android/android-grammar.md            
@@ -120,6 +121,9 @@ nav:
 theme: 
     name: material
     custom_dir: overrides
+plugins:
+    - search
+    
 markdown_extensions:
     - tables
     - attr_list
