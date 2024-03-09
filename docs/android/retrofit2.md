@@ -137,10 +137,11 @@ public class RespAppInfo {
 }
 ```
 
-```
+```java
 @POST("/api/Info")
-Call<RespAppInfo> postAppInfo(@Query("t") long time, @Query("sign") String sign,
-                             @Body ReqAppInfo data);
+Call<RespAppInfo> postAppInfo(@Query("t") long time, 
+                              @Query("sign") String sign,
+                              @Body ReqAppInfo data);
 ```
 
 ```

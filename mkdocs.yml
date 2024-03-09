@@ -39,13 +39,10 @@ nav:
             - HigherOrder Function: ios/higher-order-function.md
             - Combine: ios/combine.md
             - SwiftUI: ios/swiftui.md
-        - Library:
+        - Library:            
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
-            - Create Framework: ios/app-with-framework.md
-            - Cocoapod Usage: ios/cocoapod-usage.md
-            - Cocoapod Private: ios/cocoapods-private.md
-            - Cocoapod Public: ios/cocoapods-public.md
+            - Create Framework: ios/app-with-framework.md            
             - Apple Login: ios/apple-login.md
             - XcodeGen: ios/xcode-gen.md
             - Carthage: ios/carthage.md
@@ -105,7 +102,10 @@ nav:
         
     - Package Manager:
         - Homebrew: pm/homebrew.md
-        - Cocoapod: pm/cocoapod.md
+        - Cocoapod:
+            - Usage: pm/cocoapods/cocoapods-usage.md
+            - Public: pm/cocoapods/cocoapods-public.md
+            - Private: pm/cocoapods/cocoapods-private.md
         
     - Project:
         - Gamepub SDK: project/gamepub-sdk.md
