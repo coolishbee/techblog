@@ -826,7 +826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/notification_center/" class="md-nav__link">
+      <a href="../../ios/notification-center/" class="md-nav__link">
         NotificationCenter
       </a>
     </li>
@@ -958,48 +958,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ios/cocoapod-usage/" class="md-nav__link">
-        Cocoapod Usage
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ios/cocoapods-private/" class="md-nav__link">
-        Cocoapod Private
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ios/cocoapods-public/" class="md-nav__link">
-        Cocoapod Public
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../ios/apple-login/" class="md-nav__link">
         Apple Login
       </a>
@@ -1030,6 +988,20 @@
     <li class="md-nav__item">
       <a href="../../ios/carthage/" class="md-nav__link">
         Carthage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/ios-rxswift/" class="md-nav__link">
+        RxSwift
       </a>
     </li>
   
@@ -2214,10 +2186,72 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_12_2" type="checkbox" id="__nav_12_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_2" tabindex="0" aria-expanded="false">
+          Cocoapod
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Cocoapod" data-md-level="2">
+        <label class="md-nav__title" for="__nav_12_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cocoapod
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../pm/cocoapod/" class="md-nav__link">
-        Cocoapod
+      <a href="../../pm/cocoapods/cocoapods-usage/" class="md-nav__link">
+        Usage
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pm/cocoapods/cocoapods-public/" class="md-nav__link">
+        Public
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pm/cocoapods/cocoapods-private/" class="md-nav__link">
+        Private
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2580,9 +2614,10 @@ Call&lt;RespAppGeo&gt; getGeoAPI(@Url String url);
 
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>@POST(&quot;/api/Info&quot;)
-Call&lt;RespAppInfo&gt; postAppInfo(@Query(&quot;t&quot;) long time, @Query(&quot;sign&quot;) String sign,
-                             @Body ReqAppInfo data);
+<div class="highlight"><pre><span></span><code><span class="nd">@POST</span><span class="p">(</span><span class="s">&quot;/api/Info&quot;</span><span class="p">)</span>
+<span class="n">Call</span><span class="o">&lt;</span><span class="n">RespAppInfo</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">postAppInfo</span><span class="p">(</span><span class="nd">@Query</span><span class="p">(</span><span class="s">&quot;t&quot;</span><span class="p">)</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">time</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                              </span><span class="nd">@Query</span><span class="p">(</span><span class="s">&quot;sign&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sign</span><span class="p">,</span>
+<span class="w">                              </span><span class="nd">@Body</span><span class="w"> </span><span class="n">ReqAppInfo</span><span class="w"> </span><span class="n">data</span><span class="p">);</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>https://baseURL.co.kr/api/Info?t={0}&amp;sign={1}
 </code></pre></div>
