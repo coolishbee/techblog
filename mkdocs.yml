@@ -1,4 +1,5 @@
 site_name: Tech Blog
+site_url: https://coolishbee.github.io/techblog/
 nav:
     - About: index.md
     - News: news.md
@@ -20,8 +21,10 @@ nav:
     - Flutter:
         - Develop Env: flutter/flutter-getstarted.md
         - Grammar: flutter/dart-grammar.md
-        - Features:
-            - Breaking Changes: flutter/flutter-breaking-changes.md
+        - Breaking Changes: flutter/flutter-breaking-changes.md
+        - Trouble Shooting: flutter/flutter-troubleshooting.md
+        - Features:            
+            - Flutter 실행 원리: flutter/flutter-principle.md
         - Library:
             - WebRTC: flutter/flutter-webrtc.md
             - GetX: flutter/flutter-getx.md
@@ -30,15 +33,16 @@ nav:
     - iOS:
         - Grammar: ios/ios-grammar.md
         - Features:
-            - Swift Class & Struct: ios/swift-struct-class.md
-            - XCTest: ios/xctest.md
-            - Swift ARC: ios/apple-arc.md
-            - Framework Definition: ios/use_frameworks_definition.md
+            - Swift Class & Struct: ios/swift-struct-class.md            
+            - Swift ARC: ios/apple-arc.md            
             - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
+            - 라이브러리 정의: ios/ios-library.md
+            - Swift 변수 접근자 정리: ios/swift-access-level.md
             - NotificationCenter: ios/notification-center.md
             - HigherOrder Function: ios/higher-order-function.md
-            - Combine: ios/combine.md
+            - Combine: ios/swift-combine.md
             - SwiftUI: ios/swiftui.md
+            - XCTest: ios/xctest.md
         - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
@@ -107,6 +111,7 @@ nav:
             - Usage: pm/cocoapods/cocoapods-usage.md
             - Public: pm/cocoapods/cocoapods-public.md
             - Private: pm/cocoapods/cocoapods-private.md
+            - 명령어 정의: pm/cocoapods/use_frameworks_definition.md
         
     - Project:
         - Gamepub SDK: project/gamepub-sdk.md
@@ -122,8 +127,7 @@ theme:
     name: material
     custom_dir: overrides
 plugins:
-    - search
-    
+    - search    
 markdown_extensions:
     - tables
     - attr_list
