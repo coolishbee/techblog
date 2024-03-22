@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # Class 와 Struct
 
 모든 언어의 class 와 struct 정의는 거이 비슷하다. swift 내에서의 class, struct 의 특성 및 사용가이드를 정의해보고자 한다.

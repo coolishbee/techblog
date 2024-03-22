@@ -1,4 +1,43 @@
 
+## Safe Area의 top와 bottom 높이값 구하기
+
+```swift
+if #available(iOS 15.0, *) {
+    let window = UIApplication.shared.currentScene?.keyWindow
+    let topPadding = window.safeAreaInsets.top
+    let bottomPadding = window.safeAreaInsets.bottom
+}
+```
+
+!!! 출처
+    [https://stackoverflow.com/questions/46829840/get-safe-area-inset-top-and-bottom-heights](https://stackoverflow.com/questions/46829840/get-safe-area-inset-top-and-bottom-heights)
+
+## Status bar 높이 구하기
+
+```swift
+let height = view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+```
+
+!!! 출처
+    [https://stackoverflow.com/questions/25973733/status-bar-height-in-swift](https://stackoverflow.com/questions/25973733/status-bar-height-in-swift)
+
+## Color 다크모드 코드로 설정하기
+
+```swift
+static func systemModeColor() -> UIColor {
+    let dynamicColor = UIColor(dynamicProvider: { (traitCollection) -> UIColor in
+        if traitCollection.userInterfaceStyle == .dark {
+            return UIColor.red
+        }else {
+            return UIColor.green
+        }
+    })
+    return dynamicColor
+}
+```
+
+!!! 출처
+    [https://forums.developer.apple.com/forums/thread/122468](https://forums.developer.apple.com/forums/thread/122468)
 
 ## 배열 인덱스와 값 출력
 ```swift

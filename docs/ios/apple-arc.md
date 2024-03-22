@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # ARC
 
 메모리 관리를 참조카운팅 방식으로 하는 기술로써 Swift는 자동 참조 계산(ARC)을 사용하여 앱의 메모리 사용량을 추적하고 관리합니다. 
@@ -18,3 +22,13 @@ ARC에 의해 관리되며, 참조 횟수가 증가하고 이에 대한 참조�
 ## unowned
 
 weak 와 유사하지만 optional 변수는 허용되지 않는다. 반대로 weak는 optional 이어야 한다.
+
+## 순환 참조
+
+https://velog.io/@wonbi92/Retain-Cycle
+
+순환참조 확인할 방법
+
+https://medium.com/@LeeZion94/strong-reference-cycle-8a88bdd8424b
+
+https://jooeungen.tistory.com/entry/iOSSwift-Reference-Count-체크-RetainCycle-확인하기
