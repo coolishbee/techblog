@@ -1,5 +1,12 @@
+
+# Project information
 site_name: Tech Blog
 site_url: https://coolishbee.github.io/techblog/
+
+# Repository
+repo_name: coolishbee
+repo_url: https://github.com/coolishbee
+
 nav:
     - About: index.md
     - News: news.md
@@ -19,7 +26,7 @@ nav:
             - Gorilla WebSocket: go/go-gorilla-websocket.md
             - Gin CORS: go/gin-cors.md
     - Flutter:
-        - Develop Env: flutter/flutter-getstarted.md
+        - 개발환경 및 명령어: flutter/flutter-getstarted.md
         - Dart Grammar: flutter/dart-grammar.md
         - Breaking Changes: flutter/flutter-breaking-changes.md
         - Trouble Shooting: flutter/flutter-troubleshooting.md
@@ -112,8 +119,7 @@ nav:
             - Public: pm/cocoapods/cocoapods-public.md
             - Private: pm/cocoapods/cocoapods-private.md
             - 명령어 정의: pm/cocoapods/use_frameworks_definition.md
-        - gem: pm/gem.md
-        - pub: pm/pub.md
+        - gem: pm/gem.md        
         - pip: pm/pip.md
         - yum: pm/yum.md
         
@@ -130,11 +136,20 @@ nav:
 theme: 
     name: material
     custom_dir: overrides
+    features:
+        - content.tooltips
+        - search.suggest
+        - search.highlight        
+
 plugins:
     - search    
 markdown_extensions:
     - tables
+    - abbr
     - attr_list
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.snippets
     - md_in_html
     - def_list
     - pymdownx.tasklist:

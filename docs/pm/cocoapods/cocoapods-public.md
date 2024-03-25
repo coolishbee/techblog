@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## Cocoapod 으로 소스 공개(Public)용으로 프레임워크 배포
 
 ### PodSpec 파일 생성 및 편집하기

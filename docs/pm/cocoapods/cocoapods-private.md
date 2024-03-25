@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## Cocoapod 으로 소스 비공개(private)용으로 프레임워크 배포
 
 ### Git repo 만들기

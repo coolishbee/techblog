@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 ## Cocoapod 설치
 
 macOS 에는 Ruby 가 기본 내장되어 있다. 다음 명령어면 설치가 완료된다.
@@ -145,4 +149,14 @@ pod repo add universal-sdk-ios https://github.com/coolishbee/specs.git
 pod spec lint --verbose UniversalSDK.podspec
 pod trunk push UniversalSDK.podspec
 pod repo update
+```
+
+## Cocoapods에서 SPM으로 마이그레이션
+### pod 관련 파일들 삭제
+
+```
+$ pod deintegrate
+$ pod cache clean --all
+$ rm Podfile
+$ rm Podfile.lock
 ```

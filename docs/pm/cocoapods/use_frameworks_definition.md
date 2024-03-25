@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # use_frameworks! 정의
 
 CocoaPods에 정적 라이브러리 대신 프레임 워크를 사용하려고 함을 알립니다. 

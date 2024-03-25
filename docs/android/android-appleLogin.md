@@ -1,3 +1,4 @@
+
 ## 안드로이드 환경에서 애플 로그인을 사용하기 위한 설정
 
 [참고 사이트](https://whitepaek.tistory.com/60)
@@ -282,7 +283,7 @@ redirect uri 설정시 애플서버에서 post 로 로그인정보를 request �
 
 그래야 클라이언트 웹뷰에서 shouldOverrideUrlLoading 로 redirect 된 정보를 받을 수 있기 때문이다.
 
-[apple-login-redirect.md]
+[Redirect Server](../go/apple-login-redirect.md#redirect-server){ data-preview }
 
 ## Validate Identity token
 

@@ -2,6 +2,47 @@
 comments: true
 ---
 
+## Hive DataBase 초기화 변경사항
+
+```
+@HiveType(typeId : 0)
+class Person {
+  @HiveField(0)
+  String name;
+
+  @HiveField(1)
+  int age;
+  
+  Person(this.name, this.age);
+}
+```
+
+```
+Future<void> main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(PersonAdapter()); // add here
+  runApp(MyApp());
+}
+```
+
+!!! 출처
+    [https://steemit.com/kr/@anpigon/flutter-typeadapter-hive-database](https://steemit.com/kr/@anpigon/flutter-typeadapter-hive-database)
+
+## Either 사용시 null을 허용시 초기화
+
+이전 사용법
+```
+Either<Failure, List<Product?>> _products = [];
+```
+
+변경된 방법
+```
+Either<Failure, List<Product?>> _products = right([]);
+```
+
+!!! 출처
+    [https://stackoverflow.com/questions/67681887/how-to-initialize-either-right-to-an-empty-value-in-flutter](https://stackoverflow.com/questions/67681887/how-to-initialize-either-right-to-an-empty-value-in-flutter)
+
 ## Flutter 버전 마이그레이션 이슈
 
 에러메시지
