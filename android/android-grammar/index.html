@@ -14,7 +14,7 @@
         <link rel="prev" href="../../ios/skeleton-view/">
       
       
-        <link rel="next" href="../android-gc/">
+        <link rel="next" href="../android-feature/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.5">
@@ -56,6 +56,8 @@
   
     
     
+      
+    
     
     
     
@@ -63,13 +65,15 @@
   
     
     
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#string-to-enum" class="md-skip">
+        <a href="#aes256" class="md-skip">
           Skip to content
         </a>
       
@@ -108,6 +112,34 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -946,6 +978,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/swift-mapkit/" class="md-nav__link">
+        MapKit
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1172,6 +1218,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#aes256" class="md-nav__link">
+    aes256 암호화 복호화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priceamountmicros-float" class="md-nav__link">
+    구글 인앱결제시 priceAmountMicros 에서 Float 으로 변환
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-extension" class="md-nav__link">
+    context extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    문자열내에 $ 출력하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android-language-code" class="md-nav__link">
+    Android Language Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    enum 재정의
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    문자열 분리
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5-sha256" class="md-nav__link">
+    md5, sha256 로 암호화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utc-time" class="md-nav__link">
+    UTC Time 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#millisecond-to-date-string" class="md-nav__link">
+    millisecond to Date, String 로 변환
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timezone" class="md-nav__link">
+    Timezone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuid" class="md-nav__link">
+    UUID 생성하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devicename" class="md-nav__link">
+    DeviceName 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deviceid" class="md-nav__link">
+    DeviceID 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#string-to-enum" class="md-nav__link">
     string to enum 문자열을 열거형으로 변환
   </a>
@@ -1179,21 +1323,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     절대값 구하기
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     국가코드 및 국가명 가져오기
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     언어코드 가져오기
   </a>
   
@@ -1241,8 +1385,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../android-gc/" class="md-nav__link">
-        GC
+      <a href="../android-feature/" class="md-nav__link">
+        안드로이드 특징
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-java-kotlin/" class="md-nav__link">
+        자바와 코틀린
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-compiler-gc/" class="md-nav__link">
+        컴파일러와 가비지컬렉터
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../android-coroutine/" class="md-nav__link">
+        Coroutine
       </a>
     </li>
   
@@ -1798,6 +1984,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unity/unity-troubleshooting/" class="md-nav__link">
+        TroubleShooting
+      </a>
     </li>
   
 
@@ -2566,6 +2766,104 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#aes256" class="md-nav__link">
+    aes256 암호화 복호화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priceamountmicros-float" class="md-nav__link">
+    구글 인앱결제시 priceAmountMicros 에서 Float 으로 변환
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-extension" class="md-nav__link">
+    context extension
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    문자열내에 $ 출력하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#android-language-code" class="md-nav__link">
+    Android Language Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    enum 재정의
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    문자열 분리
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#md5-sha256" class="md-nav__link">
+    md5, sha256 로 암호화
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utc-time" class="md-nav__link">
+    UTC Time 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#millisecond-to-date-string" class="md-nav__link">
+    millisecond to Date, String 로 변환
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timezone" class="md-nav__link">
+    Timezone
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uuid" class="md-nav__link">
+    UUID 생성하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devicename" class="md-nav__link">
+    DeviceName 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deviceid" class="md-nav__link">
+    DeviceID 가져오기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#string-to-enum" class="md-nav__link">
     string to enum 문자열을 열거형으로 변환
   </a>
@@ -2573,21 +2871,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     절대값 구하기
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     국가코드 및 국가명 가져오기
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     언어코드 가져오기
   </a>
   
@@ -2614,11 +2912,445 @@
 
   <h1>Grammar</h1>
 
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
+<h2 id="aes256">aes256 암호화 복호화<a class="headerlink" href="#aes256" title="Permanent link">#</a></h2>
+<div class="admonition cbc사용">
+<p class="admonition-title">Cbc사용</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">PKCS5Padding</label><label for="__tabbed_1_2">PKCS7Padding</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="nf">encryptCBC</span><span class="p">(</span><span class="n">strToEncrypt</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">iv</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">ivParameterSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IvParameterSpec</span><span class="p">(</span><span class="n">iv</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">())</span>
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecretKeySpec</span><span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;AES&quot;</span><span class="p">)</span>
+
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;AES/CBC/PKCS5Padding&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">ENCRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">secretKey</span><span class="p">,</span><span class="w"> </span><span class="n">ivParameterSpec</span><span class="p">)</span>
+
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">crypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">strToEncrypt</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">())</span>
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">encodedByte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">encode</span><span class="p">(</span><span class="n">crypted</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">)</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kt">String</span><span class="p">(</span><span class="n">encodedByte</span><span class="p">)</span>
+
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">e</span><span class="p">(</span><span class="s">&quot;Exception&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Exception : </span><span class="si">${</span><span class="n">e</span><span class="p">.</span><span class="na">message</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="p">}</span>
+
+<span class="kd">fun</span><span class="w"> </span><span class="nf">decryptCBC</span><span class="p">(</span><span class="n">strToDecrypt</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">key</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="n">iv</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ivParameterSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IvParameterSpec</span><span class="p">(</span><span class="n">iv</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">())</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecretKeySpec</span><span class="p">(</span><span class="n">key</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;AES&quot;</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;AES/CBC/PKCS5Padding&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">DECRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">secretKey</span><span class="p">,</span><span class="w"> </span><span class="n">ivParameterSpec</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">decodedByte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="n">strToDecrypt</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">byteResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">decodedByte</span><span class="p">)</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kt">String</span><span class="p">(</span><span class="n">byteResult</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">object</span><span class="w"> </span><span class="nc">AESEncyption</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tK5UTui+DPh8lIlBxya5XVsmeDCoUl6vHhdIESMB6sQ=&quot;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">salt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;QWlGNHNhMTJTQWZ2bGhpV3U=&quot;</span><span class="w"> </span><span class="c1">// base64 decode =&gt; AiF4sa12SAfvlhiWu</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">iv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;bVQzNFNhRkQ1Njc4UUFaWA==&quot;</span><span class="w"> </span><span class="c1">// base64 decode =&gt; mT34SaFD5678QAZX</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">encrypt</span><span class="p">(</span><span class="n">strToEncrypt</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">ivParameterSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IvParameterSpec</span><span class="p">(</span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="n">iv</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">))</span>
+
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecretKeyFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;PBKDF2WithHmacSHA1&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">spec</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">PBEKeySpec</span><span class="p">(</span><span class="n">secretKey</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">(),</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="n">salt</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">),</span><span class="w"> </span><span class="m">10000</span><span class="p">,</span><span class="w"> </span><span class="m">256</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factory</span><span class="p">.</span><span class="na">generateSecret</span><span class="p">(</span><span class="n">spec</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKey</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">SecretKeySpec</span><span class="p">(</span><span class="n">tmp</span><span class="p">.</span><span class="na">encoded</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AES&quot;</span><span class="p">)</span>
+
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;AES/CBC/PKCS7Padding&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">ENCRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">secretKey</span><span class="p">,</span><span class="w"> </span><span class="n">ivParameterSpec</span><span class="p">)</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">encodeToString</span><span class="p">(</span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">strToEncrypt</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">Charsets</span><span class="p">.</span><span class="na">UTF_8</span><span class="p">)),</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Error while encrypting: </span><span class="si">$</span><span class="n">e</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">fun</span><span class="w"> </span><span class="nf">decrypt</span><span class="p">(</span><span class="n">strToDecrypt</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">ivParameterSpec</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">IvParameterSpec</span><span class="p">(</span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="n">iv</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">))</span>
+
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecretKeyFactory</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;PBKDF2WithHmacSHA1&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">spec</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">PBEKeySpec</span><span class="p">(</span><span class="n">secretKey</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">(),</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="n">salt</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">),</span><span class="w"> </span><span class="m">10000</span><span class="p">,</span><span class="w"> </span><span class="m">256</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">tmp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factory</span><span class="p">.</span><span class="na">generateSecret</span><span class="p">(</span><span class="n">spec</span><span class="p">);</span>
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKey</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="n">SecretKeySpec</span><span class="p">(</span><span class="n">tmp</span><span class="p">.</span><span class="na">encoded</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;AES&quot;</span><span class="p">)</span>
+
+<span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;AES/CBC/PKCS7Padding&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">DECRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">secretKey</span><span class="p">,</span><span class="w"> </span><span class="n">ivParameterSpec</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w">  </span><span class="kt">String</span><span class="p">(</span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="n">strToDecrypt</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">)))</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Error while decrypting: </span><span class="si">$</span><span class="n">e</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition gcm사용">
+<p class="admonition-title">Gcm사용</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">encrypt</label><label for="__tabbed_2_2">decrypt</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="nf">encrypt</span><span class="p">(</span><span class="n">password</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKeySpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecretKeySpec</span><span class="p">(</span><span class="n">password</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;AES&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">iv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArray</span><span class="p">(</span><span class="m">16</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">charArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">password</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">()</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">charArray</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
+<span class="w">        </span><span class="n">iv</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">charArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">toByte</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ivParameterSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IvParameterSpec</span><span class="p">(</span><span class="n">iv</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;AES/GCM/NoPadding&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">ENCRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">secretKeySpec</span><span class="p">,</span><span class="w"> </span><span class="n">ivParameterSpec</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">encryptedValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">())</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">encodeToString</span><span class="p">(</span><span class="n">encryptedValue</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="nf">decrypt</span><span class="p">(</span><span class="n">password</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">secretKeySpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SecretKeySpec</span><span class="p">(</span><span class="n">password</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;AES&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">iv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ByteArray</span><span class="p">(</span><span class="m">16</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">charArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">password</span><span class="p">.</span><span class="na">toCharArray</span><span class="p">()</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="n">until</span><span class="w"> </span><span class="n">charArray</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
+<span class="w">        </span><span class="n">iv</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">charArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">toByte</span><span class="p">()</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">ivParameterSpec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IvParameterSpec</span><span class="p">(</span><span class="n">iv</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;AES/GCM/NoPadding&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">DECRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">secretKeySpec</span><span class="p">,</span><span class="w"> </span><span class="n">ivParameterSpec</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">decryptedByteValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">Base64</span><span class="p">.</span><span class="na">decode</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">DEFAULT</span><span class="p">))</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="kt">String</span><span class="p">(</span><span class="n">decryptedByteValue</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="priceamountmicros-float">구글 인앱결제시 priceAmountMicros 에서 Float 으로 변환<a class="headerlink" href="#priceamountmicros-float" title="Permanent link">#</a></h2>
+<p>SkuDetails.priceAmountMicros 의 대한 설명:
+<img alt="priceAmountMicros" src="https://velog.velcdn.com/images/james-chun-dev/post/6545b809-bf0f-4583-89e7-d99e6aaf237a/image.png" /></p>
+<p>priceAmountMicros to float 으로 변환후 소수점 3번째짜리에서 반올림</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JAVA</label><label for="__tabbed_3_2">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">getPrice</span><span class="p">(</span><span class="n">SkuDetails</span><span class="w"> </span><span class="n">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">.</span><span class="na">getPriceAmountMicros</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000000.0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">round</span><span class="p">(</span><span class="n">price</span><span class="o">*</span><span class="mf">1e2</span><span class="p">)</span><span class="o">/</span><span class="mf">1e2</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="nf">getPrice</span><span class="p">(</span><span class="n">item</span><span class="p">:</span><span class="w"> </span><span class="n">SkuDetails</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kt">Float</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">.</span><span class="na">priceAmountMicros</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">1000000.0</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">round</span><span class="p">(</span><span class="n">price</span><span class="o">*</span><span class="m">100</span><span class="p">)</span><span class="o">/</span><span class="m">100</span><span class="p">).</span><span class="na">toFloat</span><span class="p">()</span>
+<span class="p">}</span><span class="w">    </span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="context-extension">context extension<a class="headerlink" href="#context-extension" title="Permanent link">#</a></h2>
+<div class="admonition 유틸함수">
+<p class="admonition-title">유틸함수</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">앱이 설치되었는지 판단하는 함수</label><label for="__tabbed_4_2">특정 앱을 실행하는 함수</label><label for="__tabbed_4_3">마켓으로 이동하는 함수</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="n">Context</span><span class="p">.</span><span class="nf">isInstalledApp</span><span class="p">(</span><span class="n">packageName</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">intent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageManager</span><span class="p">.</span><span class="na">getLaunchIntentForPackage</span><span class="p">(</span><span class="n">packageName</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">intent</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="n">Context</span><span class="p">.</span><span class="nf">openApp</span><span class="p">(</span><span class="n">packageName</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">intent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageManager</span><span class="p">.</span><span class="na">getLaunchIntentForPackage</span><span class="p">(</span><span class="n">packageName</span><span class="p">)</span>
+<span class="w">    </span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="n">Context</span><span class="p">.</span><span class="nf">market</span><span class="p">(</span><span class="n">packageName</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">intent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Intent</span><span class="p">(</span><span class="n">Intent</span><span class="p">.</span><span class="na">ACTION_VIEW</span><span class="p">)</span>
+<span class="w">        </span><span class="n">intent</span><span class="p">.</span><span class="na">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Uri</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="s">&quot;market://details?id=</span><span class="si">$</span><span class="n">packageName</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="n">startActivity</span><span class="p">(</span><span class="n">intent</span><span class="p">)</span>
+<span class="w">        </span><span class="kc">true</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="p">:</span><span class="w"> </span><span class="n">ActivityNotFoundException</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">()</span>
+<span class="w">        </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<h2 id="_1">문자열내에 $ 출력하기<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">HashKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">&quot;</span>
+</code></pre></div>
+<h2 id="android-language-code">Android Language Code<a class="headerlink" href="#android-language-code" title="Permanent link">#</a></h2>
+<ul>
+<li>zh_cn (간체)</li>
+<li>zh_tw (번체)</li>
+</ul>
+<div class="admonition reference">
+<p class="admonition-title">Reference<p><a href="https://developers.google.com/interactive-media-ads/docs/sdks/android/client-side/localization">https://developers.google.com/interactive-media-ads/docs/sdks/android/client-side/localization</a></p>
+</p>
+</div>
+<h2 id="enum">enum 재정의<a class="headerlink" href="#enum" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">ApiResponseCode</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The request was successful.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">SUCCESS</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The request was canceled.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">CANCEL</span><span class="p">(</span><span class="mi">1001</span><span class="p">),</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * A network error occurred.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="n">NETWORK_ERROR</span><span class="p">(</span><span class="mi">1002</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">ApiResponseCode</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getValue</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="_2">문자열 분리<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">String</span><span class="w"> </span><span class="n">lang</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;kr/en/jp&quot;</span><span class="p">;</span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lang</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">);</span>
+</code></pre></div>
+<h2 id="md5-sha256">md5, sha256 로 암호화<a class="headerlink" href="#md5-sha256" title="Permanent link">#</a></h2>
+<div class="admonition md5 로 암호화">
+<p class="admonition-title">Md5</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">JAVA</label><label for="__tabbed_5_2">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">md5</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="p">){</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">MD5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="n">MessageDigest</span><span class="w"> </span><span class="n">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MessageDigest</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;MD5&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">md</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(</span><span class="s">&quot;UTF-8&quot;</span><span class="p">));</span>
+<span class="w">        </span><span class="kt">byte</span><span class="w"> </span><span class="n">byteData</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">md</span><span class="p">.</span><span class="na">digest</span><span class="p">();</span>
+<span class="w">        </span><span class="n">StringBuffer</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">byteData</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">((</span><span class="n">byteData</span><span class="o">[</span><span class="n">i</span><span class="o">]&amp;</span><span class="mh">0xff</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">0x100</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">).</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">        </span><span class="n">MD5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">catch</span><span class="p">(</span><span class="n">NoSuchAlgorithmException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"> </span><span class="n">MD5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">UnsupportedEncodingException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"> </span><span class="n">MD5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">MD5</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">fun</span><span class="w"> </span><span class="nf">md5</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MessageDigest</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;MD5&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">BigInteger</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="n">md</span><span class="p">.</span><span class="na">digest</span><span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">())).</span><span class="na">toString</span><span class="p">(</span><span class="m">16</span><span class="p">).</span><span class="na">padStart</span><span class="p">(</span><span class="m">32</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition sha256 로 암호화">
+<p class="admonition-title">Sha256</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">JAVA</label><label for="__tabbed_6_2">Kotlin</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">sha256</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">SHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="n">MessageDigest</span><span class="w"> </span><span class="n">sh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MessageDigest</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;SHA-256&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">sh</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="na">getBytes</span><span class="p">());</span>
+<span class="w">        </span><span class="kt">byte</span><span class="w"> </span><span class="n">byteData</span><span class="o">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sh</span><span class="p">.</span><span class="na">digest</span><span class="p">();</span>
+<span class="w">        </span><span class="n">StringBuffer</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span>
+<span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">byteData</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">            </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">toString</span><span class="p">((</span><span class="n">byteData</span><span class="o">[</span><span class="n">i</span><span class="o">]&amp;</span><span class="mh">0xff</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mh">0x100</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">).</span><span class="na">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">        </span><span class="n">SHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">NoSuchAlgorithmException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"> </span><span class="n">SHA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">SHA</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="kd">fun</span><span class="w"> </span><span class="nf">sha256</span><span class="p">(</span><span class="n">s</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">):</span><span class="w"> </span><span class="kt">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">md</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MessageDigest</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;SHA-256&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">digest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">md</span><span class="p">.</span><span class="na">digest</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">())</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">hash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">()</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">digest</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">hash</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%02x&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">))</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">hash</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition reference">
+<p class="admonition-title">Reference<p><a href="https://stackoverflow.com/questions/64171624/how-to-generate-an-md5-hash-in-kotlin">https://stackoverflow.com/questions/64171624/how-to-generate-an-md5-hash-in-kotlin</a></p>
+</p>
+</div>
+<h2 id="utc-time">UTC Time 가져오기<a class="headerlink" href="#utc-time" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;yyyy-MM-dd HH:mm:ss.SSSSSSS&quot;</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">getUtcDatetimeAsDate</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">stringDateToDate</span><span class="p">(</span><span class="n">getUtcDatetimeAsString</span><span class="p">());</span>
+<span class="p">}</span>
+<span class="c1">// UTC Now Time get</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getUtcDatetimeAsString</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">sdf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="n">DATE_FORMAT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">sdf</span><span class="p">.</span><span class="na">setTimeZone</span><span class="p">(</span><span class="n">TimeZone</span><span class="p">.</span><span class="na">getTimeZone</span><span class="p">(</span><span class="s">&quot;UTC&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">utcTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sdf</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Date</span><span class="p">());</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">utcTime</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// DATE_FORMAT 형태의 string 을 Date 로 return</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">stringDateToDate</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">strDate</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">dateToReturn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">dateFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="n">DATE_FORMAT</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="n">dateToReturn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Date</span><span class="p">)</span><span class="n">dateFormat</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">strDate</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ParseException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">dateToReturn</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="millisecond-to-date-string">millisecond to Date, String 로 변환<a class="headerlink" href="#millisecond-to-date-string" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DATE_FORMAT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;yyyy-MM-dd HH:mm:ss&quot;</span><span class="p">;</span>
+
+<span class="c1">//long형 타임을 String으로 변환.</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">longTimeToDatetimeAsString</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">resultTime</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">dateFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="n">DATE_FORMAT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">formatTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateFormat</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">resultTime</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">formatTime</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//long형 타임을 Date 로 변환.</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Date</span><span class="w"> </span><span class="nf">setTimeConvertDate</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">time</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">unixDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">dateFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="n">DATE_FORMAT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">formatTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateFormat</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">time</span><span class="p">);</span>
+<span class="w">    </span><span class="n">unixDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stringDateToDate</span><span class="p">(</span><span class="n">formatTime</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">unixDate</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// 서버에서 주는 utc string을 getTime형태로 변환 후 현재시간과 차로 offset 계산.</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="nf">serverUTCParse</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">utc</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">Date</span><span class="w"> </span><span class="n">serverDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">sdf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="n">DATE_FORMAT</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">SimpleDateFormat</span><span class="w"> </span><span class="n">dateFormat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SimpleDateFormat</span><span class="p">(</span><span class="n">DATE_FORMAT</span><span class="p">);</span>
+<span class="w">    </span><span class="n">dateFormat</span><span class="p">.</span><span class="na">setTimeZone</span><span class="p">(</span><span class="n">TimeZone</span><span class="p">.</span><span class="na">getTimeZone</span><span class="p">(</span><span class="s">&quot;utc&quot;</span><span class="p">));</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">formatTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">try</span><span class="p">{</span>
+<span class="w">        </span><span class="n">serverDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Date</span><span class="p">)</span><span class="n">sdf</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">utc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">formatTime</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dateFormat</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">serverDate</span><span class="p">.</span><span class="na">getTime</span><span class="p">());</span>
+
+<span class="w">        </span><span class="n">serverDate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stringDateToDate</span><span class="p">(</span><span class="n">formatTime</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ParseException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">timeOffset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serverDate</span><span class="p">.</span><span class="na">getTime</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">getUtcDatetimeAsDate</span><span class="p">().</span><span class="na">getTime</span><span class="p">();</span><span class="w"> </span><span class="c1">//서버시간-현재시간</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">timeOffset</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="timezone">Timezone<a class="headerlink" href="#timezone" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getTimeZone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">TimeZone</span><span class="w"> </span><span class="n">timeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TimeZone</span><span class="p">.</span><span class="na">getDefault</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Calendar</span><span class="w"> </span><span class="n">calendar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GregorianCalendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="n">timeZone</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">offsetInMillis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeZone</span><span class="p">.</span><span class="na">getOffset</span><span class="p">(</span><span class="n">calendar</span><span class="p">.</span><span class="na">getTimeInMillis</span><span class="p">());</span>
+
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">v</span><span class="p">(</span><span class="s">&quot;gmt offset(sec)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="n">offsetInMillis</span><span class="p">));</span>
+
+<span class="w">        </span><span class="c1">//초에서 분으로 환산</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="n">Locale</span><span class="p">.</span><span class="na">getDefault</span><span class="p">(),</span><span class="s">&quot;%02d&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">((</span><span class="n">offsetInMillis</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60000</span><span class="p">)));</span>
+<span class="w">        </span><span class="n">Log</span><span class="p">.</span><span class="na">v</span><span class="p">(</span><span class="s">&quot;gmt offset(min)&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+<span class="w">        </span><span class="n">offset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">offsetInMillis</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s">&quot;+&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">strGmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeZone</span><span class="p">.</span><span class="na">getDisplayName</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span><span class="n">TimeZone</span><span class="p">.</span><span class="na">SHORT</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">strId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timeZone</span><span class="p">.</span><span class="na">getID</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">strTimeZone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Local;%s;(%s) Local Time;%s;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">offset</span><span class="p">,</span><span class="w"> </span><span class="n">strGmt</span><span class="p">,</span><span class="w"> </span><span class="n">strId</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">strTimeZone</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//gmt offset(sec): 32400000</span>
+<span class="c1">//gmt offset(min): 540</span>
+<span class="c1">//Local;+540;(GMT+09:00) Local Time;Asia/Seoul;</span>
+</code></pre></div>
+<h2 id="uuid">UUID 생성하기<a class="headerlink" href="#uuid" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getUUID</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">        </span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">UUID</span><span class="p">.</span><span class="na">randomUUID</span><span class="p">().</span><span class="na">toString</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="c1">//output : 2b2204c3-762f-4aae-8d50-241ad7a2dbae</span>
+</code></pre></div>
+<h2 id="devicename">DeviceName 가져오기<a class="headerlink" href="#devicename" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDeviceModel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Build</span><span class="p">.</span><span class="na">BRAND</span><span class="p">,</span><span class="w"> </span><span class="n">Build</span><span class="p">.</span><span class="na">MODEL</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="deviceid">DeviceID 가져오기<a class="headerlink" href="#deviceid" title="Permanent link">#</a></h2>
+<p>유니티엔진에서 제공하는 <a href="https://docs.unity3d.com/ScriptReference/SystemInfo-deviceUniqueIdentifier.html">deviceUniqueIdentifier</a> 와 동일하게 만들어줍니다. (<a href="#md5-sha256">md5 함수</a>로 이동)</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDeviceId</span><span class="p">(</span><span class="n">Context</span><span class="w"> </span><span class="n">context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span>
+<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">deviceId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span>
+
+<span class="w">   </span><span class="n">String</span><span class="w"> </span><span class="n">android_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Settings</span><span class="p">.</span><span class="na">Secure</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span>
+<span class="w">            </span><span class="n">context</span><span class="p">.</span><span class="na">getContentResolver</span><span class="p">(),</span>
+<span class="w">            </span><span class="n">Settings</span><span class="p">.</span><span class="na">Secure</span><span class="p">.</span><span class="na">ANDROID_ID</span><span class="p">);</span>
+<span class="w">   </span><span class="n">deviceId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">md5Encode</span><span class="p">(</span><span class="n">android_id</span><span class="p">);</span>
+
+<span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">deviceId</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h2 id="string-to-enum">string to enum 문자열을 열거형으로 변환<a class="headerlink" href="#string-to-enum" title="Permanent link">#</a></h2>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">JAVA</label><label for="__tabbed_1_2">Kotlin</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">JAVA</label><label for="__tabbed_7_2">Kotlin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">MyEnum</span><span class="w"> </span><span class="p">{</span>
@@ -2657,8 +3389,8 @@
 <p><a href="https://stackoverflow.com/questions/53523948/how-do-i-create-an-enum-from-an-int-in-kotlin">https://stackoverflow.com/questions/53523948/how-do-i-create-an-enum-from-an-int-in-kotlin</a></p>
 </div>
 </div>
-<h2 id="_1">절대값 구하기<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">JAVA</label><label for="__tabbed_2_2">Kotlin</label></div>
+<h2 id="_3">절대값 구하기<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">JAVA</label><label for="__tabbed_8_2">Kotlin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">);</span>
@@ -2670,8 +3402,8 @@
 </div>
 </div>
 </div>
-<h2 id="_2">국가코드 및 국가명 가져오기<a class="headerlink" href="#_2" title="Permanent link">#</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">JAVA</label><label for="__tabbed_3_2">Kotlin</label></div>
+<h2 id="_4">국가코드 및 국가명 가져오기<a class="headerlink" href="#_4" title="Permanent link">#</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">JAVA</label><label for="__tabbed_9_2">Kotlin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getCountry</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2693,8 +3425,8 @@
 </div>
 </div>
 </div>
-<h2 id="_3">언어코드 가져오기<a class="headerlink" href="#_3" title="Permanent link">#</a></h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">JAVA</label><label for="__tabbed_4_2">Kotlin</label></div>
+<h2 id="_5">언어코드 가져오기<a class="headerlink" href="#_5" title="Permanent link">#</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">JAVA</label><label for="__tabbed_10_2">Kotlin</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getLanguage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2715,12 +3447,64 @@
 
 
 
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+        data-repo="coolishbee/techblog"
+        data-repo-id="R_kgDOIxND1A"
+        data-category="General"
+        data-category-id="DIC_kwDOIxND1M4CWY7Q"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
                 
               </article>
             </div>
           
           
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
         
       </main>
       
@@ -2747,7 +3531,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "search.suggest", "search.highlight", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>

@@ -56,12 +56,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -108,6 +112,34 @@
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -987,6 +1019,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ios/swift-mapkit/" class="md-nav__link">
+        MapKit
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1222,8 +1268,50 @@
   
   
     <li class="md-nav__item">
-      <a href="../../android/android-gc/" class="md-nav__link">
-        GC
+      <a href="../../android/android-feature/" class="md-nav__link">
+        안드로이드 특징
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-java-kotlin/" class="md-nav__link">
+        자바와 코틀린
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-compiler-gc/" class="md-nav__link">
+        컴파일러와 가비지컬렉터
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../android/android-coroutine/" class="md-nav__link">
+        Coroutine
       </a>
     </li>
   
@@ -1779,6 +1867,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../unity/unity-troubleshooting/" class="md-nav__link">
+        TroubleShooting
+      </a>
     </li>
   
 
@@ -2575,10 +2677,82 @@
   <h1>Go GC</h1>
 
 <h2 id="golang-gc">Golang GC<a class="headerlink" href="#golang-gc" title="Permanent link">#</a></h2>
+<p>동기와 비동기에 대해 설명해주세요.</p>
+<p>동기(Synchronous)와 비동기(Asynchronous)는 프로그래밍에서 작업의 진행 방식을 나타내는 용어입니다. 이들은 작업이 어떻게 실행되고 완료되는지를 기준으로 구분됩니다.</p>
+<p>동기(Synchronous)</p>
+<p>동기 방식은 작업이 순차적으로 실행되며, 이전 작업이 완료될 때까지 다음 작업이 실행되지 않습니다. 간단히 말해, 작업 A가 작업 B에 의존하고 있을 때, 작업 A가 완료되기 전까지 작업 B는 시작되지 않습니다. 작업이 블로킹되고 대기 상태에 들어갈 수 있습니다.
+비동기(Asynchronous)</p>
+<p>비동기 방식은 작업이 동시에 실행되고, 이전 작업이 완료되기를 기다리지 않고 다음 작업을 진행합니다. 각 작업은 별도의 스레드 또는 프로세스에서 실행되며, 작업 간에 상호 의존성이 없습니다. 작업이 블로킹되지 않고 계속 진행됩니다.
+블로킹과 넌블로킹에 대해 설명해주세요.</p>
+<p>블로킹(Blocking)과 넌블로킹(Non-blocking)은 작업을 어떻게 처리하는지를 나타내는 용어로서, 주로 입출력(IO) 작업과 관련됩니다.</p>
+<p>블로킹(Blocking)</p>
+<p>블로킹 작업은 호출된 함수 또는 작업이 완료될 때까지 현재 실행 흐름이 멈추는 것을 의미합니다. 예를 들어, 파일을 읽을 때 블로킹 작업을 수행하면 파일이 완전히 읽혀질 때까지 다음 코드는 실행되지 않습니다. 블로킹 작업을 수행하는 동안은 대기 상태에 있을 수 있습니다.
+넌블로킹(Non-blocking)</p>
+<p>넌블로킹 작업은 호출된 함수 또는 작업이 즉시 반환되며, 현재 실행 흐름이 멈추지 않고 계속 진행됩니다. 예를 들어, 파일을 비동기적으로 읽을 때 넌블로킹 작업을 수행하면 파일 읽기 요청 후 즉시 반환되며, 나중에 완료될 때 알림을 받을 수 있습니다. 넌블로킹 작업을 수행하는 동안 다른 작업을 수행할 수 있습니다.</p>
+<p>TCP와 UDP의 특징에 대해 설명해주세요.</p>
+<p>TCP</p>
+<p>연결 지향적: 데이터를 전송하기 전에 연결을 설정하고, 신뢰성 있는 데이터 전송을 보장하기 위해 연결을 유지합니다.
+신뢰성: 패킷 손실이나 오류가 발생할 경우 재전송을 통해 데이터의 정확성과 순서를 보장합니다.
+흐름 제어와 혼잡 제어: TCP는 데이터의 흐름을 조절하고 네트워크 혼잡을 방지하기 위해 흐름 제어 및 혼잡 제어 메커니즘을 사용합니다.
+순차적 데이터 전송: 패킷의 순서를 보장하여 데이터를 원래의 순서대로 수신합니다.
+상대적으로 높은 지연: 연결 설정 및 신뢰성을 위한 추가적인 작업으로 인해 지연이 발생할 수 있습니다.
+UDP</p>
+<p>비연결 지향적: 데이터 전송 전에 연결을 설정하지 않고, 데이터 그램을 즉시 전송합니다.
+신뢰성 없음: 패킷 손실이나 오류가 발생할 경우에도 재전송을 하지 않으므로 데이터 손실이 발생할 수 있습니다.
+흐름 제어나 혼잡 제어를 지원하지 않음: UDP는 흐름 제어나 혼잡 제어 메커니즘을 제공하지 않기 때문에 데이터 전송의 품질을 보장하지 않습니다.
+높은 성능: TCP에 비해 간단하며, 데이터의 전송 속도가 빠릅니다.
+다중 캐스트와 브로드캐스트 지원: UDP는 다중 캐스트와 브로드캐스트를 지원하여 하나의 송신자가 여러 개의 수신자에게 데이터를 전송할 수 있습니다.</p>
 
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+  <script src="https://giscus.app/client.js"
+        data-repo="coolishbee/techblog"
+        data-repo-id="R_kgDOIxND1A"
+        data-category="General"
+        data-category-id="DIC_kwDOIxND1M4CWY7Q"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="1"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+  </script>
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>
@@ -2586,6 +2760,11 @@
           
           
         </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
         
       </main>
       
@@ -2612,7 +2791,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "search.suggest", "search.highlight", "navigation.top"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.51d95adb.min.js"></script>
