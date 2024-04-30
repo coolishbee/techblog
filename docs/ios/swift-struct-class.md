@@ -35,6 +35,9 @@ comments: true
 
 ## 초기화 예제
 
+convenience init, required init 란 무엇이냐? 이 키워드의 쓰임새는 무엇인가
+상황별 예제
+
 !!! Class
     `init` `convenience init` `required init`
     === "convenience"

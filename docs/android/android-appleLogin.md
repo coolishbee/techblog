@@ -1,7 +1,8 @@
+---
+comments: true
+---
 
 ## 안드로이드 환경에서 애플 로그인을 사용하기 위한 설정
-
-[참고 사이트](https://whitepaek.tistory.com/60)
 
 ## 로그인 요청 URL 설정
 

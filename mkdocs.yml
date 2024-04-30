@@ -50,6 +50,7 @@ nav:
             - Combine: ios/swift-combine.md
             - SwiftUI: ios/swiftui.md
             - XCTest: ios/xctest.md
+            - MapKit: ios/swift-mapkit.md
         - Library:
             - AfNetworking: ios/afnetworking-usage.md
             - InAppPurchase: ios/ios-inapp-purchase-usage.md
@@ -62,7 +63,10 @@ nav:
     - Android:
         - Grammar: android/android-grammar.md            
         - Features:
-            - GC: android/android-gc.md
+            - 안드로이드 특징: android/android-feature.md
+            - 자바와 코틀린: android/android-java-kotlin.md
+            - 컴파일러와 가비지컬렉터: android/android-compiler-gc.md
+            - Coroutine: android/android-coroutine.md
             - PackagenameRefactor: android/android-package-refactor.md
             - Proguard: android/android-proguard.md
         - Library:
@@ -87,11 +91,13 @@ nav:
             - AndroidX Use: unity/unity2017-androidx-use.md
             - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
             - iOS Application Override: unity/unity-ios-application-override.md
+            # - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
             - Memory Manage: unity/unity-memory-mng.md
         - Library:
             - Assets: unity/unity-assets.md
         - Editor:
             - Build Machine: unity/unity-build-machine-shell.md
+        - TroubleShooting: unity/unity-troubleshooting.md
     - DB:
         - Mysql/MariaDB: db/mysql.md
         - MongoDB: db/mongodb.md
@@ -139,7 +145,28 @@ theme:
     features:
         - content.tooltips
         - search.suggest
-        - search.highlight        
+        - search.highlight
+        - navigation.top
+        # - navigation.sections
+    palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
 
 plugins:
     - search    
@@ -148,13 +175,18 @@ markdown_extensions:
     - abbr
     - attr_list
     - pymdownx.details
-    - pymdownx.superfences
+    - pymdownx.highlight    
     - pymdownx.snippets
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.emoji
     - md_in_html
     - def_list
     - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.emoji
+        custom_checkbox: true    
     - pymdownx.superfences:
         custom_fences:
             - name: mermaid

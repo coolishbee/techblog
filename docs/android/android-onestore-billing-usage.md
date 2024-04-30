@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # OneStore 결제 시스템
 
 ## SDK v19 API v6

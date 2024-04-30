@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # GooglePlay 결제 시스템
 
 ## Google Play Billing Library Version 3

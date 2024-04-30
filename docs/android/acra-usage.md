@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # acra 사용법
 
 런타임 방식으로써 크래시발생시 acra http API 를 사용하는 방법 가이드.
