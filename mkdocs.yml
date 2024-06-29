@@ -91,7 +91,7 @@ nav:
             - AndroidX Use: unity/unity2017-androidx-use.md
             - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
             - iOS Application Override: unity/unity-ios-application-override.md
-            # - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
+            - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
             - Memory Manage: unity/unity-memory-mng.md
         - Library:
             - Assets: unity/unity-assets.md
@@ -149,10 +149,12 @@ theme:
         - navigation.top
         # - navigation.sections
     palette:
+    
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/link
         name: Switch to light mode
+
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
@@ -160,6 +162,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
+        
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
