@@ -10,9 +10,9 @@ repo_url: https://github.com/coolishbee
 nav:
     - About: index.md
     - News: news.md
-    - Go:        
+    - Go:
         - Develop Env: go/go-develop-env.md
-        - Grammar: go/go-grammar.md            
+        - Grammar: go/go-grammar.md
         - Features:
             - Go GC: go/go-gc.md
             - Go Build: go/go-build-linux-onWindows.md
@@ -82,6 +82,9 @@ nav:
         - Gradle:
             - Maven: android/maven-deploy.md
             - Jcenter: android/jcenter.md
+            - Android 개발환경 다운그레이드: android/android-dev-env-downgrade.md
+            - Jar로 Maven 배포: android/java-jar-maven-publish.md
+            - Maven 자격증명: android/android-maven-credential.md
     - Unity:
         - Grammar:
             - C#: unity/c#-grammar.md
