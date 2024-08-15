@@ -56,3 +56,21 @@ $JENKINS_HOME/
 //jenkins
 -quit -batchmode -buildTarget iOS -executeMethod BuildMenu.Buildmachine_iOS
 ```
+
+### Mac 환경변수
+
+#### Intel Mac
+
+```
+export GOROOT="/usr/local/go"
+export GOPATH="/Users/james/Documents/go"
+export GOBIN=$GOPATH/bin
+export ADB_HOME="/Users/james/Library/Android/sdk/platform-tools"
+export FLUTTER_BIN="/Users/james/Documents/flutter/bin"
+export SERVERPOD_BIN="$HOME/.pub-cache/bin"
+export MKDOCS_BIN="/Users/james/Library/Python/3.9/bin"
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/james/Documents/client_secret.json"
+export PATH=$PATH:$GOROOT:$GOROOT/bin:$GOPATH:$GOBIN:$ADB_HOME:$FLUTTER_BIN:$GOOGLE_APPLICATION_CREDENTIALS:$MKDOCS_BIN:$SERVERPOD_BIN
+alias python="python3"
+alias pip="pip3"
+```
