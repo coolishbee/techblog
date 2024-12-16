@@ -8,7 +8,7 @@ comments: true
 
 1. **File > New > New Project**을 클릭합니다.
 
-2. **No Activity Next > 대충 설정하고 Finish**
+2. **No Activity Next > 설정하고 Finish**
 
 3. (Module: app) 의 `build.gradle` 파일을 엽니다.
 

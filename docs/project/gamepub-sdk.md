@@ -102,7 +102,15 @@ Unity에서 이 콜을 받으려면
 
 Unity는 공식적으로 Gradle 빌드 시스템을 지원하기 때문에 네이티브 SDK와의 의존성 문제는 아주 쉽게 해결할 수 있었습니다.
 
-### 결제 모듈 통합
+### 소셜 로그인 및 인증
+
+![auth](../img/Auth.png)
+
+### 결제
+
+![iap](../img/IAP.png)
+
+결제 모듈 통합
 
 * 구글스토어
 * 원스토어
@@ -112,7 +120,7 @@ Unity는 공식적으로 Gradle 빌드 시스템을 지원하기 때문에 네�
 
 ### 푸시(FCM)
 
-#### 인증
+#### Firebase 인증
 
 Firebase 제품군을 사용하기 위해서는 `google_services.json`의 값을 액세스하는 [Google 서비스 Gradle 플러그인](https://developers.google.com/android/guides/google-services-plugin?hl=ko)이 필요합니다. 이 플러그인은 자바코드로 읽을 수 있는 `xml`형태로 변환되며 유니티내에서는 Firebase SDK 모듈내에서 그 역할을 해줍니다.
 
@@ -374,93 +382,6 @@ AppDelegate 생명주기의 프로토콜들을 사용하는데 유니티는 자�
 [Unity XCode 프로젝트 구조](https://docs.unity3d.com/kr/2018.4/Manual/StructureOfXcodeProject.html)에 대해 알아야 합니다.
 
 그래서 저는 Unity용 iOS Bridge 프로젝트에서 UnityAppController를 파생하여 새로운 AppDelegate를 만들고 거기서 구현하였습니다.
-방식은 이렇습니다.
-```
-//
-//  SDKUnityAppDelegate.m
-//  SDKUnityBridge
-//
-//  Created by coolishbee on 2021/01/26.
-//  Copyright © 2021 coolishbee. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-#import "UnityAppController.h"
-#import <UserNotifications/UserNotifications.h>
-
-@interface SDKUnityAppDelegate : UnityAppController<UNUserNotificationCenterDelegate>
-@end
-
-IMPL_APP_CONTROLLER_SUBCLASS(SDKUnityAppDelegate)
-
-@implementation SDKUnityAppDelegate
-
--(BOOL)application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) options
-{
-    if (@available(iOS 10.0, *)) {
-        if ([UNUserNotificationCenter class] != nil) {
-            // iOS 10 or later
-            // For iOS 10 display notification (sent via APNS)
-            [UNUserNotificationCenter currentNotificationCenter].delegate = self;
-            UNAuthorizationOptions authOptions = UNAuthorizationOptionAlert |
-            UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
-            
-            [[UNUserNotificationCenter currentNotificationCenter]
-             requestAuthorizationWithOptions:authOptions
-             completionHandler:^(BOOL granted,NSError * _Nullable error)
-            {
-                if(error){
-                    NSLog(@"%@", error);
-                }else{
-                    dispatch_async(dispatch_get_main_queue(),^{
-                        [[UIApplication sharedApplication] registerForRemoteNotifications];
-                    });
-                }
-            }];
-        }
-    }        
-    
-    NSLog(@"[SDKUnityAppDelegate application:%@ didFinishLaunchingWithOptions:%@]", application, options);
-    return [super application:application didFinishLaunchingWithOptions:options];
-}
-
--(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    const unsigned char *dataBuffer = (const unsigned char *)deviceToken.bytes;
-    NSMutableString *hexString  = [NSMutableString stringWithCapacity:(deviceToken.length * 2)];
-    for (int i = 0; i < deviceToken.length; ++i) {
-        [hexString appendFormat:@"%02x", dataBuffer[i]];
-    }
-    NSString *result = [hexString copy];
-    NSLog(@"토큰 : %@", result);    
-}
-
-// 호출되는 조건
-// 1. 앱 포그라운드 상태일 때 알림 오면 호출됨
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
-       willPresentNotification:(UNNotification *)notification
-         withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler  API_AVAILABLE(ios(10.0)) {
-    NSDictionary *userInfo = notification.request.content.userInfo;
-    NSLog(@"푸시 데이터 : %@", userInfo);    
-    if (@available(iOS 14.0, *)) {
-        completionHandler(UNNotificationPresentationOptionList);
-    } else {
-        // 포그라운드 상태에서 푸시왔을 때 푸시 마노출
-        completionHandler(UNNotificationPresentationOptionNone);
-    }
-}
-
-// 호출되는 조건
-// 1. 앱 미실행 상태일 때 알림 터치하면 호출됨
-// 2. 백그라운드 상태일 때 알림 표시된 후 알림 터치하면 호출됨
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center
-didReceiveNotificationResponse:(UNNotificationResponse *)response
-         withCompletionHandler:(void(^)(void))completionHandler  API_AVAILABLE(ios(10.0)){
-    NSDictionary *userInfo = response.notification.request.content.userInfo;
-    NSLog(@"푸시 데이터 : %@", userInfo);
-    completionHandler();
-}
-@end
-```
 
 ### 네트워크 통신
 
@@ -546,42 +467,6 @@ public enum PubHttpClient {
 }
 ```
 
-PubHttpLogger.swift :
-```
-class PubHttpLogger: EventMonitor {
-    let queue = DispatchQueue(label: "APIEventLogger")
-    
-    func requestDidFinish(_ request: Request) {
-        
-        print((request.request?.httpMethod ?? "") +
-              (" --> ") +
-              (request.request?.url?.absoluteString ?? "")
-        )
-        print(request.request?.allHTTPHeaderFields ?? [:])
-        print(request.request?.httpBody?.toPrettyPrintedString ?? "")
-    }
-    
-    func request<Value>(_ request: DataRequest,
-                        didParseResponse response: DataResponse<Value, AFError>) {
-        
-        print("\(response.response?.statusCode ?? 0)" +
-              (" --> ") +
-              (request.request?.url?.absoluteString ?? "")
-        )
-        print(response.data?.toPrettyPrintedString ?? "")
-    }
-}
-
-extension Data {
-    var toPrettyPrintedString: String? {
-        guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
-              let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
-              let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }
-        return prettyPrintedString as String
-    }
-}
-```
-
 Usage :
 ```
 let reqLogin = ReqLogin(profile: socialProfile)
@@ -632,27 +517,9 @@ iOS의 경우엔 안드로이드와 달리 Swift로 구현된 API를 Objective-C
         ![xctest-unit02](../img/xctest-unit02.png)
 
 
-## 소셜로그인
 
-### 구글
 
-구글 로그인에 대해서는 특별히 언급할 만한 부분이 없을 정도로 Android, iOS 모두 잘 지원되고 있었습니다.
-
-특히 서버사이드에서 토큰 검증을 위한 라이브러리도 언어별로 제공해 주고 있었고 OIDC로 구현되어 있었기 때문에 쉽게 검증을 마칠 수 있었습니다.
-
-### 페이스북
-
-최근 소셜 로그인들 중 가장 문제가 많이 발생하는 SDK인 것 같습니다.
-
-일단 구글, 애플과 다르게 아직 [oidc를 지원하지 않고](https://developers.facebook.com/docs/reference/androidsdk/current/facebook/com/facebook/authenticationtoken.html/) 있었는데요 이유는 모르겠지만 정책 때문인지 iOS SDK 최신 버전에서만 [oidc를 지원](https://developers.facebook.com/docs/facebook-login/limited-login)하고 있었습니다.<br>
-~~그래서 iOS라도 jwt토큰 검증을 해보려고 여러차례 시도해보았지만 facebook sdk 최신버전 사용시 런타임중에 facebook 라이브러리 단에서 계속적인 충돌하는 현상이 발생했습니다.~~
-
-~~이때 Carthage나 SPM으로 변경하거나 버전을 다양하게 변경하여 테스트를 해봤지만 동일한 현상이 발생했고 결국 facebook github 사이트에서 xcframework를 직접 다운받아 해결이 가능했으나 유지 보수 입장에서는 너무 파편화돼버리기 때문에 직접 검증한 v11.2.1을 사용하였습니다.~~
-
-반면 Android에서는 큰 문제 없이 마이너 버전에서 최신 버전으로 마이그레이션하였으나 oidc를 지원하지 않기 때문에 서버사이드에서 토큰 검증 시 API 호출을
-할 수밖에 없습니다.
-
-### 애플
+## 안드로이드 애플로그인
 
 !!! note "참고"
 
@@ -666,7 +533,7 @@ Apple 로그인은 안드로이드에서의 구현이 까다롭습니다.
 
 그래서 제가 최종적으로 Custom Tabs을 사용해서 구현한 안드로이드에서의 Apple 로그인 흐름은 이렇습니다.
 
-#### 안드로이드 Apple 로그인 Flow
+### 안드로이드 Apple 로그인 Flow
 
 ``` mermaid
 sequenceDiagram
@@ -691,7 +558,7 @@ sequenceDiagram
 <br>
 안드로이드에서 Apple 로그인을 구현하려면 Apple 인증서버에서 보내주는 인증정보를 수신하고 Redirect해줄 서버가 필요합니다.
 
-#### WebView 구현
+### WebView 구현
 
 기본적으로 Apple 로그인은 웹 환경을 지원하기 때문에 웹뷰로 구현할 수 있습니다.
 여기서 핵심은 백엔드 서버(Redirect 서버)에서 넘겨주는 정보를 어떻게 받을지가 관건이었습니다.
@@ -714,7 +581,7 @@ public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request
 2. 서버로부터 리다이렉트 수신을 받을 수 있는가
 3. 새로운 액티비티 위에 Custom Tabs를 올릴 수 있는가
 
-#### Custom Tabs 구현
+### Custom Tabs 구현
 
 이미 WebView 이용하여 구현해보았기 때문에 WebView의 shouldOverrideUrlLoading가 하는 역할만 만들어주면 되겠다고 생각했습니다.
 

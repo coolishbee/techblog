@@ -59,8 +59,6 @@ $JENKINS_HOME/
 
 ### Mac 환경변수
 
-#### Intel Mac
-
 ```
 export GOROOT="/usr/local/go"
 export GOPATH="/Users/james/Documents/go"

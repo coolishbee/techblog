@@ -8,141 +8,147 @@ repo_name: coolishbee
 repo_url: https://github.com/coolishbee
 
 nav:
-    - About: index.md
-    - News: news.md
-    - Go:
-        - Develop Env: go/go-develop-env.md
-        - Grammar: go/go-grammar.md
-        - Features:
-            - Go GC: go/go-gc.md
-            - Go Build: go/go-build-linux-onWindows.md
-            - Goroutine: go/go-goroutine.md
-        - Library:
-            - Google API: go/go-google-api-usage.md
-            - Apple Login Redirect Sever: go/apple-login-redirect.md
-            - Gin Swagger: go/go-gin-swagger.md
-            - Google Play Developer API: go/google-play-developer-api.md
-            - Gin MongoDB: go/go-gin-mongodb.md
-            - Gorilla WebSocket: go/go-gorilla-websocket.md
-            - Gin CORS: go/gin-cors.md
-    - Flutter:
-        - 개발환경 및 명령어: flutter/flutter-getstarted.md
-        - Dart Grammar: flutter/dart-grammar.md
-        - Breaking Changes: flutter/flutter-breaking-changes.md
-        - Trouble Shooting: flutter/flutter-troubleshooting.md
-        - Features:            
-            - Flutter 실행 원리: flutter/flutter-principle.md
-        - Library:
-            - WebRTC: flutter/flutter-webrtc.md
-            - GetX: flutter/flutter-getx.md
-            - BloC: flutter/flutter-bloc.md
-            - Provider: flutter/flutter-provider.md
-    - iOS:
-        - Grammar: ios/ios-grammar.md
-        - Features:
-            - Swift Class & Struct: ios/swift-struct-class.md            
-            - Swift ARC: ios/apple-arc.md            
-            - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
-            - 라이브러리 정의: ios/ios-library.md
-            - Swift 변수 접근자 정리: ios/swift-access-level.md
-            - NotificationCenter: ios/notification-center.md
-            - HigherOrder Function: ios/higher-order-function.md
-            - Combine: ios/swift-combine.md
-            - SwiftUI: ios/swiftui.md
-            - XCTest: ios/xctest.md
-            - MapKit: ios/swift-mapkit.md
-        - Library:
-            - AfNetworking: ios/afnetworking-usage.md
-            - InAppPurchase: ios/ios-inapp-purchase-usage.md
-            - Create Framework: ios/app-with-framework.md            
-            - Apple Login: ios/apple-login.md
-            - XcodeGen: ios/xcode-gen.md
-            - Carthage: ios/carthage.md
-            - RxSwift: ios/ios-rxswift.md
-            - SkeletonView: ios/skeleton-view.md
-    - Android:
-        - Grammar: android/android-grammar.md            
-        - Features:
-            - 안드로이드 특징: android/android-feature.md
-            - 자바와 코틀린: android/android-java-kotlin.md
-            - 컴파일러와 가비지컬렉터: android/android-compiler-gc.md
-            - Coroutine: android/android-coroutine.md
-            - PackagenameRefactor: android/android-package-refactor.md
-            - Proguard: android/android-proguard.md
-        - Library:
-            - ACRA: android/acra-usage.md
-            - GoogleBilling: android/android-google-billing-usage.md
-            - OneStoreBilling: android/android-onestore-billing-usage.md
-            - Create Module: android/create-library.md
-            - Create Only Module: android/only-library.md
-            - Gson: android/gson.md
-            - Retrofit2: android/retrofit2.md
-            - AppleLogin: android/android-appleLogin.md
-            - ServiceID Setting: ios/ios-serviceID-setting.md
-        - Gradle:
-            - Maven: android/maven-deploy.md
-            - Jcenter: android/jcenter.md
-            - Android 개발환경 다운그레이드: android/android-dev-env-downgrade.md
-            - Jar로 Maven 배포: android/java-jar-maven-publish.md
-            - Maven 자격증명: android/android-maven-credential.md
-    - Unity:
-        - Grammar:
-            - C#: unity/c#-grammar.md
-            - API: unity/unity-api.md
-        - Features:
-            - Android Gradle: unity/gradle-version-manage.md
-            - AndroidX Use: unity/unity2017-androidx-use.md
-            - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
-            - iOS Application Override: unity/unity-ios-application-override.md
-            - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
-            - Memory Manage: unity/unity-memory-mng.md
-            - Global-metadata.dat: unity/unity-global-metadata.md
-        - Library:
-            - Assets: unity/unity-assets.md
-        - Editor:
-            - Build Machine: unity/unity-build-machine-shell.md
-        - TroubleShooting: unity/unity-troubleshooting.md
-    - DB:
-        - Mysql/MariaDB: db/mysql.md
-        - MongoDB: db/mongodb.md
-        - Redis: db/redis.md
-        - LevelDB: db/leveldb.md
-    - Docker:
-        - Usage: docker/docker-usage.md
-        - Build Deploy: docker/docker-build-deploy.md
-        - Compose: docker/docker-compose.md
-    - Shell:
-        - GPG Key: shell/gpg-usage.md
-        - MAC Terminal: shell/mac-terminal.md
-        - Linux Terminal: shell/linux-terminal.md
-    - CI/CD:
-        - Jenkins:
-            - Jenkins Setup: ci/jenkins-setup.md            
-            - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
-        - Fastlane:
-            - Fastlane Setup: ci/fastlane-setup.md
+    - Home:
+        - About: index.md
+        - Project:
+            - Gamepub SDK: project/gamepub-sdk.md
+            - SDK API Server: project/sdk-api-server.md
+            - AdReport Admin: project/ad-report-admin.md
+            - Adjust Admin: project/adjust-data-admin.md
+            - Grafana Loki: project/grafana-loki.md
+            - Push Server: project/push-server.md
+            - SDK Build Deploy: project/jenkins-sdk-build-deploy.md
+            - Python in Jenkins: project/jenkins-python.md
+            - Lunch: project/python-lunch.md
+    
+    - Blog:
+        - News: news.md
+        - Go:
+            - Develop Env: go/go-develop-env.md
+            - Grammar: go/go-grammar.md
+            - Features:
+                - Go GC: go/go-gc.md
+                - Go Build: go/go-build-linux-onWindows.md
+                - Goroutine: go/go-goroutine.md
+            - Library:
+                - Google API: go/go-google-api-usage.md
+                - Apple Login Redirect Sever: go/apple-login-redirect.md
+                - Gin Swagger: go/go-gin-swagger.md
+                - Google Play Developer API: go/google-play-developer-api.md
+                - Gin MongoDB: go/go-gin-mongodb.md
+                - Gorilla WebSocket: go/go-gorilla-websocket.md
+                - Gin CORS: go/gin-cors.md
+        - Flutter:
+            - 개발환경 및 명령어: flutter/flutter-getstarted.md
+            - Dart Grammar: flutter/dart-grammar.md
+            - Breaking Changes: flutter/flutter-breaking-changes.md
+            - Trouble Shooting: flutter/flutter-troubleshooting.md
+            - Features:            
+                - Flutter 실행 원리: flutter/flutter-principle.md
+            - Library:
+                - WebRTC: flutter/flutter-webrtc.md
+                - GetX: flutter/flutter-getx.md
+                - BloC: flutter/flutter-bloc.md
+                - Provider: flutter/flutter-provider.md
+        - iOS:
+            - Grammar: ios/ios-grammar.md
+            - Features:
+                - Swift Class & Struct: ios/swift-struct-class.md            
+                - Swift ARC: ios/apple-arc.md            
+                - Exclude Architecture: ios/ios_exclude_simulator_architecture.md
+                - 라이브러리 정의: ios/ios-library.md
+                - Swift 변수 접근자 정리: ios/swift-access-level.md
+                - NotificationCenter: ios/notification-center.md
+                - HigherOrder Function: ios/higher-order-function.md
+                - Combine: ios/swift-combine.md
+                - SwiftUI: ios/swiftui.md
+                - XCTest: ios/xctest.md
+                - MapKit: ios/swift-mapkit.md
+            - Library:
+                - AfNetworking: ios/afnetworking-usage.md
+                - InAppPurchase: ios/ios-inapp-purchase-usage.md
+                - Create Framework: ios/app-with-framework.md            
+                - Apple Login: ios/apple-login.md
+                - XcodeGen: ios/xcode-gen.md
+                - Carthage: ios/carthage.md
+                - RxSwift: ios/ios-rxswift.md
+                - SkeletonView: ios/skeleton-view.md
+        - Android:
+            - Grammar: android/android-grammar.md            
+            - Features:
+                - 안드로이드 특징: android/android-feature.md
+                - 자바와 코틀린: android/android-java-kotlin.md
+                - 컴파일러와 가비지컬렉터: android/android-compiler-gc.md
+                - Coroutine: android/android-coroutine.md
+                - PackagenameRefactor: android/android-package-refactor.md
+                - Proguard: android/android-proguard.md
+            - Library:
+                - ACRA: android/acra-usage.md
+                - GoogleBilling: android/android-google-billing-usage.md
+                - OneStoreBilling: android/android-onestore-billing-usage.md
+                - Create Module: android/create-library.md
+                - Create Only Module: android/only-library.md
+                - Gson: android/gson.md
+                - Retrofit2: android/retrofit2.md
+                - AppleLogin: android/android-appleLogin.md
+                - ServiceID Setting: ios/ios-serviceID-setting.md
+            - Gradle:
+                - Maven: android/maven-deploy.md
+                - Jcenter: android/jcenter.md
+                - Android 개발환경 다운그레이드: android/android-dev-env-downgrade.md
+                - Jar로 Maven 배포: android/java-jar-maven-publish.md
+                - Maven 자격증명: android/android-maven-credential.md
+        - Unity:
+            - Grammar:
+                - C#: unity/c#-grammar.md
+                - API: unity/unity-api.md
+            - Features:
+                - Android Gradle: unity/gradle-version-manage.md
+                - AndroidX Use: unity/unity2017-androidx-use.md
+                - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
+                - iOS Application Override: unity/unity-ios-application-override.md
+                - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
+                - Memory Manage: unity/unity-memory-mng.md
+                - Global-metadata.dat: unity/unity-global-metadata.md
+                - Unity IAP: unity/unity-iap.md
+                
+            - Library:
+                - Assets: unity/unity-assets.md
+            - Editor:
+                - Build Machine: unity/unity-build-machine-shell.md
+            - TroubleShooting: unity/unity-troubleshooting.md
+        - DB:
+            - Mysql/MariaDB: db/mysql.md
+            - MongoDB: db/mongodb.md
+            - Redis: db/redis.md
+            - LevelDB: db/leveldb.md
+        - Docker:
+            - Usage: docker/docker-usage.md
+            - Build Deploy: docker/docker-build-deploy.md
+            - Compose: docker/docker-compose.md
+        - Shell:
+            - GPG Key: shell/gpg-usage.md
+            - MAC Terminal: shell/mac-terminal.md
+            - Linux Terminal: shell/linux-terminal.md
+        - CI/CD:
+            - Jenkins:
+                - Jenkins Setup: ci/jenkins-setup.md            
+                - Docker Build and Deploy in Jenkins: ci/jenkins-docker-build-deploy.md
+            - Fastlane:
+                - Fastlane Setup: ci/fastlane-setup.md
+            
+        - Package Manager:
+            - Homebrew: pm/homebrew.md
+            - Cocoapod:
+                - Usage: pm/cocoapods/cocoapods-usage.md
+                - Public: pm/cocoapods/cocoapods-public.md
+                - Private: pm/cocoapods/cocoapods-private.md
+                - 명령어 정의: pm/cocoapods/use_frameworks_definition.md
+            - gem: pm/gem.md        
+            - pip: pm/pip.md
+            - yum: pm/yum.md
+            
         
-    - Package Manager:
-        - Homebrew: pm/homebrew.md
-        - Cocoapod:
-            - Usage: pm/cocoapods/cocoapods-usage.md
-            - Public: pm/cocoapods/cocoapods-public.md
-            - Private: pm/cocoapods/cocoapods-private.md
-            - 명령어 정의: pm/cocoapods/use_frameworks_definition.md
-        - gem: pm/gem.md        
-        - pip: pm/pip.md
-        - yum: pm/yum.md
-        
-    - Project:
-        - Gamepub SDK: project/gamepub-sdk.md
-        - SDK API Server: project/sdk-api-server.md
-        - AdReport Admin: project/ad-report-admin.md
-        - Adjust Admin: project/adjust-data-admin.md
-        - Grafana Loki: project/grafana-loki.md
-        - Push Server: project/push-server.md
-        - SDK Build Deploy: project/jenkins-sdk-build-deploy.md
-        - Python in Jenkins: project/jenkins-python.md
-        - Lunch: project/python-lunch.md
 theme: 
     name: material
     custom_dir: overrides
@@ -151,6 +157,9 @@ theme:
         - search.suggest
         - search.highlight
         - navigation.top
+        - navigation.tabs
+        # - navigation.tabs.sticky
+        # - navigation.path
         # - navigation.sections
     palette:
     
@@ -176,7 +185,7 @@ theme:
         name: Switch to system preference
 
 plugins:
-    - search    
+    - search
 markdown_extensions:
     - tables
     - abbr

@@ -50,6 +50,26 @@ $ rm -rf /opt/homebrew/var/mysql
 - `brew upgrade` : 업데이트 가능한 모든 패키지 업데이트
 - `brew cleanup packgeName` : 해당 패키지의 최신버전을 제외한 나머지 버전들 모두 삭제
 - `brew uninstall packgeName` : 해당 패키지 언인스톨
+- `brew search packgeName` : 해당 패키지 찾기
+
+
+## jdk 심볼릭링크 설정하기
+
+brew로 openjdk를 설치한 경우
+
+```
+sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdk
+```
+
+```
+export JDK_BIN="/opt/homebrew/opt/openjdk@11/bin" //zshrc 추가
+```
+
+```
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+```
+
+그러나 나는 오라클 사이트에서 직접 다운받아 설치하는 것을 선호.
 
 ## 문제 해결
 
