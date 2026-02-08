@@ -116,7 +116,9 @@ nav:
                 - Assets: unity/unity-assets.md
             - Editor:
                 - Build Machine: unity/unity-build-machine-shell.md
-            - TroubleShooting: unity/unity-troubleshooting.md
+            - TroubleShooting:
+                - Other: unity/troubleshooting/unity-other.md
+                - iOS Resolver: unity/troubleshooting/unity-ios-resolver.md
         - DB:
             - Mysql/MariaDB: db/mysql.md
             - MongoDB: db/mongodb.md
