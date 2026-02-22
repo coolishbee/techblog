@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Common non-public paths (if introduced later)
+Disallow: /draft/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+
+Sitemap: https://coolishbee.github.io/techblog/sitemap.xml
