@@ -110,7 +110,6 @@ nav:
                 - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
                 - Memory Manage: unity/unity-memory-mng.md
                 - Global-metadata.dat: unity/unity-global-metadata.md
-                - Unity IAP: unity/unity-iap.md
                 
             - Library:
                 - Assets: unity/unity-assets.md
@@ -147,8 +146,6 @@ nav:
                 - Private: pm/cocoapods/cocoapods-private.md
                 - 명령어 정의: pm/cocoapods/use_frameworks_definition.md
             - gem: pm/gem.md        
-            - pip: pm/pip.md
-            - yum: pm/yum.md
             
         
 theme: 
