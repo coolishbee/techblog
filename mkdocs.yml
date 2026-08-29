@@ -103,14 +103,18 @@ nav:
                 - C#: unity/c#-grammar.md
                 - API: unity/unity-api.md
             - Features:
-                - Android Gradle: unity/gradle-version-manage.md
-                - AndroidX Use: unity/unity2017-androidx-use.md
-                - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
-                - iOS Application Override: unity/unity-ios-application-override.md
                 - 컴파일러와 가비지컬렉터: unity/unity-compiler-gc.md
                 - Memory Manage: unity/unity-memory-mng.md
                 - Global-metadata.dat: unity/unity-global-metadata.md
-                
+            - Platform:
+                - Android Gradle: unity/gradle-version-manage.md
+                - AndroidX Use: unity/unity2017-androidx-use.md
+                - Unity 딥링크 트러블슈팅: unity/unity-deeplink.md
+                - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
+                - iOS Application Override: unity/unity-ios-application-override.md
+                - iOS Home Indicator: unity/unity-ios-home-indicator.md
+                - CocoaPods 설치 가이드: unity/unity-cocoapods-install.md
+                - Keychain access group이 바뀌자 UUID가 초기화됐다: unity/ios-keychain-access-group-uuid.md
             - Library:
                 - Assets: unity/unity-assets.md
             - Editor:
