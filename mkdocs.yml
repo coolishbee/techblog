@@ -158,6 +158,7 @@ theme:
     custom_dir: overrides
     features:
         - content.tooltips
+        - content.code.copy
         - search.suggest
         - search.highlight
         - navigation.top
@@ -195,7 +196,7 @@ markdown_extensions:
     - abbr
     - attr_list
     - pymdownx.details
-    - pymdownx.highlight    
+    - pymdownx.highlight
     - pymdownx.snippets
     - pymdownx.critic
     - pymdownx.caret
