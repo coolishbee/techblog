@@ -109,6 +109,7 @@ nav:
             - Platform:
                 - Android Gradle: unity/gradle-version-manage.md
                 - AndroidX Use: unity/unity2017-androidx-use.md
+                - Android 16KB 페이지 크기 대응: unity/android-16kb-page-size.md
                 - Unity 딥링크 트러블슈팅: unity/unity-deeplink.md
                 - iOS Capability: unity/unity_xcode_AddInAppPurchase.md
                 - iOS Application Override: unity/unity-ios-application-override.md
